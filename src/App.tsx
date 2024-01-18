@@ -1,15 +1,10 @@
 import { Table } from "./components/Table";
+import { Employee } from "./components/Table";
+import { useState } from "react";
 import "./App.css";
 
-export interface Employee {
-  id:number,
-  firstname:string,
-  lastname:string,
-  salary:number,
-  status:string
-}
 
-const data:Employee[] = [
+const employees:Employee[] = [
   {
     id: 1,
     firstname: "Jan",
@@ -41,10 +36,12 @@ const data:Employee[] = [
 ]
 
 function App() {
+  const [listof] = useState<Employee[]>(employees);
+
   return (
     <>
       <h1>WORKERS</h1>
-      <Table/>
+      <Table data={listof}/>
     </>
   );
 }

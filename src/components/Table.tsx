@@ -1,6 +1,29 @@
-import React from 'react'
+//import React from 'react';
 
-export const Table = () => {
+type EmployeeStatus = string;
+
+export interface Employee {
+    id:number,
+    firstname:string,
+    lastname:string,
+    salary:number,
+    status:string
+  }
+
+export const Table = (props: {data:Employee[]}) => {
+    const renderStatus = (status:EmployeeStatus):string => {
+        switch (status){
+            case 'weak':
+              return ':(';
+            case 'strong':
+              return ':)';
+            case 'medium':
+              return ':/'
+            default:
+              return '?'
+        }
+    }
+
   return (
     <table>
         <thead>
@@ -13,14 +36,14 @@ export const Table = () => {
           </tr>
         </thead>
         <tbody>
-          {data.map((employee) => {
+          {props.data.map((employee) => {
             return ( 
           <tr>
             <td>{employee.id}</td>
             <td>{employee.firstname}</td>
             <td>{employee.lastname}</td>
             <td>{employee.salary}</td>
-            <td>{employee.status}</td>
+            <td>{renderStatus(employee.status)}</td>
           </tr>
             )
           })}
