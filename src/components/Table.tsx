@@ -12,7 +12,7 @@ export interface Employee {
 
 export const Table = (props: {data:Employee[]}) => {
     const renderStatus = (status:EmployeeStatus):string => {
-        switch (status){
+        switch (status) {
             case 'weak':
               return ':(';
             case 'strong':
