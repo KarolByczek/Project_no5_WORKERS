@@ -11,30 +11,38 @@ const employees:Employee[] = [
     firstname: "Jan",
     lastname: "Nowak",
     salary: 2500,
-    status: "weak" 
+    status: "weak",
+    birthdate: new Date('2000-10-13') 
   },
   {
     id: 2,
     firstname: "Zbigniew",
     lastname: "Szarota",
     salary: 3000,
-    status: "strong"
+    status: "strong",
+    birthdate: new Date('1999-10-21')
   },
   {
     id: 3,
     firstname: "Waldemar",
     lastname: "Siekieratka",
     salary: 2600,
-    status: "weak"
+    status: "weak",
+    birthdate: new Date('1994-08-31')
   },
   {
     id: 4,
     firstname: "Arleta",
     lastname: "Bomba",
     salary: 2800,
-    status: "medium"
+    status: "medium",
+    birthdate: new Date('1990-10-10')
   }
-]
+];
+
+const clickTheRow = () => {
+  window.alert('HEY, WHATs UP?!');
+}
 
 function App() {
   const [listof] = useState<Employee[]>(employees);
@@ -43,7 +51,7 @@ function App() {
     <>
     <div className="container">
       <h1>WORKERS</h1>
-      <Table data={listof}/>
+      <Table data={listof} onClick={clickTheRow}/>
     </div>
     </>
   );

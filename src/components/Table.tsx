@@ -1,16 +1,22 @@
 //import React from 'react';
 
-type EmployeeStatus = string;
+import { MouseEvent } from "react";
+
+type EmployeeStatus = 'weak' | 'strong' | 'medium'
 
 export interface Employee {
     id:number,
     firstname:string,
     lastname:string,
     salary:number,
-    status:string
+    status:EmployeeStatus,
+    birthdate: Date,
+    
   }
 
-export const Table = (props: {data:Employee[]}) => {
+type onClickHandler = (event:MouseEvent<HTMLTableRowElement>) => void
+
+export const Table = (props: {data:Employee[], onClick:onClickHandler}) => {
     const renderStatus = (status:EmployeeStatus):string => {
         switch (status) {
             case 'weak':
@@ -25,7 +31,7 @@ export const Table = (props: {data:Employee[]}) => {
     }
 
   return (
-    <table>
+    <table className="table table-striped mt-5">
         <thead>
           <tr>
             <th>ID</th>
@@ -33,17 +39,19 @@ export const Table = (props: {data:Employee[]}) => {
             <th>Last Name</th>
             <th>Salary</th>
             <th>Status</th>
+            <th>Birthdate</th>
           </tr>
         </thead>
         <tbody>
           {props.data.map((employee) => {
             return ( 
-          <tr>
+          <tr onClick={props.onClick}>
             <td>{employee.id}</td>
             <td>{employee.firstname}</td>
             <td>{employee.lastname}</td>
             <td>{employee.salary}</td>
             <td>{renderStatus(employee.status)}</td>
+            <td>{(`${employee.birthdate}`).substring(0, 16)}</td>
           </tr>
             )
           })}
