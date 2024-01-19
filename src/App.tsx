@@ -1,8 +1,10 @@
 import { Table } from "./components/Table";
 import { Employee } from "./components/Table";
 import { useState } from "react";
+import { DetailModal } from "./components/DetailModal";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import "./App.css";
+
 
 
 const employees:Employee[] = [
@@ -54,10 +56,9 @@ function App() {
 
   return (
     <>
-    <div className="container">
       <h1>WORKERS</h1>
       <Table data={listof} />
-    </div>
+      <DetailModal />
     </>
   );
 }
