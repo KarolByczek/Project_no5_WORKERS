@@ -1,7 +1,5 @@
 //import React from 'react';
 
-import { MouseEvent } from "react";
-
 type EmployeeStatus = 'weak' | 'strong' | 'medium'
 
 export interface Employee {
@@ -11,12 +9,12 @@ export interface Employee {
     salary:number,
     status:EmployeeStatus,
     birthdate: Date,
+    fucker: boolean,
+    sucker: boolean
     
   }
 
-type onClickHandler = (event:MouseEvent<HTMLTableRowElement>) => void
-
-export const Table = (props: {data:Employee[], onClick:onClickHandler}) => {
+export const Table = (props: {data:Employee[]}) => {
     const renderStatus = (status:EmployeeStatus):string => {
         switch (status) {
             case 'weak':
@@ -44,8 +42,10 @@ export const Table = (props: {data:Employee[], onClick:onClickHandler}) => {
         </thead>
         <tbody>
           {props.data.map((employee) => {
-            return ( 
-          <tr onClick={props.onClick}>
+            return (
+          <tr key={employee.id} onClick={() => {
+            console.log(props.data[props.data.indexOf(employee)])
+          }}>
             <td>{employee.id}</td>
             <td>{employee.firstname}</td>
             <td>{employee.lastname}</td>
