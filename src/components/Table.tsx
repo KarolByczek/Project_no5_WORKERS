@@ -36,14 +36,6 @@ export const Table = (props: { data: Employee[] }) => {
     navigate('/details', {state: item});
   }
 
-  const onMouseOverHandler = (event:MouseEvent<HTMLTableRowElement>) => {
-    event.currentTarget.style.fontWeight = 'bold';
-    event.currentTarget.style.cursor = 'pointer';
-  }
-
-  const onMouseOutHandler = (event:MouseEvent<HTMLTableRowElement>) => {
-    event.currentTarget.style.fontWeight = 'normal';
-  }
 
   return (
     <table className="table table-striped mt-5">
@@ -62,8 +54,7 @@ export const Table = (props: { data: Employee[] }) => {
           return (
             <tr
               key={employee.id}
-              onMouseOver={onMouseOverHandler}
-              onMouseOut={onMouseOutHandler}
+              className="tablerow"
               onClick={(event) => onClickHandler(event, employee)}
             >
               <td>{employee.id}</td>

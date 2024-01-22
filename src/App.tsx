@@ -1,7 +1,6 @@
 import { Table } from "./components/Table";
 import { Employee } from "./components/Table";
 import { useState } from "react";
-import { DetailModal } from "./components/DetailModal";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import "./App.css";
 
@@ -58,7 +57,6 @@ function App() {
     <>
       <h1>WORKERS</h1>
       <Table data={listof} />
-      <DetailModal />
     </>
   );
 }
