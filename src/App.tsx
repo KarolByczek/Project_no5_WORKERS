@@ -1,6 +1,5 @@
 import { Table } from "./components/Table";
 import { Employee } from "./components/Table";
-import { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import "./App.css";
 
@@ -51,12 +50,11 @@ const employees:Employee[] = [
 
 
 function App() {
-  const [listof] = useState<Employee[]>(employees);
 
   return (
     <>
       <h1>WORKERS</h1>
-      <Table data={listof} />
+      <Table data={employees} />
     </>
   );
 }
