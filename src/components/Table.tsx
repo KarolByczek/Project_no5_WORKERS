@@ -35,10 +35,14 @@ export const Table = (props: { data: Employee[] }) => {
   const onChangeHandler = (event: KeyboardEvent):void => {
     const input = event.target as HTMLInputElement;
     const phrase = input.value.toLowerCase();
-    const data = props.data.filter(item => {
-      return JSON.stringify(item).toLowerCase().includes(phrase);
+    const data01 = props.data.filter(item => {
+      return item.firstname.toLowerCase().includes(phrase)
+      || item.lastname.toLowerCase().includes(phrase)
+      || item.birthdate.toString().includes(phrase)
+      || item.salary.toString().includes(phrase);
     })
-    setFiltereddata(data);
+    console.log(data01);
+    setFiltereddata(data01);
   };
 
   const onClickHandler = (
