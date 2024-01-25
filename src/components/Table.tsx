@@ -32,7 +32,15 @@ export const Table = (props: { data: Employee[] }) => {
     }
   };
 
-  const onChangeHandler = (event: KeyboardEvent):void => {
+  const findByPhrase = (columns:string[], item:any, phrase:string):boolean => {
+    columns.forEach(key => {
+      const field = item[key];
+      field.toLowerCase().includes(phrase)
+    })
+    return 
+  }
+
+  /*const onChangeHandler = (event: KeyboardEvent):void => {
     const input = event.target as HTMLInputElement;
     const phrase = input.value.toLowerCase();
     const data01 = props.data.filter(item => {
@@ -43,7 +51,7 @@ export const Table = (props: { data: Employee[] }) => {
     })
     console.log(data01);
     setFiltereddata(data01);
-  };
+  };*/
 
   const onClickHandler = (
     event: MouseEvent<HTMLTableRowElement>,
@@ -63,7 +71,7 @@ export const Table = (props: { data: Employee[] }) => {
             id="formcontrol"
             className="formcontrol"
             placeholder="Type any employee data..."
-            onKeyDown={onChangeHandler}
+            onKeyUp={onChangeHandler}
           />
         </label>
       </div>
