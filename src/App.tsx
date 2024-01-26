@@ -1,6 +1,6 @@
 import { Table } from "./components/Table";
 import { Employee } from "./components/Table";
-import 'bootstrap/dist/css/bootstrap.min.css'
+//import 'bootstrap/dist/css/bootstrap.min.css'
 import "./App.css";
 
 

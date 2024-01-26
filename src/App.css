@@ -14,8 +14,14 @@
 }
 
 
-.tablerow:hover {
-  cursor: pointer;
+.tablerow {
   font-weight: bolder;
+  background-color: #888;
+  border: 0.2rem solid rgb(229, 222, 222);
+}
+
+.tablerow:hover {
+  background-color: blue;
+  cursor: pointer;
   border: 0.2rem solid red;
 }

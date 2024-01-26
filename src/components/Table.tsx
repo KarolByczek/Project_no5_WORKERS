@@ -82,7 +82,7 @@ export const Table = (props: { data: any[] }) => {
             onKeyUp={onChangeHandler}
           />
       </div>
-      <table className="table table-striped mt-5">
+      <table className="table">
         <thead className="fs-4">
           <tr>
             <th>ID</th>
@@ -93,7 +93,7 @@ export const Table = (props: { data: any[] }) => {
             <th>Birthdate</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className='tbody'>
           {filtereddata.map((employee) => {
             return (
               <tr
