@@ -5,19 +5,35 @@
   text-align: center;
 }
 
-.card {
-  padding: 2em;
+body {
+  background-color: aliceblue;
+  color: black;
 }
 
-.read-the-docs {
-  color: #888;
+.searchbar {
+  margin-bottom: 1rem;
+  font-size: larger;
+  font-weight: 500;
+  align-items: end;
 }
 
+.searchbar input {
+  margin-left: 1rem;
+  padding: 0.4rem;
+}
 
 .tablerow {
   font-weight: bolder;
-  background-color: #888;
+  background-color: #ded7d7;
   border: 0.2rem solid rgb(229, 222, 222);
+}
+
+.tablerow:nth-child(2n+1) {
+  background-color: rgb(230, 234, 233);
+}
+
+.tablerow td {
+  padding: 0.5rem;
 }
 
 .tablerow:hover {
