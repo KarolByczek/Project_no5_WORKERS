@@ -73,17 +73,16 @@ export const Table = (props: { data: any[] }) => {
 
   return (
     <>
-      <div className="mb-3 mt-5">
+      <div className="searchbar">
           SEARCH FOR:
           <input
             placeholder="Type any employee data..."
             type='search'
-            className='container'
             onKeyUp={onChangeHandler}
           />
       </div>
       <table className="table">
-        <thead className="fs-4">
+        <thead className="thead">
           <tr>
             <th>ID</th>
             <th>First Name</th>
