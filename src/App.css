@@ -13,7 +13,9 @@
   color: #888;
 }
 
+
 .tablerow:hover {
   cursor: pointer;
   font-weight: bolder;
+  border: 0.2rem solid red;
 }
