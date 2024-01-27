@@ -55,7 +55,7 @@ export const Table = (props: { data: any[] }) => {
   const onChangeHandler = (event: React.KeyboardEvent): void => {
     const input = event.target as HTMLInputElement;
     const phrase01 = input.value.toLowerCase();
-    const cols = ["firstname", "lastname", "birthdate"];
+    const cols = ["firstname", "lastname", "birthdate", "salary"];
 
     const data01 = props.data.filter((empl) => {
       return findByPhrase(cols, empl as unknown as {[key:string]:string}, phrase01)
