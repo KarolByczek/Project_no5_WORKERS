@@ -4,7 +4,7 @@
   margin-bottom: 1rem;
   font-size: larger;
   font-weight: 500;
-  align-items: end;
+  align-items: baseline;
 }
 
 .searchbar input {
@@ -14,8 +14,8 @@
 
 .tablerow {
   font-weight: bolder;
-  background-color: #ded7d7;
-  border: 0.2rem solid rgb(229, 222, 222);
+  background-color: #ded3d3;
+  border: 0.2rem solid rgb(202, 97, 97);
 }
 
 .tablerow:nth-child(2n+1) {

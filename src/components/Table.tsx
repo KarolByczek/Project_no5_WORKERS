@@ -15,7 +15,7 @@ export interface Employee {
   sucker: boolean;
 }
 
-export const Table = (props: { data: any[] }) => {
+export const Table = (props: { data: Employee[] }) => {
   const navigate = useNavigate();
   const [filtereddata, setFiltereddata] = useState(props.data);
 
@@ -71,6 +71,10 @@ export const Table = (props: { data: any[] }) => {
     navigate("/details", { state: item });
   };
 
+  const sortHandler = () => {
+    filtereddata.sort(a,b => )
+  }
+
   return (
     <>
       <div className="searchbar">
@@ -84,7 +88,7 @@ export const Table = (props: { data: any[] }) => {
       <table className="table">
         <thead className="thead">
           <tr>
-            <th>ID</th>
+            <th onClick={}>ID</th>
             <th>First Name</th>
             <th>Last Name</th>
             <th>Salary</th>
