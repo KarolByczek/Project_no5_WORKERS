@@ -13,13 +13,14 @@ export interface Employee {
   birthdate: Date;
   fucker: boolean;
   sucker: boolean;
-  field: any
 }
 
 export const Table = (props: { data: Employee[] }) => {
   const navigate = useNavigate();
   const [filtereddata, setFiltereddata] = useState(props.data);
   const [sortDirection, setSortDirection] = useState<string>("default");
+  const [sortBy, setSortBy] = useState<string>('none')
+  const [column, setColumn] = useState<null | string>(null)
 
   const renderStatus = (status: EmployeeStatus): string => {
     switch (status) {
@@ -100,6 +101,12 @@ export const Table = (props: { data: Employee[] }) => {
     event.preventDefault();
     let sortedData = [...filtereddata];
 
+    setColumn(key);
+
+    if(key !== column) {
+      setSortDirection('default');
+    }
+
     if (sortDirection === "default") {
       sortedData = sortedData.sort((a, b) => sortDesc(a, b, key));
       setSortDirection("descending");
@@ -111,6 +118,7 @@ export const Table = (props: { data: Employee[] }) => {
       setSortDirection("default");
     }
     setFiltereddata([...sortedData]);
+    setSortBy(event.currentTarget.innerHTML);
   };
 
   return (
@@ -130,7 +138,7 @@ export const Table = (props: { data: Employee[] }) => {
             <th onClick={(event) => handleHeaderColumnClick(event, "firstname")}>First Name</th>
             <th onClick={(event) => handleHeaderColumnClick(event, "lastname")}>Last Name</th>
             <th onClick={(event) => handleHeaderColumnClick(event, "salary")}>Salary</th>
-            <th>Status</th>
+            <th onClick={(event) => handleHeaderColumnClick(event, "status")}>Status</th>
             <th onClick={(event) => handleHeaderColumnClick(event, "birthdate")}>Birthdate</th>
           </tr>
         </thead>
@@ -153,6 +161,10 @@ export const Table = (props: { data: Employee[] }) => {
           })}
         </tbody>
       </table>
+      <div>
+        <p>SORTED BY: {sortBy}</p>
+        <p>SORTING DIRECTION: {sortDirection}</p>
+      </div>
     </>
   );
 };
