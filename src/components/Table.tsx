@@ -13,6 +13,7 @@ export interface Employee {
   birthdate: Date;
   fucker: boolean;
   sucker: boolean;
+  field: any
 }
 
 export const Table = (props: { data: Employee[] }) => {
@@ -75,35 +76,35 @@ export const Table = (props: { data: Employee[] }) => {
     navigate("/details", { state: item });
   };
 
-  const sortDesc = (a: Employee, b: Employee): number => {
-    if (a.lastname > b.lastname) {
+  const sortDesc = (a:Employee, b:Employee, key:keyof Employee): number => {
+    if (a[key] > b[key]) {
       return 1;
     }
-    if (a.lastname < b.lastname) {
+    if (a[key] < b[key]) {
       return -1;
     }
     return 0;
   };
 
-  const sortAsc = (a: Employee, b: Employee): number => {
-    if (a.lastname < b.lastname) {
+  const sortAsc = (a:Employee, b:Employee, key:keyof Employee): number => {
+    if (a[key] < b[key]) {
       return 1;
     }
-    if (a.lastname > b.lastname) {
+    if (a[key] > b[key]) {
       return -1;
     }
     return 0;
   };
 
-  const handleHeaderColumnClick = (event: MouseEvent): void => {
+  const handleHeaderColumnClick = (event: MouseEvent, key:keyof Employee): void => {
     event.preventDefault();
     let sortedData = [...filtereddata];
 
     if (sortDirection === "default") {
-      sortedData = sortedData.sort(sortDesc);
+      sortedData = sortedData.sort((a, b) => sortDesc(a, b, key));
       setSortDirection("descending");
     } else if (sortDirection === "descending") {
-      sortedData = sortedData.sort(sortAsc);
+      sortedData = sortedData.sort((a, b) => sortAsc(a, b, key));
       setSortDirection("ascending");
     } else {
       sortedData = props.data;
@@ -126,11 +127,11 @@ export const Table = (props: { data: Employee[] }) => {
         <thead className="thead">
           <tr>
             <th>ID</th>
-            <th>First Name</th>
-            <th onClick={handleHeaderColumnClick}>Last Name</th>
-            <th>Salary</th>
+            <th onClick={(event) => handleHeaderColumnClick(event, "firstname")}>First Name</th>
+            <th onClick={(event) => handleHeaderColumnClick(event, "lastname")}>Last Name</th>
+            <th onClick={(event) => handleHeaderColumnClick(event, "salary")}>Salary</th>
             <th>Status</th>
-            <th>Birthdate</th>
+            <th onClick={(event) => handleHeaderColumnClick(event, "birthdate")}>Birthdate</th>
           </tr>
         </thead>
         <tbody className="tbody">
