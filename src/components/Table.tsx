@@ -71,8 +71,20 @@ export const Table = (props: { data: Employee[] }) => {
     navigate("/details", { state: item });
   };
 
-  const sortHandler = () => {
-    filtereddata.sort(a,b => )
+  const handleHeaderColumnClick = (event:MouseEvent):void => {
+    event.preventDefault()
+
+    const sortedData = filtereddata.sort((a,b) => {
+      if (a.lastname > b.lastname) {
+        return 1;
+      }
+      if (a.lastname < b.lastname) {
+        return -1
+      }
+        return 0
+    });
+
+    setFiltereddata([...sortedData]);
   }
 
   return (
@@ -88,9 +100,9 @@ export const Table = (props: { data: Employee[] }) => {
       <table className="table">
         <thead className="thead">
           <tr>
-            <th onClick={}>ID</th>
-            <th>First Name</th>
-            <th>Last Name</th>
+            <th>ID</th>
+            <th onClick={handleHeaderColumnClick}>First Name</th>
+            <th onClick={handleHeaderColumnClick}>Last Name</th>
             <th>Salary</th>
             <th>Status</th>
             <th>Birthdate</th>
