@@ -19,8 +19,7 @@ export const Table = (props: { data: Employee[] }) => {
   const navigate = useNavigate();
   const [filtereddata, setFiltereddata] = useState(props.data);
   const [sortDirection, setSortDirection] = useState<string>("default");
-  const [sortBy, setSortBy] = useState<string>('none')
-
+  const [sortBy, setSortBy] = useState<string>("none");
 
   const renderStatus = (status: EmployeeStatus): string => {
     switch (status) {
@@ -77,7 +76,7 @@ export const Table = (props: { data: Employee[] }) => {
     navigate("/details", { state: item });
   };
 
-  const sortAsc = (a:Employee, b:Employee, key:keyof Employee): number => {
+  const sortAsc = (a: Employee, b: Employee, key: keyof Employee): number => {
     if (a[key] > b[key]) {
       return 1;
     }
@@ -87,7 +86,7 @@ export const Table = (props: { data: Employee[] }) => {
     return 0;
   };
 
-  const sortDesc = (a:Employee, b:Employee, key:keyof Employee): number => {
+  const sortDesc = (a: Employee, b: Employee, key: keyof Employee): number => {
     if (a[key] < b[key]) {
       return 1;
     }
@@ -97,29 +96,45 @@ export const Table = (props: { data: Employee[] }) => {
     return 0;
   };
 
-  const handleHeaderColumnClick = (event: MouseEvent, key:keyof Employee): void => {
+  const handleHeaderColumnClick = (
+    event: MouseEvent,
+    key: keyof Employee
+  ): void => {
     event.preventDefault();
     let sortedData = [...filtereddata];
+    let tempsortdir = sortDirection;
 
-    //setSortBy(key);
+    if (key !== sortBy) {
+      tempsortdir = "descending";
+    }
 
-    //if(key !== sortBy) {
-    //  setSortDirection('default');
-    //}
-
-    if (sortDirection === "default") {
+    if (tempsortdir === "default") {
       sortedData = sortedData.sort((a, b) => sortAsc(a, b, key));
-      setSortDirection('ascending'); 
-    } else if (sortDirection === 'ascending') {
+      setSortDirection("ascending");
+    } else if (tempsortdir === "ascending") {
       sortedData = sortedData.sort((a, b) => sortDesc(a, b, key));
-      setSortDirection('descending');
+      setSortDirection("descending");
     } else {
       sortedData = props.data;
-      setSortDirection('default');
+      setSortDirection("default");
     }
     setFiltereddata([...sortedData]);
     setSortBy(key);
   };
+
+  function showArrow(key: keyof Employee): string {
+    if (key === sortBy) {
+      switch (sortDirection) {
+        case "ascending":
+          return "↑";
+        case "descending":
+          return "↓";
+        default:
+          return "";
+      }
+    }
+    return "";
+  }
 
   return (
     <>
@@ -135,11 +150,25 @@ export const Table = (props: { data: Employee[] }) => {
         <thead className="thead">
           <tr>
             <th>ID</th>
-            <th onClick={(event) => handleHeaderColumnClick(event, "firstname")}>First Name</th>
-            <th onClick={(event) => handleHeaderColumnClick(event, "lastname")}>Last Name</th>
-            <th onClick={(event) => handleHeaderColumnClick(event, "salary")}>Salary</th>
-            <th onClick={(event) => handleHeaderColumnClick(event, "status")}>Status</th>
-            <th onClick={(event) => handleHeaderColumnClick(event, "birthdate")}>Birthdate</th>
+            <th
+              onClick={(event) => handleHeaderColumnClick(event, "firstname")}
+            >
+              First Name{showArrow("firstname")}
+            </th>
+            <th onClick={(event) => handleHeaderColumnClick(event, "lastname")}>
+              Last Name{showArrow("lastname")}
+            </th>
+            <th onClick={(event) => handleHeaderColumnClick(event, "salary")}>
+              Salary{showArrow("salary")}
+            </th>
+            <th onClick={(event) => handleHeaderColumnClick(event, "status")}>
+              Status
+            </th>
+            <th
+              onClick={(event) => handleHeaderColumnClick(event, "birthdate")}
+            >
+              Birthdate
+            </th>
           </tr>
         </thead>
         <tbody className="tbody">
