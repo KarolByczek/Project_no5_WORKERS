@@ -1,18 +1,23 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
-import './index.css'
-import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-import { DetailModal } from './components/DetailModal.tsx'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import HomePage from './HomePage.tsx';
+import './index.css';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { DetailModal } from './components/DetailModal.tsx';
+import { AddForm } from './components/AddForm.tsx';
 
 const router = createBrowserRouter([
     {
       path: '/',
-      element: <App />
+      element: <HomePage />
     },
     {
       path: '/details',
       element: <DetailModal />
+    },
+    {
+      path: '/add_form',
+      element: <AddForm />
     }
   ])
 
