@@ -20,7 +20,7 @@ export const Table = (props: { data: Employee[] }) => {
   const [filtereddata, setFiltereddata] = useState(props.data);
   const [sortDirection, setSortDirection] = useState<string>("default");
   const [sortBy, setSortBy] = useState<string>('none')
-  const [column, setColumn] = useState<null | string>(null)
+
 
   const renderStatus = (status: EmployeeStatus): string => {
     switch (status) {
@@ -77,7 +77,7 @@ export const Table = (props: { data: Employee[] }) => {
     navigate("/details", { state: item });
   };
 
-  const sortDesc = (a:Employee, b:Employee, key:keyof Employee): number => {
+  const sortAsc = (a:Employee, b:Employee, key:keyof Employee): number => {
     if (a[key] > b[key]) {
       return 1;
     }
@@ -87,7 +87,7 @@ export const Table = (props: { data: Employee[] }) => {
     return 0;
   };
 
-  const sortAsc = (a:Employee, b:Employee, key:keyof Employee): number => {
+  const sortDesc = (a:Employee, b:Employee, key:keyof Employee): number => {
     if (a[key] < b[key]) {
       return 1;
     }
@@ -101,24 +101,24 @@ export const Table = (props: { data: Employee[] }) => {
     event.preventDefault();
     let sortedData = [...filtereddata];
 
-    setColumn(key);
+    //setSortBy(key);
 
-    if(key !== column) {
-      setSortDirection('default');
-    }
+    //if(key !== sortBy) {
+    //  setSortDirection('default');
+    //}
 
     if (sortDirection === "default") {
-      sortedData = sortedData.sort((a, b) => sortDesc(a, b, key));
-      setSortDirection("descending");
-    } else if (sortDirection === "descending") {
       sortedData = sortedData.sort((a, b) => sortAsc(a, b, key));
-      setSortDirection("ascending");
+      setSortDirection('ascending'); 
+    } else if (sortDirection === 'ascending') {
+      sortedData = sortedData.sort((a, b) => sortDesc(a, b, key));
+      setSortDirection('descending');
     } else {
       sortedData = props.data;
-      setSortDirection("default");
+      setSortDirection('default');
     }
     setFiltereddata([...sortedData]);
-    setSortBy(event.currentTarget.innerHTML);
+    setSortBy(key);
   };
 
   return (
