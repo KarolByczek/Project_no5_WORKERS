@@ -55,7 +55,7 @@ function HomePage() {
   return (
     <>
       <h1>EMPLOYEES</h1>
-      <Link className='add_employee_link' to={'add_form'}>ADD A NEW EMPLOYEE</Link>
+      <Link className='add_employee_link' to='add_form'>ADD A NEW EMPLOYEE</Link>
       <Table data={employees} />
     </>
   );
