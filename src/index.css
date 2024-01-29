@@ -10,7 +10,7 @@ body {
   color: black;
   display: flex;
   flex-direction: column;
-  padding-top: 20vh;
+  padding-top: 10vh;
   align-items: center;
 }
 

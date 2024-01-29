@@ -110,16 +110,17 @@ export const Table = (props: { data: Employee[] }) => {
 
     if (tempsortdir === "default") {
       sortedData = sortedData.sort((a, b) => sortAsc(a, b, key));
-      setSortDirection("ascending");
+      tempsortdir = "ascending";
     } else if (tempsortdir === "ascending") {
       sortedData = sortedData.sort((a, b) => sortDesc(a, b, key));
-      setSortDirection("descending");
+      tempsortdir = "descending";
     } else {
       sortedData = props.data;
-      setSortDirection("default");
+      tempsortdir = "default";
     }
     setFiltereddata([...sortedData]);
     setSortBy(key);
+    setSortDirection(tempsortdir);
   };
 
   function showArrow(key: keyof Employee): string {
