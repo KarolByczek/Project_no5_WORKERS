@@ -24,3 +24,29 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+.add_employee_link {
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: larger;
+  border: 1rem solid aquamarine;
+  border-radius: 0.4rem;
+  background-color: brown;
+  color: black;
+  padding: 0.6rem;
+}
+
+.add_employee_form {
+  display: flex;
+  flex-direction: column;
+}
+
+.add_employee_form label {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0.8rem auto;
+}

@@ -2,6 +2,7 @@ import { Table } from "./components/Table";
 import { Employee } from "./components/Table";
 //import 'bootstrap/dist/css/bootstrap.min.css'
 import "./App.css";
+import { Link } from "react-router-dom";
 
 
 
@@ -49,14 +50,15 @@ const employees:Employee[] = [
 ];
 
 
-function App() {
+function HomePage() {
 
   return (
     <>
-      <h1>WORKERS</h1>
+      <h1>EMPLOYEES</h1>
+      <Link className='add_employee_link' to='add_form'>ADD A NEW EMPLOYEE</Link>
       <Table data={employees} />
     </>
   );
 }
 
-export default App;
+export default HomePage;
