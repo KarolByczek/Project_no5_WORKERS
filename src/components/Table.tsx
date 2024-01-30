@@ -69,11 +69,19 @@ export const Table = (props: { data: Employee[] }) => {
   };
 
   const onClickHandler = (
-    event: MouseEvent<HTMLTableRowElement>,
+    event: MouseEvent<HTMLButtonElement>,
     item: Employee
   ): void => {
     event.preventDefault();
     navigate("/details", { state: item });
+  };
+
+  const onClickHandler02 = (
+    event: MouseEvent<HTMLButtonElement>,
+    item: Employee
+  ): void => {
+    event.preventDefault();
+    navigate("/edit_page", { state: item });
   };
 
   const sortAsc = (a: Employee, b: Employee, key: keyof Employee): number => {
@@ -137,6 +145,7 @@ export const Table = (props: { data: Employee[] }) => {
     return "";
   }
 
+
   return (
     <>
       <div className="searchbar">
@@ -178,7 +187,6 @@ export const Table = (props: { data: Employee[] }) => {
               <tr
                 key={employee.id}
                 className="tablerow"
-                onClick={(event) => onClickHandler(event, employee)}
               >
                 <td>{employee.id}</td>
                 <td>{employee.firstname}</td>
@@ -186,6 +194,11 @@ export const Table = (props: { data: Employee[] }) => {
                 <td>{employee.salary}</td>
                 <td>{renderStatus(employee.status)}</td>
                 <td>{`${employee.birthdate}`.substring(0, 16)}</td>
+                <td className="buttons">
+                  <button onClick={(event) => onClickHandler(event, employee)}>Details</button>
+                  <button onClick={(event) => onClickHandler02(event, employee)} >Edit</button>
+                </td>
+                
               </tr>
             );
           })}

@@ -1,0 +1,44 @@
+{
+    "employees": [
+    {
+        "id": 4,
+        "firstname": "Marek",
+        "lastname": "Nowodworski",
+        "salary": 2700,
+        "status": "weak",
+        "birthdate": {},
+        "fucker": true,
+        "sucker": false
+    },
+    {
+        "id": 5,
+        "firstname": "Zara",
+        "lastname": "Arlovitz",
+        "salary": 4000,
+        "status": "strong",
+        "birthdate": {},
+        "fucker": true,
+        "sucker": true
+    },
+    {
+        "id": 6,
+        "firstname": "Bożydar",
+        "lastname": "Smalcownik",
+        "salary": 2700,
+        "status": "weak",
+        "birthdate": {},
+        "fucker": true,
+        "sucker": false
+    },
+    {
+        "id": 7,
+        "firstname": "Arkadiusz",
+        "lastname": "Maxim",
+        "salary": 2100,
+        "status": "medium",
+        "birthdate": {},
+        "fucker": true,
+        "sucker": false
+    }
+]
+}

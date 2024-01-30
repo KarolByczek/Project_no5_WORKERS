@@ -1,7 +1,10 @@
 import React from "react";
 import { Employee } from "../components/Table";
+import { useNavigate } from "react-router-dom";
 
 export function AddEmployee() {
+  const navigate = useNavigate();
+
   const makeEmployee = (formdata: FormData):Employee => {
     return {
       id: +Date.now(),
@@ -15,22 +18,23 @@ export function AddEmployee() {
     }
   }
 
-  const handleSubmit = (event: React.FormEvent) => {
+  const handleAddEmployee = (event: React.FormEvent) => {
     event.preventDefault();
     //window.alert('Great Success! You have added your new employee to the list :)');
     const form = event.target as HTMLFormElement;
     const formdata = new FormData(form);
 
     const newEmployeeToSend = makeEmployee(formdata);
+    navigate("/", { state: newEmployeeToSend });
     console.log(newEmployeeToSend);
-
     console.log('Formularz zstał wysłany')
   };
+
 
   return (
     <div>
       <h3>PROVIDE DATA OF AN EMPLOYEE YOU WOULD LIKE TO ADD TO THE LIST:</h3>
-      <form className="add_employee_form" onSubmit={handleSubmit}>
+      <form className="add_employee_form" onSubmit={handleAddEmployee}>
         <label htmlFor="firstname">
           First Name:
           <input name="firstname" type="text" />

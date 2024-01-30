@@ -3,60 +3,24 @@ import { Employee } from "./components/Table";
 //import 'bootstrap/dist/css/bootstrap.min.css'
 import "./App.css";
 import { Link } from "react-router-dom";
-
-
-
-const employees:Employee[] = [
-  {
-    id: 0,
-    firstname: "Jan",
-    lastname: "Nowak",
-    salary: 2500,
-    status: "weak",
-    birthdate: new Date('2000-10-13'),
-    fucker: true,
-    sucker: true 
-  },
-  {
-    id: 1,
-    firstname: "Zbigniew",
-    lastname: "Szarota",
-    salary: 3000,
-    status: "strong",
-    birthdate: new Date('1999-10-21'),
-    fucker: false,
-    sucker: true
-  },
-  {
-    id: 2,
-    firstname: "Waldemar",
-    lastname: "Siekieratka",
-    salary: 2600,
-    status: "weak",
-    birthdate: new Date('1994-08-31'),
-    fucker: true,
-    sucker: false
-  },
-  {
-    id: 3,
-    firstname: "Arleta",
-    lastname: "Bomba",
-    salary: 2800,
-    status: "medium",
-    birthdate: new Date('1990-10-10'),
-    fucker: false,
-    sucker: false
-  }
-];
+import { useEffect, useState } from "react";
 
 
 function HomePage() {
+  const [totalemployees, setTotalemployees] = useState<Employee[]>([]);
+
+  useEffect(() => {
+    fetch('http://localhost:3000/employees').then(response => response.json())
+    //.then(dapa => console.log(dapa))
+    .then(responseData => setTotalemployees(responseData))
+  }, [setTotalemployees]);
+ 
 
   return (
     <>
       <h1>EMPLOYEES</h1>
       <Link className='add_employee_link' to='add_form'>ADD A NEW EMPLOYEE</Link>
-      <Table data={employees} />
+     { totalemployees.length > 0 ? <Table data={totalemployees} />: null}
     </>
   );
 }
