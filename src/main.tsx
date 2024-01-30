@@ -4,7 +4,7 @@ import HomePage from './HomePage.tsx';
 import './index.css';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { DetailModal } from './components/DetailModal.tsx';
-import { AddForm } from './components/AddForm.tsx';
+import { AddEmployee } from './components/AddEmployee.tsx';
 
 const router = createBrowserRouter([
     {
@@ -17,7 +17,7 @@ const router = createBrowserRouter([
     },
     {
       path: '/add_form',
-      element: <AddForm />
+      element: <AddEmployee />
     }
   ])
 

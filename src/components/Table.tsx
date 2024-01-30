@@ -2,7 +2,7 @@ import React from "react";
 import { MouseEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-type EmployeeStatus = "weak" | "strong" | "medium";
+export type EmployeeStatus = "weak" | "strong" | "medium";
 
 export interface Employee {
   id: number;
