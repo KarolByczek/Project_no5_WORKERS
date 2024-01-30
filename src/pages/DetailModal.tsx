@@ -1,6 +1,6 @@
 //import React from 'react'
 import { useLocation } from "react-router-dom";
-import { Employee } from "./Table";
+import { Employee } from "../components/Table";
 import '../index.css';
 
 export const DetailModal = () => {

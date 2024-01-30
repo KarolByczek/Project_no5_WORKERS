@@ -3,8 +3,9 @@ import ReactDOM from 'react-dom/client';
 import HomePage from './HomePage.tsx';
 import './index.css';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import { DetailModal } from './components/DetailModal.tsx';
-import { AddEmployee } from './components/AddEmployee.tsx';
+import { DetailModal } from './pages/DetailModal.tsx';
+import { AddEmployee } from './pages/AddEmployee.tsx';
+import { EditEmployee } from './pages/EditEmployee.tsx';
 
 const router = createBrowserRouter([
     {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
     {
       path: '/add_form',
       element: <AddEmployee />
+    },
+    {
+      path: '/edit_page',
+      element: <EditEmployee />
     }
   ])
 

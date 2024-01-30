@@ -1,7 +1,7 @@
 import React from "react";
-import { Employee } from "./Table";
+import { Employee } from "../components/Table";
 
-export function AddEmployee() {
+export function EditEmployee() {
   const makeEmployee = (formdata: FormData):Employee => {
     return {
       id: +Date.now(),
@@ -29,7 +29,7 @@ export function AddEmployee() {
 
   return (
     <div>
-      <h3>PROVIDE DATA OF AN EMPLOYEE YOU WOULD LIKE TO ADD TO THE LIST:</h3>
+      <h3>EDIT EMPLOYEE DATA:</h3>
       <form className="add_employee_form" onSubmit={handleSubmit}>
         <label htmlFor="firstname">
           First Name:
@@ -59,7 +59,7 @@ export function AddEmployee() {
           Sucker:
           <input name="sucker" type="text" />
         </label>
-        <button type="submit">ADD HER OR HIM</button>
+        <button type="submit">SAVE AFTER EDITING HER OR HIM</button>
       </form>
     </div>
   );
