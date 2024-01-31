@@ -23,13 +23,24 @@ export function AddEmployee() {
     //window.alert('Great Success! You have added your new employee to the list :)');
     const form = event.target as HTMLFormElement;
     const formdata = new FormData(form);
+    
 
     const newEmployeeToSend = makeEmployee(formdata);
-    navigate("/", { state: newEmployeeToSend });
-    console.log(newEmployeeToSend);
-    console.log('Formularz zstał wysłany')
-  };
+    fetch('http://localhost:3000/employees', {
+      method: 'POST',
+      body: JSON.stringify(newEmployeeToSend)
+    }).then(response => {
+      if (response.status === 201) {
+        navigate('/');
+      } else {
+        console.log('Something went wrong!');
+        throw new Error;
+      }
+    }).catch(err => console.error(err))
 
+    console.log(newEmployeeToSend);
+    console.log('Formularz został wysłany')
+  };
 
   return (
     <div>

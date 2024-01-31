@@ -1,44 +1,64 @@
 {
-    "employees": [
+  "employees": [
     {
-        "id": 4,
-        "firstname": "Marek",
-        "lastname": "Nowodworski",
-        "salary": 2700,
-        "status": "weak",
-        "birthdate": {},
-        "fucker": true,
-        "sucker": false
+      "id": "4",
+      "firstname": "Marek",
+      "lastname": "Nowodworski",
+      "salary": 2700,
+      "status": "weak",
+      "birthdate": {},
+      "fucker": true,
+      "sucker": false
     },
     {
-        "id": 5,
-        "firstname": "Zara",
-        "lastname": "Arlovitz",
-        "salary": 4000,
-        "status": "strong",
-        "birthdate": {},
-        "fucker": true,
-        "sucker": true
+      "id": "5",
+      "firstname": "Zara",
+      "lastname": "Arlovitz",
+      "salary": 4000,
+      "status": "strong",
+      "birthdate": {},
+      "fucker": true,
+      "sucker": true
     },
     {
-        "id": 6,
-        "firstname": "Bożydar",
-        "lastname": "Smalcownik",
-        "salary": 2700,
-        "status": "weak",
-        "birthdate": {},
-        "fucker": true,
-        "sucker": false
+      "id": "6",
+      "firstname": "Bożydar",
+      "lastname": "Smalcownik",
+      "salary": 2700,
+      "status": "weak",
+      "birthdate": {},
+      "fucker": true,
+      "sucker": false
     },
     {
-        "id": 7,
-        "firstname": "Arkadiusz",
-        "lastname": "Maxim",
-        "salary": 2100,
-        "status": "medium",
-        "birthdate": {},
-        "fucker": true,
-        "sucker": false
+      "id": "7",
+      "firstname": "Arkadiusz",
+      "lastname": "Maxim",
+      "salary": 2100,
+      "status": "medium",
+      "birthdate": {},
+      "fucker": true,
+      "sucker": false
+    },
+    {
+      "id": 1706717958299,
+      "firstname": "Florian",
+      "lastname": "Nowak",
+      "birthdate": "1986-04-23T00:00:00.000Z",
+      "salary": "2",
+      "fucker": "true",
+      "status": "weak",
+      "sucker": "false"
+    },
+    {
+      "id": 1706718059679,
+      "firstname": "Bąk",
+      "lastname": "Musiał",
+      "birthdate": "1976-04-23T00:00:00.000Z",
+      "salary": "-18",
+      "fucker": "true",
+      "status": "weak",
+      "sucker": "true"
     }
-]
+  ]
 }
