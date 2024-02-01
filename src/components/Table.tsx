@@ -190,12 +190,6 @@ export const Table = (props: { data: Employee[] }) => {
             >
               Birthdate{showArrow("birthdate")}
             </th>
-            <th>
-              Sucker?
-            </th>
-            <th>
-              Fucker?
-            </th>
           </tr>
         </thead>
         <tbody className="tbody">
@@ -211,8 +205,6 @@ export const Table = (props: { data: Employee[] }) => {
                 <td>{employee.salary}</td>
                 <td>{renderStatus(employee.status)}</td>
                 <td>{new Date(employee.birthdate).toLocaleDateString()}</td>
-                <td>{employee.sucker.toString()}</td>
-                <td>{employee.fucker.toString()}</td>
                 <td className="buttons">
                   <button onClick={(event) => onClickHandler(event, employee)}>Details</button>
                   <button onClick={(event) => onClickHandler02(event, employee)} >Edit</button>

@@ -20,19 +20,27 @@ export const DetailModal = () => {
     <div className="detail_container">
       <div className="detail_header">DETAILS:</div>
       <div className="detail_records">
-        <label htmlFor="lastname">Lastname:</label>
-        <input type="text" id="lastname" readOnly value={data.lastname} />
-        <label htmlFor="birthdate">Birthdate:</label>
-        <input
-          type="text"
-          id="birthdate"
-          readOnly
-          value={dateFormater(new Date(data.birthdate))}
-        />
-        <label htmlFor="fucker">Fucker:</label>
-        <input type="text" id="fucker" readOnly value={`${data.fucker}`} />
-        <label htmlFor="sucker">Sucker:</label>
-        <input type="text" id="sucker" readOnly value={`${data.sucker}`} />
+        <label htmlFor="lastname">
+          Lastname:
+          <input type="text" id="lastname" readOnly value={data.lastname} />
+        </label>
+        <label htmlFor="birthdate">
+          Birthdate:
+          <input
+            type="text"
+            id="birthdate"
+            readOnly
+            value={dateFormater(new Date(data.birthdate))}
+          />
+        </label>
+        <label htmlFor="fucker">
+          Fucker:
+          <input type="text" id="fucker" readOnly value={`${data.fucker}`} />
+        </label>
+        <label htmlFor="sucker">
+          Sucker:
+          <input type="text" id="sucker" readOnly value={`${data.sucker}`} />
+        </label>
       </div>
     </div>
   );

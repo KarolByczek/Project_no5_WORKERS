@@ -109,6 +109,16 @@
       "fucker": false,
       "status": "weak",
       "sucker": false
+    },
+    {
+      "id": "1706793879021",
+      "firstname": "Kordian",
+      "lastname": "Skrzynecki",
+      "birthdate": "1998-04-09T00:00:00.000Z",
+      "salary": 3200,
+      "fucker": "false",
+      "status": "weak",
+      "sucker": "false"
     }
   ]
 }
