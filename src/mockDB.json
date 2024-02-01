@@ -64,7 +64,7 @@
       "id": 1706777329364,
       "firstname": "MIsiu",
       "lastname": "Koterski",
-      "birthdate": "1981-10-01T00:00:00.000Z",
+      "birthdate": "1981-10-01",
       "salary": "12000",
       "fucker": "true",
       "status": "weak",
@@ -74,7 +74,7 @@
       "id": 1706777455155,
       "firstname": "Maria",
       "lastname": "Nowak",
-      "birthdate": "2002-06-20T00:00:00.000Z",
+      "birthdate": "2002-06-20",
       "salary": "2900",
       "fucker": "true",
       "status": "weak",
@@ -84,7 +84,7 @@
       "id": 1706778069279,
       "firstname": "Florian",
       "lastname": "Koterski",
-      "birthdate": "2001-07-25T00:00:00.000Z",
+      "birthdate": "2001-07-25",
       "salary": "-530",
       "fucker": "true",
       "status": "weak",
@@ -94,11 +94,21 @@
       "id": 1706778506933,
       "firstname": "Masza",
       "lastname": "Robinson",
-      "birthdate": "1996-02-04T00:00:00.000Z",
+      "birthdate": "1996-02-04",
       "salary": "2300",
       "fucker": "false",
       "status": "weak",
       "sucker": "true"
+    },
+    {
+      "id": 1706781605748,
+      "firstname": "",
+      "lastname": "",
+      "birthdate": null,
+      "salary": "",
+      "fucker": "",
+      "status": "weak",
+      "sucker": ""
     }
   ]
 }
