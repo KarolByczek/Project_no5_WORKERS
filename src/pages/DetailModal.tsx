@@ -14,6 +14,8 @@ export const DetailModal = () => {
       <div className="detail_records">
         <label htmlFor="lastname">Lastname:</label>
         <input type="text" id="lastname" readOnly value={data.lastname} />
+        <label htmlFor="birthdate">Birthdate:</label>
+        <input type="text" id="birthdate" readOnly value={new Date(data.birthdate).toLocaleDateString()} />
         <label htmlFor="fucker">Fucker:</label>
         <input type="text" id="fucker" readOnly value={`${data.fucker}`} />
         <label htmlFor="sucker">Sucker:</label>

@@ -7,7 +7,7 @@ export function AddEmployee() {
 
   const makeEmployee = (formdata: FormData):Employee => {
     return {
-      id: +Date.now(),
+      id: Date.now(),
       firstname: formdata.get('firstname') as string,
       lastname: formdata.get('lastname') as string,
       birthdate: new Date(formdata.get('birthdate') as string),
@@ -24,7 +24,6 @@ export function AddEmployee() {
     const form = event.target as HTMLFormElement;
     const formdata = new FormData(form);
     
-
     const newEmployeeToSend = makeEmployee(formdata);
     fetch('http://localhost:3000/employees', {
       method: 'POST',
@@ -34,7 +33,7 @@ export function AddEmployee() {
         navigate('/');
       } else {
         console.log('Something went wrong!');
-        throw new Error;
+        throw new Error('Mi scusi, tu es putana!');
       }
     }).catch(err => console.error(err))
 
@@ -64,7 +63,7 @@ export function AddEmployee() {
         </label>
         <label htmlFor="birthdate">
           Birthdate:
-          <input name="birthdate" type="text" />
+          <input name="birthdate" type="date" />
         </label>
         <label htmlFor="fucker">
           Fucker:
