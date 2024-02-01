@@ -7,11 +7,11 @@ export function AddEmployee() {
 
   const makeEmployee = (formdata: FormData):Employee => {
     return {
-      id: Date.now(),
+      id: Date.now().toString(),
       firstname: formdata.get('firstname') as string,
       lastname: formdata.get('lastname') as string,
       birthdate: new Date(formdata.get('birthdate') as string),
-      salary: formdata.get('salary') as unknown as number,
+      salary: +(formdata.get('salary') as string),
       fucker: formdata.get('fucker') as unknown as boolean,
       status: 'weak',
       sucker: formdata.get('sucker') as unknown as boolean

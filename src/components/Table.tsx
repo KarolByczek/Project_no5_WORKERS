@@ -5,15 +5,26 @@ import { useNavigate } from "react-router-dom";
 export type EmployeeStatus = "weak" | "strong" | "medium";
 
 export interface Employee {
-  id: number;
-  firstname: string;
-  lastname: string;
-  salary: number;
-  status: EmployeeStatus;
-  birthdate: Date;
-  fucker: boolean;
-  sucker: boolean;
+  id: string,
+  firstname: string,
+  lastname: string,
+  salary: number,
+  status: EmployeeStatus,
+  birthdate: Date,
+  fucker: boolean,
+  sucker: boolean
 }
+
+/*export interface EmployeesDTO {
+  id: string,
+  firstname: string,
+  lastname: string,
+  salary: number,
+  status: EmployeeStatus,
+  birthdate: string,
+  fucker: string,
+  sucker: string
+}*/
 
 export const Table = (props: { data: Employee[] }) => {
   const navigate = useNavigate();
@@ -172,12 +183,18 @@ export const Table = (props: { data: Employee[] }) => {
               Salary{showArrow("salary")}
             </th>
             <th onClick={(event) => handleHeaderColumnClick(event, "status")}>
-              Status
+              Status{showArrow("status")}
             </th>
             <th
               onClick={(event) => handleHeaderColumnClick(event, "birthdate")}
             >
-              Birthdate
+              Birthdate{showArrow("birthdate")}
+            </th>
+            <th>
+              Sucker?
+            </th>
+            <th>
+              Fucker?
             </th>
           </tr>
         </thead>
@@ -194,6 +211,8 @@ export const Table = (props: { data: Employee[] }) => {
                 <td>{employee.salary}</td>
                 <td>{renderStatus(employee.status)}</td>
                 <td>{new Date(employee.birthdate).toLocaleDateString()}</td>
+                <td>{employee.sucker.toString()}</td>
+                <td>{employee.fucker.toString()}</td>
                 <td className="buttons">
                   <button onClick={(event) => onClickHandler(event, employee)}>Details</button>
                   <button onClick={(event) => onClickHandler02(event, employee)} >Edit</button>
