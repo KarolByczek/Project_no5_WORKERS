@@ -23,6 +23,16 @@ body {
 .detail_records {
   display: flex;
   flex-direction: column;
+  gap: 2rem;
+}
+
+.detail_records label {
+  display: flex;
+  justify-content: end;
+}
+
+.detail_records input {
+margin-left: 1rem;
 }
 
 .add_employee_link {
