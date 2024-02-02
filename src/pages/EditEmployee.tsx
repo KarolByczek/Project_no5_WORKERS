@@ -6,13 +6,13 @@ export function EditEmployee() {
     const location = useLocation();
     const navigate = useNavigate()
     const data: Employee = location.state;
-    const [inputValue0, setInputValue0] = useState<any>(data.firstname);
-    const [inputValue1, setInputValue1] = useState<any>(data.lastname);
-    const [inputValue2, setInputValue2] = useState<any>(data.salary);
-    const [inputValue3, setInputValue3] = useState<any>(data.status);
-    const [inputValue4, setInputValue4] = useState<any>(new Date(data.birthdate).toString());
-    const [inputValue5, setInputValue5] = useState<any>(data.fucker);
-    const [inputValue6, setInputValue6] = useState<any>(data.sucker)
+    const [inputValue0, setInputValue0] = useState<string>(data.firstname);
+    const [inputValue1, setInputValue1] = useState<string>(data.lastname);
+    const [inputValue2, setInputValue2] = useState<string>(data.salary.toString());
+    const [inputValue3, setInputValue3] = useState<string>(data.status);
+    const [inputValue4, setInputValue4] = useState<string>(new Date(data.birthdate).toString());
+    const [inputValue5, setInputValue5] = useState<string>(data.fucker.toString());
+    const [inputValue6, setInputValue6] = useState<string>(data.sucker.toString())
     
 
   const makeEmployee = (formdata: FormData):Employee => {
@@ -75,7 +75,7 @@ export function EditEmployee() {
         </label>
         <label htmlFor="birthdate">
           Birthdate:
-          <input name="birthdate" type="text" onChange={(event) => setInputValue4(event.target.value)} value={inputValue4} />
+          <input name="birthdate" type="text" onChange={(event) => setInputValue4(event.target.value)} value={inputValue4.substring(0, 15)} />
         </label>
         <label htmlFor="fucker">
           Fucker:

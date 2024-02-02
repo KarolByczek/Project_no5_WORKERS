@@ -1,6 +1,7 @@
 import React from "react";
 import { MouseEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { QuestionModal } from "./QuestionModal";
 
 export type EmployeeStatus = "weak" | "strong" | "medium";
 
@@ -97,13 +98,11 @@ export const Table = (props: { data: Employee[] }) => {
 
   const onClickHandler03 = (
     event: MouseEvent<HTMLButtonElement>,
-    item: Employee
-  ): void => {
+    item: Employee,
+    dataset:Employee[]
+  ): JSX.Element => {
     event.preventDefault();
-    const dataminusemployee = filtereddata.filter((oneof) => {
-      return oneof !== item;
-    });
-    setFiltereddata([...dataminusemployee]);
+    return <QuestionModal item={item} dataset={dataset}/>;
   };
 
   const sortAsc = (a: Employee, b: Employee, key: keyof Employee): number => {
@@ -222,7 +221,7 @@ export const Table = (props: { data: Employee[] }) => {
                     Edit
                   </button>
                   <button
-                    onClick={(event) => onClickHandler03(event, employee)}
+                    onClick={(event) => onClickHandler03(event, employee, filtereddata)}
                   >
                     Remove
                   </button>

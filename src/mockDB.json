@@ -1,174 +1,74 @@
 {
   "employees": [
     {
-      "id": "1",
-      "firstname": "Marek",
-      "lastname": "Nowodworski",
-      "birthdate": "1970-01-21T00:00:00.000Z",
-      "salary": "2700",
-      "fucker": "true",
-      "status": "weak",
-      "sucker": "false"
-    },
-    {
-      "id": "2",
-      "firstname": "Zara",
-      "lastname": "Arlovitz",
-      "birthdate": null,
-      "salary": "4000",
-      "fucker": "true",
-      "status": "strong",
-      "sucker": "true"
-    },
-    {
       "id": "3",
       "firstname": "Bożydar",
       "lastname": "Smalcownik",
-      "birthdate": "1970-09-12T23:00:00.000Z",
+      "birthdate": "1970-10-12T23:00:00.000Z",
       "salary": "2750",
       "fucker": "true",
       "status": "medium",
       "sucker": "false"
     },
     {
-      "id": "4",
-      "firstname": "Arkadiusz",
-      "lastname": "Maxim",
-      "birthdate": "1975-07-03T23:00:00.000Z",
-      "salary": "2100",
-      "fucker": "true",
-      "status": "medium",
-      "sucker": "false"
-    },
-    {
-      "id": "5",
-      "firstname": "Florian",
-      "lastname": "Nowak",
-      "birthdate": "1986-04-22T22:00:00.000Z",
-      "salary": "2",
-      "fucker": "false",
-      "status": "weak",
-      "sucker": "true"
-    },
-    {
       "id": "6",
       "firstname": "Bąk",
       "lastname": "Musiał",
-      "birthdate": "1976-05-23T00:00:00.000Z",
+      "birthdate": "1979-05-23T00:00:00.000Z",
       "salary": "-18",
       "fucker": "true",
       "status": "weak",
       "sucker": "true"
     },
     {
-      "id": "1706777329364",
-      "firstname": "Misiu",
-      "lastname": "Koterski",
-      "birthdate": "1981-10-01",
-      "salary": 12000,
-      "fucker": true,
-      "status": "weak",
-      "sucker": true
-    },
-    {
-      "id": "1706777455155",
+      "id": "1706879062730",
       "firstname": "Maria",
-      "lastname": "Nowak",
-      "birthdate": "2001-02-21T23:00:00.000Z",
-      "salary": "2900",
-      "fucker": "true",
-      "status": "medium",
-      "sucker": "false"
-    },
-    {
-      "id": "1706778069279",
-      "firstname": "Florian",
-      "lastname": "Koterski",
-      "birthdate": "2001-07-29T00:00:00.000Z",
-      "salary": "530",
+      "lastname": "Szarota",
+      "birthdate": "1984-04-02T22:00:00.000Z",
+      "salary": "3200",
       "fucker": "true",
       "status": "weak",
       "sucker": "false"
     },
     {
-      "id": "1706778506933",
-      "firstname": "Masza",
-      "lastname": "Robinson",
-      "birthdate": "1996-07-03T22:00:00.000Z",
-      "salary": "2300",
-      "fucker": "false",
+      "id": "1706879435500",
+      "firstname": "Florian",
+      "lastname": "Nowak",
+      "birthdate": "1989-06-26T22:00:00.000Z",
+      "salary": "4300",
+      "fucker": "true",
       "status": "weak",
       "sucker": "true"
     },
     {
-      "id": "1706781605748",
-      "firstname": "Jordan",
-      "lastname": "Kłyś",
-      "birthdate": "1981-01-01T00:00:00.000Z",
-      "salary": "3500",
-      "fucker": "false",
-      "status": "medium",
-      "sucker": "false"
-    },
-    {
-      "id": "1706793879021",
-      "firstname": "Kordian",
-      "lastname": "Skrzynecki",
-      "birthdate": "1998-04-09T00:00:00.000Z",
-      "salary": 3200,
-      "fucker": "false",
-      "status": "weak",
-      "sucker": "false"
-    },
-    {
-      "id": "1706803825909",
-      "firstname": "Marian",
-      "lastname": "Kozioł",
-      "birthdate": "1995-02-14T00:00:00.000Z",
-      "salary": 3200,
-      "fucker": "true",
-      "status": "weak",
-      "sucker": "false"
-    },
-    {
-      "id": "1706804276881",
-      "firstname": "Mirek",
-      "lastname": "Gajecki",
-      "birthdate": "1969-06-25T00:00:00.000Z",
-      "salary": 3500,
-      "fucker": "true",
-      "status": "medium",
-      "sucker": "false"
-    },
-    {
-      "id": "1706819903015",
+      "id": "1706885143518",
       "firstname": "Maria",
-      "lastname": "Siekieratka",
-      "birthdate": "2020-06-24T00:00:00.000Z",
-      "salary": 4500,
+      "lastname": "Musiał",
+      "birthdate": "1971-10-04T23:00:00.000Z",
+      "salary": "4100",
+      "fucker": "false",
+      "status": "weak",
+      "sucker": "false"
+    },
+    {
+      "id": "1706885349607",
+      "firstname": "Masza",
+      "lastname": "Nowak",
+      "birthdate": "1978-06-22T22:00:00.000Z",
+      "salary": "3250",
+      "fucker": "true",
+      "status": "weak",
+      "sucker": "true"
+    },
+    {
+      "id": "1706886742322",
+      "firstname": "Arleta",
+      "lastname": "Bomba",
+      "birthdate": "1986-07-23T00:00:00.000Z",
+      "salary": 2145,
       "fucker": "true",
       "status": "strong",
-      "sucker": "false"
-    },
-    {
-      "id": "1706869403208",
-      "firstname": "Marek",
-      "lastname": "Horschveld",
-      "birthdate": "1986-04-22T22:00:00.000Z",
-      "salary": "3340",
-      "fucker": "true",
-      "status": "weak",
       "sucker": "true"
-    },
-    {
-      "id": "1706870629689",
-      "firstname": "Wacław",
-      "lastname": "Ciołek",
-      "birthdate": "1970-09-20T23:00:00.000Z",
-      "salary": "3205",
-      "fucker": "true",
-      "status": "weak",
-      "sucker": "false"
     }
   ]
 }
