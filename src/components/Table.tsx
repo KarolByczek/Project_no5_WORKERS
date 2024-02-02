@@ -5,14 +5,14 @@ import { useNavigate } from "react-router-dom";
 export type EmployeeStatus = "weak" | "strong" | "medium";
 
 export interface Employee {
-  id: string,
-  firstname: string,
-  lastname: string,
-  salary: number,
-  status: EmployeeStatus,
-  birthdate: Date,
-  fucker: boolean,
-  sucker: boolean
+  id: string;
+  firstname: string;
+  lastname: string;
+  salary: number;
+  status: EmployeeStatus;
+  birthdate: Date;
+  fucker: boolean;
+  sucker: boolean;
 }
 
 /*export interface EmployeesDTO {
@@ -95,6 +95,17 @@ export const Table = (props: { data: Employee[] }) => {
     navigate("/edit_page", { state: item });
   };
 
+  const onClickHandler03 = (
+    event: MouseEvent<HTMLButtonElement>,
+    item: Employee
+  ): void => {
+    event.preventDefault();
+    const dataminusemployee = filtereddata.filter((oneof) => {
+      return oneof !== item;
+    });
+    setFiltereddata([...dataminusemployee]);
+  };
+
   const sortAsc = (a: Employee, b: Employee, key: keyof Employee): number => {
     if (a[key] > b[key]) {
       return 1;
@@ -156,7 +167,6 @@ export const Table = (props: { data: Employee[] }) => {
     return "";
   }
 
-
   return (
     <>
       <div className="searchbar">
@@ -195,10 +205,7 @@ export const Table = (props: { data: Employee[] }) => {
         <tbody className="tbody">
           {filtereddata.map((employee) => {
             return (
-              <tr
-                key={employee.id}
-                className="tablerow"
-              >
+              <tr key={employee.id} className="tablerow">
                 <td>{employee.id}</td>
                 <td>{employee.firstname}</td>
                 <td>{employee.lastname}</td>
@@ -206,10 +213,20 @@ export const Table = (props: { data: Employee[] }) => {
                 <td>{renderStatus(employee.status)}</td>
                 <td>{new Date(employee.birthdate).toLocaleDateString()}</td>
                 <td className="buttons">
-                  <button onClick={(event) => onClickHandler(event, employee)}>Details</button>
-                  <button onClick={(event) => onClickHandler02(event, employee)} >Edit</button>
+                  <button onClick={(event) => onClickHandler(event, employee)}>
+                    Details
+                  </button>
+                  <button
+                    onClick={(event) => onClickHandler02(event, employee)}
+                  >
+                    Edit
+                  </button>
+                  <button
+                    onClick={(event) => onClickHandler03(event, employee)}
+                  >
+                    Remove
+                  </button>
                 </td>
-                
               </tr>
             );
           })}

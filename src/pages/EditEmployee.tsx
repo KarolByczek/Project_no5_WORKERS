@@ -10,7 +10,7 @@ export function EditEmployee() {
     const [inputValue1, setInputValue1] = useState<any>(data.lastname);
     const [inputValue2, setInputValue2] = useState<any>(data.salary);
     const [inputValue3, setInputValue3] = useState<any>(data.status);
-    const [inputValue4, setInputValue4] = useState<any>(new Date(data.birthdate).toDateString());
+    const [inputValue4, setInputValue4] = useState<any>(new Date(data.birthdate).toString());
     const [inputValue5, setInputValue5] = useState<any>(data.fucker);
     const [inputValue6, setInputValue6] = useState<any>(data.sucker)
     
