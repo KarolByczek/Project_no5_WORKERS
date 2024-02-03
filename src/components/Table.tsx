@@ -32,6 +32,7 @@ export const Table = (props: { data: Employee[] }) => {
   const [filtereddata, setFiltereddata] = useState(props.data);
   const [sortDirection, setSortDirection] = useState<string>("default");
   const [sortBy, setSortBy] = useState<string>("none");
+  const [showcaseOpen, setShowcaseOpen] = useState<boolean>(false);
 
   const renderStatus = (status: EmployeeStatus): string => {
     switch (status) {
@@ -94,16 +95,24 @@ export const Table = (props: { data: Employee[] }) => {
   ): void => {
     event.preventDefault();
     navigate("/edit_page", { state: item });
+    setShowcaseOpen(false);
+    console.log(showcaseOpen)
   };
 
   const onClickHandler03 = (
     event: MouseEvent<HTMLButtonElement>,
-    item: Employee,
-    dataset:Employee[]
-  ): JSX.Element => {
+  ): void => {
     event.preventDefault();
-    return <QuestionModal item={item} dataset={dataset}/>;
-  };
+    setShowcaseOpen(true);
+    console.log(showcaseOpen)
+    }
+   
+
+  const showcaseRenderer = () => {
+    if (showcaseOpen === true) {
+      return <QuestionModal item={filtereddata[0]} dataset={filtereddata} />
+    }
+  }
 
   const sortAsc = (a: Employee, b: Employee, key: keyof Employee): number => {
     if (a[key] > b[key]) {
@@ -176,6 +185,7 @@ export const Table = (props: { data: Employee[] }) => {
           onKeyUp={onChangeHandler}
         />
       </div>
+      {showcaseRenderer}
       <table className="table">
         <thead className="thead">
           <tr>
@@ -221,7 +231,7 @@ export const Table = (props: { data: Employee[] }) => {
                     Edit
                   </button>
                   <button
-                    onClick={(event) => onClickHandler03(event, employee, filtereddata)}
+                    onClick={(event) => onClickHandler03(event)}
                   >
                     Remove
                   </button>

@@ -1,10 +1,8 @@
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom';
 import { Employee } from './Table';
 
 export const QuestionModal = (props:{dataset:Employee[], item:Employee}) => {
     const [filtereddata, setFiltereddata] = useState<Employee[]>(props.dataset);
-    const navigate = useNavigate();
 
     const onClickButton01 = () => {
         fetch(`http://localhost:3000/employees/${props.item.id}`, {
@@ -13,7 +11,7 @@ export const QuestionModal = (props:{dataset:Employee[], item:Employee}) => {
       })
         .then((response) => {
           if (response.ok) {
-            navigate("/");
+            console.log('Response is ok');
           } else {
             console.log("Something went wrong!");
             throw new Error("Mi scusi, tu es putana!");
