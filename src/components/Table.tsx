@@ -32,7 +32,7 @@ export const Table = (props: { data: Employee[] }) => {
   const [filtereddata, setFiltereddata] = useState(props.data);
   const [sortDirection, setSortDirection] = useState<string>("default");
   const [sortBy, setSortBy] = useState<string>("none");
-  //const [showcaseOpen, setShowcaseOpen] = useState<boolean>(false);
+  const [showcaseOpen, setShowcaseOpen] = useState<boolean>(false);
 
   const renderStatus = (status: EmployeeStatus): string => {
     switch (status) {
@@ -97,22 +97,21 @@ export const Table = (props: { data: Employee[] }) => {
     navigate("/edit_page", { state: item });
   };
 
-  const $showcase = document.querySelector(".questionmodal");
+  const $showcase: Element | null = document.querySelector(".questionmodal");
   console.log($showcase);
 
-  const onClickHandler03 = (event: MouseEvent<HTMLButtonElement>) => {
+  const onClickHandler03 = (event: MouseEvent<HTMLButtonElement>):void => {
     event.preventDefault();
-    let variable = 'false';
-    console.log(variable)
-    if (variable === 'false') {
-      console.log('it is TRUE!');
-      variable = 'true';
+    let variable = showcaseOpen;
+    if (variable === false) {
+      $showcase.style.display = 'block';
+      variable = true;
     }
     else {
-      console.log('it is FALSE!');
-      variable = 'false';
+      $showcase.style.display = 'none';
+      variable = false;
     }
-    return variable;
+    setShowcaseOpen(variable);
   };
 
   const sortAsc = (a: Employee, b: Employee, key: keyof Employee): number => {

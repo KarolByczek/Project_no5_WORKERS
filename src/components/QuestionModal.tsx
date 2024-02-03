@@ -1,8 +1,10 @@
-import { useState } from 'react'
+
+import { useState } from 'react';
 import { Employee } from './Table';
 
 export const QuestionModal = (props:{dataset:Employee[], item:Employee, className:string}) => {
-    const [filtereddata, setFiltereddata] = useState<Employee[]>(props.dataset);
+    const [state, setState] = useState<Employee[]>([]);
+    const $showcase: Element | null = document.querySelector(props.className);
 
     const onClickButton01 = () => {
         fetch(`http://localhost:3000/employees/${props.item.id}`, {
@@ -16,22 +18,19 @@ export const QuestionModal = (props:{dataset:Employee[], item:Employee, classNam
             console.log("Something went wrong!");
             throw new Error("Mi scusi, tu es putana!");
           }
-        })
+        }).then(() => console.log("The employee data has been deleted"))
+        .then(() => props.dataset.filter((one) => {
+          return one !== props.item
+        })).then(() => console.log())
         .catch((err) => console.error(err));
   
-      const dataminusone = filtereddata.filter((empl) => {
-        return empl !== props.item;
-      });
-      setFiltereddata([...dataminusone]);
-  
-      console.log("The employee data has been deleted");
     };
 
   return (
     <div className={props.className}>
         You really wanna do this?
         <button onClick={onClickButton01}>Yes</button>
-        <button onClick={() => window.alert('cancelled')}>Cancel</button>
+        <button onClick={() => {}}>Cancel</button>
     </div>
   )
 }

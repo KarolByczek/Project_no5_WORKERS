@@ -1,54 +1,54 @@
 {
   "employees": [
     {
-      "id": "1706879062730",
-      "firstname": "Maria",
-      "lastname": "Szarota",
-      "birthdate": "1984-04-02T22:00:00.000Z",
-      "salary": "3200",
-      "fucker": "true",
-      "status": "weak",
-      "sucker": "false"
-    },
-    {
-      "id": "1706879435500",
-      "firstname": "Florian",
-      "lastname": "Nowak",
-      "birthdate": "1989-06-26T22:00:00.000Z",
-      "salary": "4300",
-      "fucker": "true",
-      "status": "weak",
-      "sucker": "true"
-    },
-    {
-      "id": "1706885143518",
-      "firstname": "Maria",
+      "id": "1706993251593",
+      "firstname": "Masza",
       "lastname": "Musiał",
-      "birthdate": "1971-10-04T23:00:00.000Z",
-      "salary": "4100",
+      "birthdate": "1986-04-23T00:00:00.000Z",
+      "salary": 26,
       "fucker": "false",
       "status": "weak",
-      "sucker": "false"
+      "sucker": "true"
     },
     {
-      "id": "1706885349607",
-      "firstname": "Masza",
-      "lastname": "Nowak",
-      "birthdate": "1978-06-22T22:00:00.000Z",
-      "salary": "3250",
+      "id": "1706993398521",
+      "firstname": "Florian",
+      "lastname": "Siekieratka",
+      "birthdate": "1986-04-23T00:00:00.000Z",
+      "salary": -9,
       "fucker": "true",
       "status": "weak",
       "sucker": "true"
     },
     {
-      "id": "1706886742322",
-      "firstname": "Arleta",
+      "id": "1706993413169",
+      "firstname": "Maria",
       "lastname": "Bomba",
-      "birthdate": "1986-07-23T00:00:00.000Z",
-      "salary": 2145,
+      "birthdate": "1996-04-23T00:00:00.000Z",
+      "salary": -27,
       "fucker": "true",
-      "status": "strong",
+      "status": "weak",
+      "sucker": "false"
+    },
+    {
+      "id": "1706993428925",
+      "firstname": "Bąk",
+      "lastname": "Siekieratka",
+      "birthdate": "1996-04-23T00:00:00.000Z",
+      "salary": 17,
+      "fucker": "true",
+      "status": "weak",
       "sucker": "true"
+    },
+    {
+      "id": "1706993444673",
+      "firstname": "Florian",
+      "lastname": "Szarota",
+      "birthdate": "1986-04-23T00:00:00.000Z",
+      "salary": -20,
+      "fucker": "true",
+      "status": "weak",
+      "sucker": "false"
     }
   ]
 }

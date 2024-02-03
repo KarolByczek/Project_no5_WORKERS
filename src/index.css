@@ -63,8 +63,18 @@ margin-left: 1rem;
 }
 
 .questionmodal {
-  position: relative;
+  display: none;
+  position: absolute;
   background-color: bisque;
+  left: 40%;
+  top: 80%;
+  height: 40%;
+  z-index: 3;
+  border: 0.5rem solid red;
+  border-radius: 0.3rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .questionmodal .active {
