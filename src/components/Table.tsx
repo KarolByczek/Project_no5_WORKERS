@@ -32,7 +32,7 @@ export const Table = (props: { data: Employee[] }) => {
   const [filtereddata, setFiltereddata] = useState(props.data);
   const [sortDirection, setSortDirection] = useState<string>("default");
   const [sortBy, setSortBy] = useState<string>("none");
-  const [showcaseOpen, setShowcaseOpen] = useState<boolean>(false);
+  //const [showcaseOpen, setShowcaseOpen] = useState<boolean>(false);
 
   const renderStatus = (status: EmployeeStatus): string => {
     switch (status) {
@@ -95,24 +95,25 @@ export const Table = (props: { data: Employee[] }) => {
   ): void => {
     event.preventDefault();
     navigate("/edit_page", { state: item });
-    setShowcaseOpen(false);
-    console.log(showcaseOpen)
   };
 
-  const onClickHandler03 = (
-    event: MouseEvent<HTMLButtonElement>,
-  ): void => {
-    event.preventDefault();
-    setShowcaseOpen(true);
-    console.log(showcaseOpen)
-    }
-   
+  const $showcase = document.querySelector(".questionmodal");
+  console.log($showcase);
 
-  const showcaseRenderer = () => {
-    if (showcaseOpen === true) {
-      return <QuestionModal item={filtereddata[0]} dataset={filtereddata} />
+  const onClickHandler03 = (event: MouseEvent<HTMLButtonElement>) => {
+    event.preventDefault();
+    let variable = 'false';
+    console.log(variable)
+    if (variable === 'false') {
+      console.log('it is TRUE!');
+      variable = 'true';
     }
-  }
+    else {
+      console.log('it is FALSE!');
+      variable = 'false';
+    }
+    return variable;
+  };
 
   const sortAsc = (a: Employee, b: Employee, key: keyof Employee): number => {
     if (a[key] > b[key]) {
@@ -185,7 +186,11 @@ export const Table = (props: { data: Employee[] }) => {
           onKeyUp={onChangeHandler}
         />
       </div>
-      {showcaseRenderer}
+      <QuestionModal
+        className={"questionmodal"}
+        dataset={filtereddata}
+        item={filtereddata[0]}
+      />
       <table className="table">
         <thead className="thead">
           <tr>
@@ -230,9 +235,7 @@ export const Table = (props: { data: Employee[] }) => {
                   >
                     Edit
                   </button>
-                  <button
-                    onClick={(event) => onClickHandler03(event)}
-                  >
+                  <button onClick={(event) => onClickHandler03(event)}>
                     Remove
                   </button>
                 </td>

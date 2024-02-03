@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Employee } from './Table';
 
-export const QuestionModal = (props:{dataset:Employee[], item:Employee}) => {
+export const QuestionModal = (props:{dataset:Employee[], item:Employee, className:string}) => {
     const [filtereddata, setFiltereddata] = useState<Employee[]>(props.dataset);
 
     const onClickButton01 = () => {
@@ -28,7 +28,7 @@ export const QuestionModal = (props:{dataset:Employee[], item:Employee}) => {
     };
 
   return (
-    <div className='questionmodal'>
+    <div className={props.className}>
         You really wanna do this?
         <button onClick={onClickButton01}>Yes</button>
         <button onClick={() => window.alert('cancelled')}>Cancel</button>

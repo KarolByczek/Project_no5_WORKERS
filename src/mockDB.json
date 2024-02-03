@@ -1,26 +1,6 @@
 {
   "employees": [
     {
-      "id": "3",
-      "firstname": "Bożydar",
-      "lastname": "Smalcownik",
-      "birthdate": "1970-10-12T23:00:00.000Z",
-      "salary": "2750",
-      "fucker": "true",
-      "status": "medium",
-      "sucker": "false"
-    },
-    {
-      "id": "6",
-      "firstname": "Bąk",
-      "lastname": "Musiał",
-      "birthdate": "1979-05-23T00:00:00.000Z",
-      "salary": "-18",
-      "fucker": "true",
-      "status": "weak",
-      "sucker": "true"
-    },
-    {
       "id": "1706879062730",
       "firstname": "Maria",
       "lastname": "Szarota",
