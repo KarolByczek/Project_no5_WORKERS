@@ -97,7 +97,7 @@ export const Table = (props: { data: Employee[] }) => {
     navigate("/edit_page", { state: item });
   };
 
-  const $showcase: Element | null = document.querySelector(".questionmodal");
+  const $showcase = document.querySelector(".questionmodal");
   console.log($showcase);
 
   const onClickHandler03 = (event: MouseEvent<HTMLButtonElement>):void => {
@@ -189,6 +189,7 @@ export const Table = (props: { data: Employee[] }) => {
         className={"questionmodal"}
         dataset={filtereddata}
         item={filtereddata[0]}
+        hook={setFiltereddata}
       />
       <table className="table">
         <thead className="thead">

@@ -1,51 +1,21 @@
 {
   "employees": [
     {
-      "id": "1706993251593",
-      "firstname": "Masza",
-      "lastname": "Musiał",
-      "birthdate": "1986-04-23T00:00:00.000Z",
-      "salary": 26,
-      "fucker": "false",
-      "status": "weak",
-      "sucker": "true"
-    },
-    {
-      "id": "1706993398521",
-      "firstname": "Florian",
-      "lastname": "Siekieratka",
-      "birthdate": "1986-04-23T00:00:00.000Z",
-      "salary": -9,
-      "fucker": "true",
-      "status": "weak",
-      "sucker": "true"
-    },
-    {
-      "id": "1706993413169",
-      "firstname": "Maria",
-      "lastname": "Bomba",
-      "birthdate": "1996-04-23T00:00:00.000Z",
-      "salary": -27,
-      "fucker": "true",
-      "status": "weak",
-      "sucker": "false"
-    },
-    {
-      "id": "1706993428925",
-      "firstname": "Bąk",
-      "lastname": "Siekieratka",
-      "birthdate": "1996-04-23T00:00:00.000Z",
-      "salary": 17,
-      "fucker": "true",
-      "status": "weak",
-      "sucker": "true"
-    },
-    {
       "id": "1706993444673",
       "firstname": "Florian",
       "lastname": "Szarota",
       "birthdate": "1986-04-23T00:00:00.000Z",
       "salary": -20,
+      "fucker": "true",
+      "status": "weak",
+      "sucker": "false"
+    },
+    {
+      "id": "1707040454753",
+      "firstname": "Maria",
+      "lastname": "Bomba",
+      "birthdate": "1979-03-23T00:00:00.000Z",
+      "salary": 12,
       "fucker": "true",
       "status": "weak",
       "sucker": "false"
