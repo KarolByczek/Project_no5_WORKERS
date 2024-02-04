@@ -2,11 +2,11 @@
 import { Employee } from "./Table";
 
 export const QuestionModal = (props: {
-  dataset: Employee[],
-  item: Employee,
-  className: string,
-  hook: Function,
-  element: Element | null
+  dataset: Employee[];
+  item: Employee;
+  className: string;
+  hook: Function;
+  element: Element | null;
 }) => {
   //const [state, setState] = useState<Employee[]>([]);
   const $showcase: Element | null = document.querySelector(props.className);
@@ -33,14 +33,22 @@ export const QuestionModal = (props: {
 
     props.hook([...filteredonceagain]);
 
-    props.element.style.display = 'none';
+    props.element.style.display = "none";
   };
 
   return (
     <div className={props.className}>
-      You really wanna do this?
-      <button onClick={onClickButton01}>Yes</button>
-      <button onClick={() => {props.element.style.display = 'none';}}>Cancel</button>
+      <div>
+        You really wanna do this?
+        <button onClick={onClickButton01}>Yes</button>
+        <button
+          onClick={() => {
+            props.element.style.display = "none";
+          }}
+        >
+          Cancel
+        </button>
+      </div>
     </div>
   );
 };
