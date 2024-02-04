@@ -1,24 +1,44 @@
 {
   "employees": [
     {
-      "id": "1706993444673",
-      "firstname": "Florian",
-      "lastname": "Szarota",
-      "birthdate": "1986-04-23T00:00:00.000Z",
-      "salary": -20,
-      "fucker": "true",
+      "id": "1707055874092",
+      "firstname": "Maria",
+      "lastname": "Siekieratka",
+      "birthdate": "1991-12-27T00:00:00.000Z",
+      "salary": -490,
+      "fucker": "false",
       "status": "weak",
       "sucker": "false"
     },
     {
-      "id": "1707040454753",
-      "firstname": "Maria",
-      "lastname": "Bomba",
-      "birthdate": "1979-03-23T00:00:00.000Z",
-      "salary": 12,
-      "fucker": "true",
+      "id": "1707056282740",
+      "firstname": "Florian",
+      "lastname": "Szarota",
+      "birthdate": "1983-07-13T00:00:00.000Z",
+      "salary": 998,
+      "fucker": "false",
       "status": "weak",
       "sucker": "false"
+    },
+    {
+      "id": "1707056320753",
+      "firstname": "Bąk",
+      "lastname": "Koterski",
+      "birthdate": "1997-03-23T00:00:00.000Z",
+      "salary": 10567,
+      "fucker": "false",
+      "status": "weak",
+      "sucker": "true"
+    },
+    {
+      "id": "1707056454149",
+      "firstname": "Florian",
+      "lastname": "Musiał",
+      "birthdate": "1992-09-17T00:00:00.000Z",
+      "salary": 8000,
+      "fucker": "false",
+      "status": "weak",
+      "sucker": "true"
     }
   ]
 }

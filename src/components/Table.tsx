@@ -102,16 +102,7 @@ export const Table = (props: { data: Employee[] }) => {
 
   const onClickHandler03 = (event: MouseEvent<HTMLButtonElement>):void => {
     event.preventDefault();
-    let variable = showcaseOpen;
-    if (variable === false) {
       $showcase.style.display = 'block';
-      variable = true;
-    }
-    else {
-      $showcase.style.display = 'none';
-      variable = false;
-    }
-    setShowcaseOpen(variable);
   };
 
   const sortAsc = (a: Employee, b: Employee, key: keyof Employee): number => {
@@ -190,6 +181,7 @@ export const Table = (props: { data: Employee[] }) => {
         dataset={filtereddata}
         item={filtereddata[0]}
         hook={setFiltereddata}
+        element={$showcase}
       />
       <table className="table">
         <thead className="thead">
