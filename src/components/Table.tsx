@@ -32,7 +32,7 @@ export const Table = (props: { data: Employee[] }) => {
   const [filtereddata, setFiltereddata] = useState(props.data);
   const [sortDirection, setSortDirection] = useState<string>("default");
   const [sortBy, setSortBy] = useState<string>("none");
-  const [showcaseOpen, setShowcaseOpen] = useState<boolean>(false);
+  const [currentGuy, setCurrentGuy] = useState<Employee>(filtereddata[0]);
 
   const renderStatus = (status: EmployeeStatus): string => {
     switch (status) {
@@ -100,9 +100,10 @@ export const Table = (props: { data: Employee[] }) => {
   const $showcase = document.querySelector(".questionmodal");
   console.log($showcase);
 
-  const onClickHandler03 = (event: MouseEvent<HTMLButtonElement>):void => {
+  const onClickHandler03 = (event: MouseEvent<HTMLButtonElement>, guyToDelete:Employee):void => {
     event.preventDefault();
       $showcase.style.display = 'block';
+      setCurrentGuy(guyToDelete)
   };
 
   const sortAsc = (a: Employee, b: Employee, key: keyof Employee): number => {
@@ -179,7 +180,7 @@ export const Table = (props: { data: Employee[] }) => {
       <QuestionModal
         className={"questionmodal"}
         dataset={filtereddata}
-        item={filtereddata[0]}
+        item={currentGuy}
         hook={setFiltereddata}
         element={$showcase}
       />
@@ -227,7 +228,7 @@ export const Table = (props: { data: Employee[] }) => {
                   >
                     Edit
                   </button>
-                  <button onClick={(event) => onClickHandler03(event)}>
+                  <button onClick={(event) => onClickHandler03(event, employee)}>
                     Remove
                   </button>
                 </td>
