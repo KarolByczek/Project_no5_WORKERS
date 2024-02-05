@@ -1,4 +1,5 @@
 //import { ReactNode } from "react";
+
 import { Employee } from "./Table";
 
 export const QuestionModal = (props: {
@@ -31,8 +32,9 @@ export const QuestionModal = (props: {
     });
 
     props.hook([...filteredonceagain]);
-
+    window.location.reload();
     props.element.style.display = "none";
+
   };
 
   return (

@@ -130,7 +130,7 @@ export const Table = (props: { data: Employee[] }) => {
     key: keyof Employee
   ): void => {
     event.preventDefault();
-    let sortedData = filtereddata;
+    let sortedData = [...filtereddata];
     let tempsortdir = sortDirection;
 
     if (key !== sortBy) {

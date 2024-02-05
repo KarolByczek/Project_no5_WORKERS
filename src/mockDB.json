@@ -11,24 +11,24 @@
       "sucker": "false"
     },
     {
-      "id": "1707131296209",
-      "firstname": "Florian",
-      "lastname": "Siekieratka",
-      "birthdate": "1976-04-23T00:00:00.000Z",
-      "salary": -7,
+      "id": "1707144016538",
+      "firstname": "Maria",
+      "lastname": "Nowak",
+      "birthdate": "1996-04-23T00:00:00.000Z",
+      "salary": -14,
       "fucker": "true",
       "status": "weak",
       "sucker": "false"
     },
     {
-      "id": "1707131310124",
-      "firstname": "Arleta",
-      "lastname": "Nowak",
-      "birthdate": "1996-04-23T00:00:00.000Z",
-      "salary": -9,
-      "fucker": "true",
-      "status": "weak",
-      "sucker": "false"
+      "id": "1707144054940",
+      "firstname": "Bąk",
+      "lastname": "Musiał",
+      "birthdate": "1976-04-23T00:00:00.000Z",
+      "salary": 1266,
+      "fucker": "false",
+      "status": "medium",
+      "sucker": "true"
     }
   ]
 }
