@@ -32,7 +32,7 @@ export const Table = (props: { data: Employee[] }) => {
   const [filtereddata, setFiltereddata] = useState(props.data);
   const [sortDirection, setSortDirection] = useState<string>("default");
   const [sortBy, setSortBy] = useState<string>("none");
-  const [currentGuy, setCurrentGuy] = useState<Employee>(filtereddata[0]);
+  const [currentGuy, setCurrentGuy] = useState<Employee>(props.data[0]);
 
   const renderStatus = (status: EmployeeStatus): string => {
     switch (status) {
@@ -97,8 +97,7 @@ export const Table = (props: { data: Employee[] }) => {
     navigate("/edit_page", { state: item });
   };
 
-  const $showcase = document.querySelector(".questionmodal");
-  console.log($showcase);
+  const $showcase:any = document.querySelector(".questionmodal");
 
   const onClickHandler03 = (event: MouseEvent<HTMLButtonElement>, guyToDelete:Employee):void => {
     event.preventDefault();
@@ -131,7 +130,7 @@ export const Table = (props: { data: Employee[] }) => {
     key: keyof Employee
   ): void => {
     event.preventDefault();
-    let sortedData = [...filtereddata];
+    let sortedData = filtereddata;
     let tempsortdir = sortDirection;
 
     if (key !== sortBy) {

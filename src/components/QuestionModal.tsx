@@ -6,12 +6,11 @@ export const QuestionModal = (props: {
   item: Employee;
   className: string;
   hook: Function;
-  element: Element | null;
+  element: any;
 }) => {
-  //const [state, setState] = useState<Employee[]>([]);
-  const $showcase: Element | null = document.querySelector(props.className);
 
   const onClickButton01 = () => {
+
     fetch(`http://localhost:3000/employees/${props.item.id}`, {
       method: "DELETE",
       body: JSON.stringify(props.item),
