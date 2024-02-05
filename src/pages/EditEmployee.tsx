@@ -2,6 +2,11 @@ import React, { useState } from "react";
 import { Employee, EmployeeStatus } from "../components/Table";
 import { useLocation, useNavigate } from "react-router-dom";
 
+export interface SelectOptions {
+  value: string,
+  label: string
+}
+
 export function EditEmployee() {
     const location = useLocation();
     const navigate = useNavigate()
@@ -14,6 +19,11 @@ export function EditEmployee() {
     const [inputValue5, setInputValue5] = useState<string>(data.fucker.toString());
     const [inputValue6, setInputValue6] = useState<string>(data.sucker.toString())
     
+const selectOptions:SelectOptions[] = [
+  {value: 'weak', label: 'weak'},
+  {value: 'medium', label: 'medium'},
+  {value: 'strong', label: 'strong'}
+]
 
   const makeEmployee = (formdata: FormData):Employee => {
     return {
@@ -52,7 +62,7 @@ export function EditEmployee() {
     console.log('The employee data has been edited')
   };
 
-
+//DRY!!
   return (
     <div>
       <h3>EDIT EMPLOYEE DATA:</h3>
@@ -71,7 +81,12 @@ export function EditEmployee() {
         </label>
         <label htmlFor="status">
           Status:
-          <input name="status" type="text" onChange={(event) => setInputValue3(event.target.value)} value={inputValue3} />
+          <select name="status" id="status">
+            {selectOptions.map((option) => {
+              return (
+              <option key={option.value} value={option.value} selected={inputValue3 === option.label}>{option.label}</option>
+            )})}
+          </select>
         </label>
         <label htmlFor="birthdate">
           Birthdate:

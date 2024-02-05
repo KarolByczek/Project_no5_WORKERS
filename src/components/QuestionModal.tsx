@@ -27,11 +27,11 @@ export const QuestionModal = (props: {
       .then(() => console.log("The employee data has been deleted"))
       .catch((err) => console.error(err));
 
-    const filteredonceagain = props.dataset.filter((one) => {
-      return one !== props.item;
-    });
+    //const filteredonceagain = props.dataset.filter((one) => {
+      //return one !== props.item;
+    //});
 
-    props.hook([...filteredonceagain]);
+    //props.hook([...filteredonceagain]);
     window.location.reload();
     props.element.style.display = "none";
   };
