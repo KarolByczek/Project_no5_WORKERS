@@ -175,7 +175,7 @@ export const Table = (props: { data: Employee[] }) => {
       <div className="searchbar">
         {t("search_for")}
         <input
-          placeholder="Type any employee data..."
+          placeholder={t('search_placeholder')}
           type="search"
           onKeyUp={onChangeHandler}
         /><span> </span>

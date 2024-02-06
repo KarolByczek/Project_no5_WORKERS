@@ -7,7 +7,7 @@
       "birthdate": "1976-04-22T23:00:00.000Z",
       "salary": "11",
       "fucker": "true",
-      "status": "medium",
+      "status": "strong",
       "sucker": "false"
     },
     {
@@ -29,6 +29,26 @@
       "fucker": "true",
       "status": "weak",
       "sucker": "true"
+    },
+    {
+      "id": "1707224968687",
+      "firstname": "Bąk",
+      "lastname": "Musiał",
+      "birthdate": "2000-01-23T00:00:00.000Z",
+      "salary": -1288,
+      "fucker": "false",
+      "status": "weak",
+      "sucker": "true"
+    },
+    {
+      "id": "1707225002833",
+      "firstname": "Aron",
+      "lastname": "Blitzkrieg",
+      "birthdate": "1972-03-21T00:00:00.000Z",
+      "salary": 3400,
+      "fucker": "true",
+      "status": "weak",
+      "sucker": "false"
     }
   ]
 }

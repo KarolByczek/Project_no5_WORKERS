@@ -21,7 +21,8 @@ const resources = {
             yes: "YES",
             cancellation: "CANCEL",
             employee_result_one: "{{count}} employee.",
-            employee_result_other: "{{count}} employees."   
+            employee_result_other: "{{count}} employees.",
+            search_placeholder: "Type any employee data..."   
         }
     },
     pl: {
@@ -30,7 +31,7 @@ const resources = {
             search_for: "SZUKAJ:",
             first_name: "Imię",
             last_name: "Nazwisko",
-            salary: "Płaca",
+            salary: "Wynagrodzenie",
             status: "Status",
             birthdate: "Data Urodzin",
             details: "Szczegóły",
@@ -43,7 +44,8 @@ const resources = {
             yes: "TAK",
             cancellation: "ANULUJ",
             employee_result_one: "{{count}} pracownika.",
-            employee_result_other: "{{count}} pracowników."
+            employee_result_other: "{{count}} pracowników.",
+            search_placeholder: "Wpisz dowolne dane pracownika..."
         }
     },
     de: {
@@ -60,12 +62,13 @@ const resources = {
             remove: "Entfernen",
             add_a_new: "HINFÜGEN EINE NEUE MITARBEITER ZU",
             sorted_by: "SORTIEREN NACH:",
-            sorting_direction: "SORTIERUNG RICHTUNG",
+            sorting_direction: "SORTIERUNG RICHTUNG:,",
             confirmation: "Sind Sie sicher Sie mochten dieser Mitarbeiter entfernen?",
             yes: "JA",
             cancellation: "ANULIEREN",
             employee_result_one: "{{count}} mitarbeiter.",
-            employee_result_other: "{{count}} mitarbeitern."
+            employee_result_other: "{{count}} mitarbeitern.",
+            search_placeholder: "Schreiben Sie einen info von einer mitarbeiter..."
 
         }
     }
@@ -73,7 +76,7 @@ const resources = {
 
 i18n.use(initReactI18next).init({
     resources,
-    lng: "de",
+    lng: "pl",
     fallbackLng: "en"
 })
 
