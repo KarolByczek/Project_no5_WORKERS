@@ -2,6 +2,7 @@ import React from "react";
 import { MouseEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { QuestionModal } from "./QuestionModal";
+import { useTranslation } from "react-i18next";
 
 export type EmployeeStatus = "weak" | "strong" | "medium";
 
@@ -29,6 +30,8 @@ export interface Employee {
 
 export const Table = (props: { data: Employee[] }) => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
+  const $showcase: any = document.querySelector(".questionmodal");
   const [filtereddata, setFiltereddata] = useState(props.data);
   const [sortDirection, setSortDirection] = useState<string>("default");
   const [sortBy, setSortBy] = useState<string>("none");
@@ -97,12 +100,13 @@ export const Table = (props: { data: Employee[] }) => {
     navigate("/edit_page", { state: item });
   };
 
-  const $showcase:any = document.querySelector(".questionmodal");
-
-  const onClickHandler03 = (event: MouseEvent<HTMLButtonElement>, guyToDelete:Employee):void => {
+  const onClickHandler03 = (
+    event: MouseEvent<HTMLButtonElement>,
+    guyToDelete: Employee
+  ): void => {
     event.preventDefault();
-      $showcase.style.display = 'block';
-      setCurrentGuy(guyToDelete)
+    $showcase.style.display = "block";
+    setCurrentGuy(guyToDelete);
   };
 
   const sortAsc = (a: Employee, b: Employee, key: keyof Employee): number => {
@@ -169,12 +173,13 @@ export const Table = (props: { data: Employee[] }) => {
   return (
     <>
       <div className="searchbar">
-        SEARCH FOR:
+        {t("search_for")}
         <input
           placeholder="Type any employee data..."
           type="search"
           onKeyUp={onChangeHandler}
-        />
+        /><span> </span>
+        {t("employee_result", {count: filtereddata.length})}
       </div>
       <QuestionModal
         className={"questionmodal"}
@@ -190,21 +195,26 @@ export const Table = (props: { data: Employee[] }) => {
             <th
               onClick={(event) => handleHeaderColumnClick(event, "firstname")}
             >
-              First Name{showArrow("firstname")}
+              {t("first_name")}
+              {showArrow("firstname")}
             </th>
             <th onClick={(event) => handleHeaderColumnClick(event, "lastname")}>
-              Last Name{showArrow("lastname")}
+              {t("last_name")}
+              {showArrow("lastname")}
             </th>
             <th onClick={(event) => handleHeaderColumnClick(event, "salary")}>
-              Salary{showArrow("salary")}
+              {t("salary")}
+              {showArrow("salary")}
             </th>
             <th onClick={(event) => handleHeaderColumnClick(event, "status")}>
-              Status{showArrow("status")}
+              {t("status")}
+              {showArrow("status")}
             </th>
             <th
               onClick={(event) => handleHeaderColumnClick(event, "birthdate")}
             >
-              Birthdate{showArrow("birthdate")}
+              {t("birthdate")}
+              {showArrow("birthdate")}
             </th>
           </tr>
         </thead>
@@ -220,15 +230,17 @@ export const Table = (props: { data: Employee[] }) => {
                 <td>{new Date(employee.birthdate).toLocaleDateString()}</td>
                 <td className="buttons">
                   <button onClick={(event) => onClickHandler(event, employee)}>
-                    Details
+                    {t("details")}
                   </button>
                   <button
                     onClick={(event) => onClickHandler02(event, employee)}
                   >
-                    Edit
+                    {t("edit")}
                   </button>
-                  <button onClick={(event) => onClickHandler03(event, employee)}>
-                    Remove
+                  <button
+                    onClick={(event) => onClickHandler03(event, employee)}
+                  >
+                    {t("remove")}
                   </button>
                 </td>
               </tr>
@@ -237,8 +249,12 @@ export const Table = (props: { data: Employee[] }) => {
         </tbody>
       </table>
       <div>
-        <p>SORTED BY: {sortBy}</p>
-        <p>SORTING DIRECTION: {sortDirection}</p>
+        <p>
+          {t("sorted_by")} {sortBy}
+        </p>
+        <p>
+          {t("sorting_direction")} {sortDirection}
+        </p>
       </div>
     </>
   );

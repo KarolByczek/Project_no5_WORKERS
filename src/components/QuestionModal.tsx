@@ -1,5 +1,6 @@
 //import { ReactNode } from "react";
 
+import { useTranslation } from "react-i18next";
 import { Employee } from "./Table";
 
 export const QuestionModal = (props: {
@@ -9,6 +10,8 @@ export const QuestionModal = (props: {
   hook: Function;
   element: any;
 }) => {
+
+  const { t } = useTranslation();
 
   const onClickButton01 = () => {
 
@@ -32,21 +35,21 @@ export const QuestionModal = (props: {
     //});
 
     //props.hook([...filteredonceagain]);
-    window.location.reload();
+    document.location.reload();
     props.element.style.display = "none";
   };
 
   return (
     <div className={props.className}>
       <div>
-        You really wanna do this?
-        <button onClick={onClickButton01}>Yes</button>
+        {t('confirmation')}
+        <button onClick={onClickButton01}>{t('yes')}</button>
         <button
           onClick={() => {
             props.element.style.display = "none";
           }}
         >
-          Cancel
+          {t('cancellation')}
         </button>
       </div>
     </div>

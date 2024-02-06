@@ -17,28 +17,18 @@
       "birthdate": "1996-04-22T22:00:00.000Z",
       "salary": "-14",
       "fucker": "true",
-      "status": "strong",
+      "status": "medium",
       "sucker": "false"
     },
     {
-      "id": "1707144288592",
-      "firstname": "Masza",
-      "lastname": "Bomba",
-      "birthdate": "1986-04-22T22:00:00.000Z",
-      "salary": "15",
+      "id": "1707152234790",
+      "firstname": "Misiu",
+      "lastname": "Koterski",
+      "birthdate": "1996-04-23T00:00:00.000Z",
+      "salary": 14,
       "fucker": "true",
       "status": "weak",
-      "sucker": "false"
-    },
-    {
-      "id": "1707147352104",
-      "firstname": "Florian",
-      "lastname": "Musiał",
-      "birthdate": "1996-04-22T22:00:00.000Z",
-      "salary": "-17",
-      "fucker": "true",
-      "status": "weak",
-      "sucker": "false"
+      "sucker": "true"
     }
   ]
 }
