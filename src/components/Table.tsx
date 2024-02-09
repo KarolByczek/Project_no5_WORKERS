@@ -17,6 +17,7 @@ export interface Employee {
   sucker: boolean;
 }
 
+
 /*export interface EmployeesDTO {
   id: string,
   firstname: string,
@@ -36,6 +37,7 @@ export const Table = (props: { data: Employee[] }) => {
   const [sortDirection, setSortDirection] = useState<string>("default");
   const [sortBy, setSortBy] = useState<string>("none");
   const [currentGuy, setCurrentGuy] = useState<Employee>(props.data[0]);
+
 
   const renderStatus = (status: EmployeeStatus): string => {
     switch (status) {

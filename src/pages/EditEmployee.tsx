@@ -66,7 +66,7 @@ const selectOptions:SelectOptions[] = [
   return (
     <div>
       <h3>EDIT EMPLOYEE DATA:</h3>
-      <form className="add_employee_form" onSubmit={handleEdit}>
+      <form className="edit_employee_form" onSubmit={handleEdit}>
         <label htmlFor="firstname">
           First Name:
           <input name="firstname" type="text" onChange={(event) => setInputValue0(event.target.value)} value={inputValue0} />
