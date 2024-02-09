@@ -86,9 +86,25 @@ margin-left: 1rem;
 }
 
 .edit_employee_form {
+  margin-top: 2rem;
+  height: 56vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
+  align-self: end;
   flex-wrap: wrap;
   gap: 3rem;
+}
+
+.edit_employee_form label {
+  width: 22%;
+  display: flex;
+  justify-content: end;
+  gap: 0.5rem;
+}
+
+.edit_employee_form button {
+  background-color: blueviolet;
+  padding: 1rem;
 }
