@@ -18,7 +18,7 @@ export const DetailModal = () => {
 
   return (
     <div className="detail_container">
-      <div className="detail_header">DETAILS:</div>
+      <h1>DETAILS:</h1>
       <div className="detail_records">
         <label htmlFor="lastname">
           Lastname:

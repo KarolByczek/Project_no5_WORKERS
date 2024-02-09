@@ -5,7 +5,7 @@
       "firstname": "Bąk",
       "lastname": "Musiał",
       "birthdate": "2000-01-22T23:00:00.000Z",
-      "salary": "-1288",
+      "salary": "1288",
       "fucker": "false",
       "status": "weak",
       "sucker": "true"
@@ -17,8 +17,8 @@
       "birthdate": "1972-04-25T23:00:00.000Z",
       "salary": "3400",
       "fucker": "true",
-      "status": "weak",
-      "sucker": "false"
+      "status": "medium",
+      "sucker": "true"
     },
     {
       "id": "1707490330000",
@@ -44,10 +44,10 @@
       "id": "1707505751798",
       "firstname": "Florian",
       "lastname": "Musiał",
-      "birthdate": "1986-04-23T00:00:00.000Z",
-      "salary": -955,
+      "birthdate": "1986-04-22T22:00:00.000Z",
+      "salary": "-955",
       "fucker": "true",
-      "status": "weak",
+      "status": "medium",
       "sucker": "false"
     }
   ]

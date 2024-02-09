@@ -108,3 +108,38 @@ margin-left: 1rem;
   background-color: blueviolet;
   padding: 1rem;
 }
+
+.detail_container {
+  margin-top: 2rem;
+  height: 56vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  
+}
+
+.detail_container label {
+  font-weight: bold;
+  font-size: large;
+  align-items: center;
+}
+
+.detail_container input {
+  border: 0.2rem solid red;
+  background-color: black;
+  color: aliceblue;
+  font-weight: bold;
+  font-size: large;
+  text-align: center;
+}
+
+.add_employee_form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  gap: 0.5rem;
+}
