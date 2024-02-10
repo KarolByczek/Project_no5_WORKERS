@@ -49,6 +49,16 @@
       "fucker": "true",
       "status": "medium",
       "sucker": "false"
+    },
+    {
+      "id": "1707559912316",
+      "firstname": "Maria",
+      "lastname": "Bomba",
+      "birthdate": "1996-04-23T00:00:00.000Z",
+      "salary": 9555,
+      "fucker": "false",
+      "status": "weak",
+      "sucker": "false"
     }
   ]
 }

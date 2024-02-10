@@ -29,6 +29,8 @@ export interface Employee {
   sucker: string
 }*/
 
+
+
 export const Table = (props: { data: Employee[] }) => {
   const navigate = useNavigate();
   const { t } = useTranslation();
