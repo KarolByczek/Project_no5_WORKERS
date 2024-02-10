@@ -151,4 +151,15 @@ margin-left: 1rem;
   padding: 0.5rem;
   border: 0.2rem solid black;
   border-radius: 0.3rem;
+  transition: all 0.3s;
+}
+
+.detail_modal_return:hover {
+  border: 0.2rem solid bisque;
+}
+
+@media screen and (max-width: 580px) {
+  .tablerow .buttons {
+    display: none;
+  }
 }
