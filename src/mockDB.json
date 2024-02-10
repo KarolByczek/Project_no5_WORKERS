@@ -43,9 +43,9 @@
     {
       "id": "1707559912316",
       "firstname": "Maria",
-      "lastname": "Bomba",
-      "birthdate": "1996-04-23T00:00:00.000Z",
-      "salary": 9555,
+      "lastname": "Bombiec",
+      "birthdate": "1996-06-22T22:00:00.000Z",
+      "salary": "9555",
       "fucker": "false",
       "status": "weak",
       "sucker": "false"
@@ -59,6 +59,16 @@
       "fucker": "false",
       "status": "weak",
       "sucker": "true"
+    },
+    {
+      "id": "1707570136397",
+      "firstname": "Masza",
+      "lastname": "Nowak",
+      "birthdate": "1976-04-23T00:00:00.000Z",
+      "salary": 3666,
+      "fucker": "false",
+      "status": "weak",
+      "sucker": "false"
     }
   ]
 }

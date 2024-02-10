@@ -1,5 +1,5 @@
 //import React from 'react'
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Employee } from "../components/Table";
 import "../index.css";
 
@@ -18,6 +18,7 @@ export const DetailModal = () => {
 
   return (
     <div className="detail_container">
+      <Link className='detail_modal_return' to={'/'}>RETURN TO HOME PAGE</Link>
       <h1>DETAILS:</h1>
       <div className="detail_records">
         <label htmlFor="lastname">
