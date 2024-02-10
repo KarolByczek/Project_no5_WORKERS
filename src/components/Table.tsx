@@ -35,7 +35,8 @@ export const Table = (props: { data: Employee[] }) => {
   const navigate = useNavigate();
   const { t } = useTranslation();
   const $showcase: any = document.querySelector(".questionmodal");
-  const [filtereddata, setFiltereddata] = useState(props.data);
+  const [filtereddata, setFiltereddata] = useState<Employee[]>(props.data);
+  const [filtereddataForSorting, setFiltereddataForSorting] = useState<Employee[]>(props.data);
   const [sortDirection, setSortDirection] = useState<string>("default");
   const [sortBy, setSortBy] = useState<string>("none");
   const [currentGuy, setCurrentGuy] = useState<Employee>(props.data[0]);
@@ -86,6 +87,7 @@ export const Table = (props: { data: Employee[] }) => {
       );
     });
     setFiltereddata(data01);
+    setFiltereddataForSorting(data01)
   };
 
   const onClickHandler = (
@@ -138,7 +140,7 @@ export const Table = (props: { data: Employee[] }) => {
     key: keyof Employee
   ): void => {
     event.preventDefault();
-    let sortedData = [...filtereddata];
+    let sortedData = [...filtereddataForSorting];
     let tempsortdir = sortDirection;
 
     if (key !== sortBy) {
@@ -152,7 +154,7 @@ export const Table = (props: { data: Employee[] }) => {
       sortedData = sortedData.sort((a, b) => sortDesc(a, b, key));
       tempsortdir = "descending";
     } else {
-      sortedData = props.data;
+      sortedData = [...filtereddataForSorting];
       tempsortdir = "default";
     }
     setFiltereddata([...sortedData]);

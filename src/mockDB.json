@@ -11,16 +11,6 @@
       "sucker": "true"
     },
     {
-      "id": "1707225002833",
-      "firstname": "Aron",
-      "lastname": "Blitzkrieg",
-      "birthdate": "1972-04-25T23:00:00.000Z",
-      "salary": "3400",
-      "fucker": "true",
-      "status": "medium",
-      "sucker": "true"
-    },
-    {
       "id": "1707490330000",
       "firstname": "Bąk",
       "lastname": "Musiał",
@@ -59,6 +49,16 @@
       "fucker": "false",
       "status": "weak",
       "sucker": "false"
+    },
+    {
+      "id": "1707561341611",
+      "firstname": "Florian",
+      "lastname": "Nowak",
+      "birthdate": "1996-04-23T00:00:00.000Z",
+      "salary": -11,
+      "fucker": "false",
+      "status": "weak",
+      "sucker": "true"
     }
   ]
 }

@@ -80,10 +80,6 @@ margin-left: 1rem;
   padding: 6rem 2rem 0 2rem;
 }
 
-.questionmodal .active {
-  color: blue;
-  font-size: large;
-}
 
 .edit_employee_form {
   margin-top: 2rem;
