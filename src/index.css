@@ -159,13 +159,25 @@ margin-left: 1rem;
 }
 
 @media screen and (max-width: 580px) {
+
+
   .tablerow {
     display: flex;
     flex-direction: column;
+    padding: 1rem;
+    margin-top: 1rem;
   }
 
   .tablerow td {
     width: 80vw;
+    font-size: larger;
+    padding: 0;
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .tablerow td span {
+    display: flex;
   }
 
   .thead {

@@ -228,12 +228,12 @@ export const Table = (props: { data: Employee[] }) => {
           {filtereddata.map((employee) => {
             return (
               <tr key={employee.id} className="tablerow">
-                <td>{employee.id}</td>
-                <td>{employee.firstname}</td>
-                <td>{employee.lastname}</td>
-                <td>{employee.salary}</td>
-                <td>{renderStatus(employee.status)}</td>
-                <td>{new Date(employee.birthdate).toLocaleDateString()}</td>
+                <td><span>ID:</span>{employee.id}</td>
+                <td><span>Firstname:</span>{employee.firstname}</td>
+                <td><span>Lastname:</span>{employee.lastname}</td>
+                <td><span>Salary:</span>{employee.salary}</td>
+                <td><span>Status:</span>{renderStatus(employee.status)}</td>
+                <td><span>Birthdate:</span>{new Date(employee.birthdate).toLocaleDateString()}</td>
                 <td className="buttons">
                   <button onClick={(event) => onClickHandler(event, employee)}>
                     {t("details")}

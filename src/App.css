@@ -28,6 +28,10 @@
   border-radius: 0.5rem;
 }
 
+.tablerow td span {
+  display: none;
+}
+
 .tablerow:hover {
   background-color: blue;
   cursor: pointer;

@@ -24,8 +24,8 @@
       "id": "1707561341611",
       "firstname": "Florian",
       "lastname": "Nowak",
-      "birthdate": "1996-04-23T00:00:00.000Z",
-      "salary": -11,
+      "birthdate": "1996-04-22T22:00:00.000Z",
+      "salary": "-11",
       "fucker": "false",
       "status": "weak",
       "sucker": "true"
