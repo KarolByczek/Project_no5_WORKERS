@@ -164,7 +164,17 @@ margin-left: 1rem;
     flex-direction: column;
   }
 
+  .tablerow td {
+    width: 80vw;
+  }
+
   .thead {
     display: none;
   }
+
+  .add_employee_link {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
 }
