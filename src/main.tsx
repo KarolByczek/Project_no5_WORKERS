@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import HomePage from './HomePage.tsx';
-import './index.css';
+import './index.scss';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { DetailModal } from './pages/DetailModal.tsx';
 import { AddEmployee } from './pages/AddEmployee.tsx';
