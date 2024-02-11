@@ -159,7 +159,12 @@ margin-left: 1rem;
 }
 
 @media screen and (max-width: 580px) {
-  .tablerow .buttons {
+  .tablerow {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .thead {
     display: none;
   }
 }
