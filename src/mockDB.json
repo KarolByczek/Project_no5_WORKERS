@@ -27,7 +27,7 @@
       "birthdate": "1996-04-22T22:00:00.000Z",
       "salary": "-11",
       "fucker": "false",
-      "status": "weak",
+      "status": "strong",
       "sucker": "true"
     },
     {
@@ -37,7 +37,7 @@
       "birthdate": "1976-04-22T23:00:00.000Z",
       "salary": "3666",
       "fucker": "false",
-      "status": "weak",
+      "status": "medium",
       "sucker": "false"
     },
     {
@@ -46,6 +46,16 @@
       "lastname": "Siekieratka",
       "birthdate": "1976-04-23T00:00:00.000Z",
       "salary": -117,
+      "fucker": "true",
+      "status": "weak",
+      "sucker": "false"
+    },
+    {
+      "id": "1708022251123",
+      "firstname": "Arleta",
+      "lastname": "Siekieratka",
+      "birthdate": "2000-06-23T00:00:00.000Z",
+      "salary": 877,
       "fucker": "true",
       "status": "weak",
       "sucker": "false"
