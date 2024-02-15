@@ -59,6 +59,26 @@
       "fucker": "true",
       "status": "weak",
       "sucker": "false"
+    },
+    {
+      "id": "1708022344530",
+      "firstname": "Maria",
+      "lastname": "Koterski",
+      "birthdate": "1996-04-22T22:00:00.000Z",
+      "salary": "7667",
+      "fucker": "true",
+      "status": "medium",
+      "sucker": "false"
+    },
+    {
+      "id": "1708023842516",
+      "firstname": "Misiu",
+      "lastname": "Koterski",
+      "birthdate": "1976-04-23T00:00:00.000Z",
+      "salary": 477,
+      "fucker": "true",
+      "status": "strong",
+      "sucker": "true"
     }
   ]
 }

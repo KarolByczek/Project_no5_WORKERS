@@ -6,7 +6,10 @@
 }
 
 body {
-  background-color: rgb(80, 147, 206);
+  background-color: rgb(136, 174, 161);
+  background-image: url("./assets/desert_one.jpg");
+  background-attachment: fixed;
+  background-size: 100vw auto;
   color: black;
   display: flex;
   flex-direction: column;

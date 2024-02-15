@@ -19,11 +19,11 @@ function HomePage() {
  
 
   return (
-    <>
+    <div className="main">
       <h1>{t('employees')}</h1>
       <Link className='add_employee_link' to='add_form'>{t('add_a_new')}</Link>
      { totalemployees.length > 0 ? <Table data={totalemployees} />: null}
-    </>
+    </div>
   );
 }
 
