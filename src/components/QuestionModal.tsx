@@ -30,13 +30,9 @@ export const QuestionModal = (props: {
       .then(() => console.log("The employee data has been deleted"))
       .catch((err) => console.error(err));
 
-    //const filteredonceagain = props.dataset.filter((one) => {
-      //return one !== props.item;
-    //});
-
-    //props.hook([...filteredonceagain]);
     document.location.reload();
     props.element.style.display = "none";
+    props.hook(props.dataset.filter(guy => guy != props.item))
   };
 
   return (

@@ -256,10 +256,10 @@ export const Table = (props: { data: Employee[] }) => {
       </table>
       <div>
         <p>
-          {t("sorted_by")} {sortBy}
+          <strong>{t("sorted_by")} {sortBy}</strong>
         </p>
         <p>
-          {t("sorting_direction")} {sortDirection}
+          <strong>{t("sorting_direction")} {sortDirection}</strong>
         </p>
       </div>
     </>
