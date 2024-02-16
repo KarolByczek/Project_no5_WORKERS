@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import { MouseEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { QuestionModal } from "./QuestionModal";
@@ -39,7 +39,7 @@ export const Table = (props: { data: Employee[] }) => {
   const [filtereddataForSorting, setFiltereddataForSorting] = useState<Employee[]>(props.data);
   const [sortDirection, setSortDirection] = useState<string>("default");
   const [sortBy, setSortBy] = useState<string>("none");
-  const [currentGuy, setCurrentGuy] = useState<Employee>(props.data[0]);
+  //const [currentGuy, setCurrentGuy] = useState<Employee>(props.data[0]);
 
 
   const renderStatus = (status: EmployeeStatus): string => {
@@ -109,10 +109,17 @@ export const Table = (props: { data: Employee[] }) => {
   const onClickHandler03 = (
     event: MouseEvent<HTMLButtonElement>,
     guyToDelete: Employee
-  ): void => {
+  ):ReactNode => {
     event.preventDefault();
-    $showcase.style.display = "block";
-    setCurrentGuy(guyToDelete);
+    return <QuestionModal
+    className={"questionmodal"}
+        dataset={filtereddata}
+        item={guyToDelete}
+        hook={setFiltereddata}
+        element={$showcase}
+    />;
+    //$showcase.style.display = "block";
+    //setCurrentGuy(guyToDelete);
   };
 
   const sortAsc = (a: Employee, b: Employee, key: keyof Employee): number => {
@@ -187,13 +194,6 @@ export const Table = (props: { data: Employee[] }) => {
         /><span> </span>
         {t("employee_result", {count: filtereddata.length})}
       </div>
-      <QuestionModal
-        className={"questionmodal"}
-        dataset={filtereddata}
-        item={currentGuy}
-        hook={setFiltereddata}
-        element={$showcase}
-      />
       <table className="table">
         <thead className="thead">
           <tr>

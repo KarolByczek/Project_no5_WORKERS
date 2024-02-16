@@ -39,6 +39,16 @@
       "fucker": "true",
       "status": "weak",
       "sucker": "true"
+    },
+    {
+      "id": "1708120430770",
+      "firstname": "Masza",
+      "lastname": "Musiał",
+      "birthdate": null,
+      "salary": -466,
+      "fucker": "true",
+      "status": "weak",
+      "sucker": "false"
     }
   ]
 }

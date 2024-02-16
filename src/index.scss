@@ -69,11 +69,10 @@ body {
   }
 
   .questionmodal {
-    display: none;
     position: absolute;
     background-color: bisque;
-    left: 40%;
-    top: 50%;
+    left: 0;
+    top: 0;
     height: 20%;
     z-index: 3;
     border: 0.5rem solid red;
