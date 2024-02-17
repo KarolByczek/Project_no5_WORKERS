@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import { MouseEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { QuestionModal } from "./QuestionModal";
@@ -34,12 +34,11 @@ export interface Employee {
 export const Table = (props: { data: Employee[] }) => {
   const navigate = useNavigate();
   const { t } = useTranslation();
-  const $showcase: any = document.querySelector(".questionmodal");
   const [filtereddata, setFiltereddata] = useState<Employee[]>(props.data);
   const [filtereddataForSorting, setFiltereddataForSorting] = useState<Employee[]>(props.data);
   const [sortDirection, setSortDirection] = useState<string>("default");
   const [sortBy, setSortBy] = useState<string>("none");
-  //const [currentGuy, setCurrentGuy] = useState<Employee>(props.data[0]);
+  const [isQuestModOn, setIsQuestModOn] = useState<boolean>(false);
 
 
   const renderStatus = (status: EmployeeStatus): string => {
@@ -107,17 +106,10 @@ export const Table = (props: { data: Employee[] }) => {
   };
 
   const onClickHandler03 = (
-    event: MouseEvent<HTMLButtonElement>,
-    guyToDelete: Employee
-  ):ReactNode => {
+    event: MouseEvent<HTMLButtonElement>
+  ):void => {
     event.preventDefault();
-    return <QuestionModal
-    className={"questionmodal"}
-        dataset={filtereddata}
-        item={guyToDelete}
-        hook={setFiltereddata}
-        element={$showcase}
-    />;
+    setIsQuestModOn(true);
     //$showcase.style.display = "block";
     //setCurrentGuy(guyToDelete);
   };
@@ -244,11 +236,18 @@ export const Table = (props: { data: Employee[] }) => {
                     {t("edit")}
                   </button>
                   <button
-                    onClick={(event) => onClickHandler03(event, employee)}
+                    onClick={(event) => onClickHandler03(event)}
                   >
                     {t("remove")}
                   </button>
                 </td>
+                {isQuestModOn === true ? <QuestionModal 
+                  dataset={filtereddata}
+                  className="question_modal"
+                  item={employee}
+                  hook01={setFiltereddata}
+                  hook02={setIsQuestModOn}
+                /> : null }
               </tr>
             );
           })}

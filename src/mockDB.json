@@ -11,16 +11,6 @@
       "sucker": "true"
     },
     {
-      "id": "1707559912316",
-      "firstname": "Maria",
-      "lastname": "Bombiec",
-      "birthdate": "1996-06-22T22:00:00.000Z",
-      "salary": "9555",
-      "fucker": "false",
-      "status": "strong",
-      "sucker": "false"
-    },
-    {
       "id": "1707570136397",
       "firstname": "Masza",
       "lastname": "Nowak",
@@ -31,21 +21,71 @@
       "sucker": "false"
     },
     {
-      "id": "1708120139082",
-      "firstname": "Maria",
-      "lastname": "Siekieratka",
-      "birthdate": "1976-04-23T00:00:00.000Z",
-      "salary": -7555,
-      "fucker": "true",
-      "status": "weak",
-      "sucker": "true"
-    },
-    {
       "id": "1708120430770",
       "firstname": "Masza",
       "lastname": "Musiał",
       "birthdate": null,
       "salary": -466,
+      "fucker": "true",
+      "status": "weak",
+      "sucker": "false"
+    },
+    {
+      "id": "1708165254736",
+      "firstname": "Florian",
+      "lastname": "Siekieratka",
+      "birthdate": "1976-04-23T00:00:00.000Z",
+      "salary": 344,
+      "fucker": "true",
+      "status": "weak",
+      "sucker": "false"
+    },
+    {
+      "id": "1708165268080",
+      "firstname": "Masza",
+      "lastname": "Bomba",
+      "birthdate": "1976-04-23T00:00:00.000Z",
+      "salary": -54525,
+      "fucker": "false",
+      "status": "weak",
+      "sucker": "true"
+    },
+    {
+      "id": "1708165316170",
+      "firstname": "Florian",
+      "lastname": "Bomba",
+      "birthdate": "1976-04-23T00:00:00.000Z",
+      "salary": 1432,
+      "fucker": "false",
+      "status": "weak",
+      "sucker": "false"
+    },
+    {
+      "id": "1708165331570",
+      "firstname": "Maria",
+      "lastname": "Koterski",
+      "birthdate": "1996-04-23T00:00:00.000Z",
+      "salary": -14432,
+      "fucker": "true",
+      "status": "weak",
+      "sucker": "false"
+    },
+    {
+      "id": "1708165345410",
+      "firstname": "Bąk",
+      "lastname": "Musiał",
+      "birthdate": "1986-04-23T00:00:00.000Z",
+      "salary": 42551,
+      "fucker": "false",
+      "status": "weak",
+      "sucker": "true"
+    },
+    {
+      "id": "1708165368418",
+      "firstname": "Arleta",
+      "lastname": "Siekieratka",
+      "birthdate": "1996-04-23T00:00:00.000Z",
+      "salary": 252626,
       "fucker": "true",
       "status": "weak",
       "sucker": "false"

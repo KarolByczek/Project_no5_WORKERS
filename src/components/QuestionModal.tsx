@@ -4,11 +4,11 @@ import { useTranslation } from "react-i18next";
 import { Employee } from "./Table";
 
 export const QuestionModal = (props: {
-  dataset: Employee[];
-  item: Employee;
-  className: string;
-  hook: Function;
-  element: any;
+  dataset: Employee[],
+  item: Employee,
+  className: string,
+  hook01: Function,
+  hook02: Function
 }) => {
 
   const { t } = useTranslation();
@@ -30,9 +30,8 @@ export const QuestionModal = (props: {
       .then(() => console.log("The employee data has been deleted"))
       .catch((err) => console.error(err));
 
-    document.location.reload();
-    props.element.style.display = "none";
-    props.hook(props.dataset.filter(guy => guy != props.item))
+    props.hook01(props.dataset.filter(guy => guy != props.item))
+    props.hook02(false);
   };
 
   return (
@@ -41,9 +40,7 @@ export const QuestionModal = (props: {
         {t('confirmation')}
         <button onClick={onClickButton01}>{t('yes')}</button>
         <button
-          onClick={() => {
-            props.element.style.display = "none";
-          }}
+          onClick={() => {props.hook02(false)}}
         >
           {t('cancellation')}
         </button>

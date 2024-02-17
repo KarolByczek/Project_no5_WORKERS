@@ -68,11 +68,11 @@ body {
     }
   }
 
-  .questionmodal {
-    position: absolute;
+  .question_modal {
+    position: fixed;
     background-color: bisque;
-    left: 0;
-    top: 0;
+    left: 30vw;
+    top: 30vh;
     height: 20%;
     z-index: 3;
     border: 0.5rem solid red;
