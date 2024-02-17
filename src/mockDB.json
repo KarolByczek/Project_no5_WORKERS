@@ -1,16 +1,6 @@
 {
   "employees": [
     {
-      "id": "1708120430770",
-      "firstname": "Masza",
-      "lastname": "Musiał",
-      "birthdate": null,
-      "salary": -466,
-      "fucker": "true",
-      "status": "weak",
-      "sucker": "false"
-    },
-    {
       "id": "1708165254736",
       "firstname": "Florian",
       "lastname": "Siekieratka",
@@ -47,6 +37,16 @@
       "birthdate": "1986-04-23T00:00:00.000Z",
       "salary": 42551,
       "fucker": "false",
+      "status": "weak",
+      "sucker": "true"
+    },
+    {
+      "id": "1708168735835",
+      "firstname": "Arleta",
+      "lastname": "Siekieratka",
+      "birthdate": "2000-01-23T00:00:00.000Z",
+      "salary": 2551,
+      "fucker": "true",
       "status": "weak",
       "sucker": "true"
     }
