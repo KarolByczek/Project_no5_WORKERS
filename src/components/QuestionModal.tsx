@@ -33,22 +33,25 @@ export const QuestionModal = (props: {
   };
 
   return (
-    <div className={props.className}>
-      {t("confirmation")}
-      <div>
-        {props.item.firstname} {props.item.lastname}, {t("birthdate")}: 
-        {props.item.birthdate.toString().substring(0, 10)}?
+    <div>
+    <div className="back_to_black"></div>
+      <div className={props.className}>
+        {t("confirmation")}
+        <div>
+          {props.item.firstname} {props.item.lastname}, {t("birthdate")}: {}
+          {props.item.birthdate.toString().substring(0, 10)}
+        </div>
+        <div className="modbuttons">
+          <button onClick={onClickButton01}>{t("yes")}</button>
+          <button
+            onClick={() => {
+              props.hook02(false);
+            }}
+          >
+            {t("cancellation")}
+          </button>
+        </div>
       </div>
-      <div className="modbuttons">
-        <button onClick={onClickButton01}>{t("yes")}</button>
-        <button
-          onClick={() => {
-            props.hook02(false);
-          }}
-        >
-          {t("cancellation")}
-        </button>
       </div>
-    </div>
   );
 };

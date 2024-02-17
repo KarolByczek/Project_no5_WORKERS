@@ -68,19 +68,31 @@ body {
     }
   }
 
+
+  .back_to_black {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: black;
+    opacity:  0.5;
+    z-index: 3;
+    cursor: default;
+  }
+
   .question_modal {
     position: fixed;
-    background-color: rgb(242, 125, 86);
     left: 30vw;
-    top: 35vh;
+    top: 30vh;
+    background-color: rgb(242, 125, 86);
     height: 20%;
-    z-index: 3;
+    z-index: 5;
     border: 0.5rem solid red;
     border-radius: 0.3rem;
     font-weight: bold;
-    padding: 6rem 2rem 0 2rem;
-    display: flex;
-    flex-direction: column;
+    padding: 3rem 2rem 0 2rem;
+    
     cursor: default;
 
     .modbuttons {
@@ -90,6 +102,10 @@ body {
 
       button {
         cursor: pointer;
+        padding: 0.7rem;
+        background-color: rgb(169, 56, 56);
+        border-radius: 0.5rem;
+        font-weight: bold;
       }
     }
   }
