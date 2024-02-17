@@ -39,6 +39,7 @@ export const Table = (props: { data: Employee[] }) => {
   const [sortDirection, setSortDirection] = useState<string>("default");
   const [sortBy, setSortBy] = useState<string>("none");
   const [isQuestModOn, setIsQuestModOn] = useState<boolean>(false);
+  const [currentGuy, setCurrentGuy] = useState<Employee>();
 
 
   const renderStatus = (status: EmployeeStatus): string => {
@@ -106,12 +107,12 @@ export const Table = (props: { data: Employee[] }) => {
   };
 
   const onClickHandler03 = (
-    event: MouseEvent<HTMLButtonElement>
+    event: MouseEvent<HTMLButtonElement>,
+    item: Employee
   ):void => {
     event.preventDefault();
     setIsQuestModOn(true);
-    //$showcase.style.display = "block";
-    //setCurrentGuy(guyToDelete);
+    setCurrentGuy(item);
   };
 
   const sortAsc = (a: Employee, b: Employee, key: keyof Employee): number => {
@@ -236,12 +237,12 @@ export const Table = (props: { data: Employee[] }) => {
                     {t("edit")}
                   </button>
                   <button
-                    onClick={(event) => onClickHandler03(event)}
+                    onClick={(event) => onClickHandler03(event, employee)}
                   >
                     {t("remove")}
                   </button>
                 </td>
-                {isQuestModOn === true ? <QuestionModal 
+                {isQuestModOn === true && employee === currentGuy ? <QuestionModal 
                   dataset={filtereddata}
                   className="question_modal"
                   item={employee}
