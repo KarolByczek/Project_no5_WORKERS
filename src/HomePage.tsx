@@ -1,7 +1,6 @@
 import { Table } from "./components/Table";
 import { Employee } from "./components/Table";
 //import 'bootstrap/dist/css/bootstrap.min.css'
-import "./App.scss";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";

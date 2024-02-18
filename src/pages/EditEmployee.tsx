@@ -64,7 +64,7 @@ const selectOptions:SelectOptions[] = [
 
 //DRY!!
   return (
-    <div>
+    <div id="edit_page">
       <h1>EDIT EMPLOYEE DATA:</h1>
       <form className="edit_employee_form" onSubmit={handleEdit}>
         <label htmlFor="firstname">
