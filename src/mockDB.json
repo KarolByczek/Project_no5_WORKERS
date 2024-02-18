@@ -7,7 +7,7 @@
       "birthdate": "1976-04-22T23:00:00.000Z",
       "salary": "344",
       "fucker": "true",
-      "status": "weak",
+      "status": "medium",
       "sucker": "false"
     },
     {
@@ -44,8 +44,8 @@
       "id": "1708168735835",
       "firstname": "Arleta",
       "lastname": "Siekieratka",
-      "birthdate": "2000-01-23T00:00:00.000Z",
-      "salary": 2551,
+      "birthdate": "2000-01-22T23:00:00.000Z",
+      "salary": "2551",
       "fucker": "true",
       "status": "weak",
       "sucker": "true"
@@ -54,8 +54,8 @@
       "id": "1708169882327",
       "firstname": "Bąk",
       "lastname": "Nowak",
-      "birthdate": "1976-04-23T00:00:00.000Z",
-      "salary": 1234,
+      "birthdate": "1976-04-22T23:00:00.000Z",
+      "salary": "1650",
       "fucker": "true",
       "status": "weak",
       "sucker": "true"

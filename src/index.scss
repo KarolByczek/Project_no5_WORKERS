@@ -118,25 +118,44 @@ body {
       justify-content: end;
       align-self: end;
       flex-wrap: wrap;
-      gap: 1rem;
+      gap: 0.5rem;
 
       label {
-        width: 24%;
+        display: flex;
+        align-items: center;
+        width: 25%;
         height: fit-content;
         display: flex;
         justify-content: end;
         gap: 0.5rem;
-        font-size: large;
+        font-size: larger;
+        padding: 0.9rem;
+
+        input,
+        select {
+          font-size: large;
+          padding: 0.5rem;
+          width: 50%;
+        }
       }
 
       button {
         position: relative;
-        top: 4rem;
-        right: 15rem;
-        background-color: blueviolet;
+        top: 2rem;
+        right: -2rem;
+        background-color: rgb(94, 180, 120);
+        border: 0.4rem solid green;
+        border-radius: 0.5rem;
         padding: 1rem;
+        cursor: pointer;
         height: fit-content;
+        font-weight: bold;
+        transition: all 0.3s;
       }
+      
+      button:hover {
+          border: 0.4rem solid rgb(139, 210, 139);
+        }
     }
   }
 
