@@ -4,8 +4,8 @@
       "id": "1708165254736",
       "firstname": "Florian",
       "lastname": "Siekieratka",
-      "birthdate": "1976-04-23T00:00:00.000Z",
-      "salary": 344,
+      "birthdate": "1976-04-22T23:00:00.000Z",
+      "salary": "344",
       "fucker": "true",
       "status": "weak",
       "sucker": "false"
@@ -64,18 +64,8 @@
       "id": "1708169898131",
       "firstname": "Misiu",
       "lastname": "Koterski",
-      "birthdate": "2000-01-23T00:00:00.000Z",
-      "salary": 10313,
-      "fucker": "true",
-      "status": "weak",
-      "sucker": "false"
-    },
-    {
-      "id": "1708183128051",
-      "firstname": "Florian",
-      "lastname": "Bomba",
-      "birthdate": "1986-04-23T00:00:00.000Z",
-      "salary": -3555,
+      "birthdate": "2000-01-22T23:00:00.000Z",
+      "salary": "10313",
       "fucker": "true",
       "status": "weak",
       "sucker": "false"

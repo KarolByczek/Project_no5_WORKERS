@@ -18,9 +18,8 @@ export const DetailModal = () => {
 
   return (
     <div className="detail_container">
-      <Link className='detail_modal_return' to={'/'}>RETURN TO HOME PAGE</Link>
-      <h1>DETAILS:</h1>
       <div className="detail_records">
+        <h1>DETAILS:</h1>
         <label htmlFor="lastname">
           Lastname:
           <input type="text" id="lastname" readOnly value={data.lastname} />
@@ -43,6 +42,7 @@ export const DetailModal = () => {
           <input type="text" id="sucker" readOnly value={`${data.sucker}`} />
         </label>
       </div>
+      <Link className='detail_modal_return' to={'/'}>RETURN TO HOME PAGE</Link>
     </div>
   );
 };
