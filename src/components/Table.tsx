@@ -21,7 +21,7 @@ export interface Employee {
 /*export interface EmployeesDTO {
   id: string,
   firstname: string,
-  lastname: string, poppppp
+  lastname: string,
   salary: number,
   status: EmployeeStatus,
   birthdate: string,
