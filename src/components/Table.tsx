@@ -22,7 +22,7 @@ export interface Employee {
   id: string,
   firstname: string,
   lastname: string,
-  salary: number,
+  salary: number, ppp
   status: EmployeeStatus,
   birthdate: string,
   fucker: string,
