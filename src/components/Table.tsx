@@ -1,7 +1,7 @@
 import React from "react";
 import { MouseEvent, useState } from "react";
 import { QuestionModal } from "./QuestionModal";
-import { useNavigate } from "@types/react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 export type EmployeeStatus = "weak" | "strong" | "medium";
