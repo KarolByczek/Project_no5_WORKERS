@@ -20,7 +20,7 @@ export interface Employee {
 
 /*export interface EmployeesDTO {
   id: string,
-  firstname: string,
+  firstname: string,[[[]]]
   lastname: string,
   salary: number,
   status: EmployeeStatus,
