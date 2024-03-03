@@ -40,7 +40,6 @@ const selectOptions:SelectOptions[] = [
 
   const handleEdit = (event: React.FormEvent) => {
     event.preventDefault();
-    //window.alert('Great Success! You have edited your employee data:)');
     const form = event.target as HTMLFormElement;
     const formdata = new FormData(form);
     const editedData = makeEmployee(formdata);
