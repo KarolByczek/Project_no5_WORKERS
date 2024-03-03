@@ -11,7 +11,7 @@ export interface Employee {
   firstname: string;
   lastname: string;
   salary: number;
-  status: EmployeeStatus;ppp
+  status: EmployeeStatus;
   birthdate: Date;
   fucker: boolean;
   sucker: boolean;
