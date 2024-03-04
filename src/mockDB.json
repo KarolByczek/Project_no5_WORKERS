@@ -24,19 +24,9 @@
       "id": "1708165345410",
       "firstname": "Bąk",
       "lastname": "Musiał",
-      "birthdate": "1986-04-23T00:00:00.000Z",
-      "salary": 42551,
+      "birthdate": "1986-04-22T22:00:00.000Z",
+      "salary": "42551",
       "fucker": "false",
-      "status": "weak",
-      "sucker": "true"
-    },
-    {
-      "id": "1708168735835",
-      "firstname": "Arleta",
-      "lastname": "Siekieratka",
-      "birthdate": "2000-01-22T23:00:00.000Z",
-      "salary": "2551",
-      "fucker": "true",
       "status": "weak",
       "sucker": "true"
     },
@@ -45,20 +35,10 @@
       "firstname": "Bąk",
       "lastname": "Nowak",
       "birthdate": "1976-04-22T23:00:00.000Z",
-      "salary": "1650",
+      "salary": "165",
       "fucker": "true",
       "status": "weak",
       "sucker": "true"
-    },
-    {
-      "id": "1708169898131",
-      "firstname": "Misiu",
-      "lastname": "Koterski",
-      "birthdate": "2001-01-22T23:00:00.000Z",
-      "salary": "10313",
-      "fucker": "true",
-      "status": "weak",
-      "sucker": "false"
     },
     {
       "id": "1708183143263",
@@ -69,6 +49,16 @@
       "fucker": "true",
       "status": "weak",
       "sucker": "true"
+    },
+    {
+      "id": "1709550439713",
+      "firstname": "Fred",
+      "lastname": "MIlestone",
+      "birthdate": "1993-03-23T00:00:00.000Z",
+      "salary": -5,
+      "fucker": "true",
+      "status": "weak",
+      "sucker": "false"
     }
   ]
 }
