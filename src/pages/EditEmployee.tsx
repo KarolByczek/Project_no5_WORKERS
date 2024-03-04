@@ -9,12 +9,11 @@ export interface SelectOptions {
 
 export function EditEmployee() {
     const location = useLocation();
-    const navigate = useNavigate()
+    const navigate = useNavigate();
     const data: Employee = location.state;
     const [inputValue0, setInputValue0] = useState<string>(data.firstname);
     const [inputValue1, setInputValue1] = useState<string>(data.lastname);
     const [inputValue2, setInputValue2] = useState<string>(data.salary.toString());
-    const [inputValue3, setInputValue3] = useState<string>(data.status);
     const [inputValue4, setInputValue4] = useState<string>(new Date(data.birthdate).toString());
     const [inputValue5, setInputValue5] = useState<string>(data.fucker.toString());
     const [inputValue6, setInputValue6] = useState<string>(data.sucker.toString())
@@ -83,7 +82,7 @@ const selectOptions:SelectOptions[] = [
           <select name="status" id="status">
             {selectOptions.map((option) => {
               return (
-              <option key={option.value} value={option.value} selected={inputValue3 === option.label}>{option.label}</option>
+              <option key={option.value} value={option.value} selected={data.status === option.label}>{option.label}</option>
             )})}
           </select>
         </label>
