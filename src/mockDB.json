@@ -14,10 +14,10 @@
       "id": "1708165331570",
       "firstname": "Maria",
       "lastname": "Koterski",
-      "birthdate": "1996-04-23T00:00:00.000Z",
-      "salary": -14432,
+      "birthdate": "1996-04-22T22:00:00.000Z",
+      "salary": "-14432",
       "fucker": "true",
-      "status": "weak",
+      "status": "strong",
       "sucker": "false"
     },
     {
@@ -44,8 +44,8 @@
       "id": "1709550439713",
       "firstname": "Fred",
       "lastname": "MIlestone",
-      "birthdate": "1993-03-23T00:00:00.000Z",
-      "salary": -5,
+      "birthdate": "1993-03-22T23:00:00.000Z",
+      "salary": "-5",
       "fucker": "true",
       "status": "weak",
       "sucker": "false"
@@ -57,7 +57,7 @@
       "birthdate": "1993-03-22T23:00:00.000Z",
       "salary": "455",
       "fucker": "true",
-      "status": "weak",
+      "status": "medium",
       "sucker": "false"
     },
     {
@@ -88,6 +88,16 @@
       "salary": 9666,
       "fucker": "false",
       "status": "medium",
+      "sucker": "true"
+    },
+    {
+      "id": "1709574207854",
+      "firstname": "Fred",
+      "lastname": "Fherhherh",
+      "birthdate": "1996-03-26T00:00:00.000Z",
+      "salary": 488,
+      "fucker": "true",
+      "status": "weak",
       "sucker": "true"
     }
   ]
