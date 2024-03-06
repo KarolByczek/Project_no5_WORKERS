@@ -13,8 +13,8 @@ export interface Employee {
   salary: number;
   status: EmployeeStatus;
   birthdate: Date;
-  fucker: boolean;
-  sucker: boolean;
+  club_member: boolean;
+  car_owner: boolean;
 }
 
 
@@ -25,8 +25,8 @@ export interface Employee {
   salary: number,
   status: EmployeeStatus,
   birthdate: string,
-  fucker: string,
-  sucker: string
+  club_member: string,
+  car_owner: string
 }*/
 
 
