@@ -25,7 +25,7 @@
       "firstname": "Bąk",
       "lastname": "Nowak",
       "birthdate": "1976-04-22T23:00:00.000Z",
-      "salary": "165",
+      "salary": "250",
       "fucker": "true",
       "status": "weak",
       "sucker": "true"
@@ -61,16 +61,6 @@
       "sucker": "false"
     },
     {
-      "id": "1709552252338",
-      "firstname": "gwgererhery",
-      "lastname": "MIlestone",
-      "birthdate": "1993-03-23T00:00:00.000Z",
-      "salary": 9,
-      "fucker": "true",
-      "status": "weak",
-      "sucker": "false"
-    },
-    {
       "id": "1709552558899",
       "firstname": "Fred",
       "lastname": "MIlestone",
@@ -89,6 +79,16 @@
       "fucker": "true",
       "status": "weak",
       "sucker": "true"
+    },
+    {
+      "id": "1709734770128",
+      "firstname": "Fred",
+      "lastname": "MIlestone",
+      "birthdate": "1997-03-13T00:00:00.000Z",
+      "salary": 1188,
+      "fucker": "false",
+      "status": "weak",
+      "sucker": "false"
     }
   ]
 }
