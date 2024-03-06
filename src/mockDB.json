@@ -6,9 +6,9 @@
       "lastname": "Siekieratka",
       "birthdate": "1976-04-22T23:00:00.000Z",
       "salary": "344",
-      "fucker": "true",
+      "club_member": "true",
       "status": "medium",
-      "sucker": "false"
+      "car_owner": "false"
     },
     {
       "id": "1708165331570",
@@ -16,9 +16,9 @@
       "lastname": "Koterski",
       "birthdate": "1996-04-22T22:00:00.000Z",
       "salary": "-14432",
-      "fucker": "true",
+      "club_member": "true",
       "status": "strong",
-      "sucker": "false"
+      "car_owner": "false"
     },
     {
       "id": "1708169882327",
@@ -26,9 +26,9 @@
       "lastname": "Nowak",
       "birthdate": "1976-04-22T23:00:00.000Z",
       "salary": "250",
-      "fucker": "true",
+      "club_member": "true",
       "status": "weak",
-      "sucker": "true"
+      "car_owner": "true"
     },
     {
       "id": "1708183143263",
@@ -36,9 +36,9 @@
       "lastname": "Musiał",
       "birthdate": "2000-01-23T00:00:00.000Z",
       "salary": -103,
-      "fucker": "true",
+      "club_member": "true",
       "status": "weak",
-      "sucker": "true"
+      "car_owner": "true"
     },
     {
       "id": "1709550439713",
@@ -46,9 +46,9 @@
       "lastname": "MIlestone",
       "birthdate": "1993-03-22T23:00:00.000Z",
       "salary": "-5",
-      "fucker": "true",
+      "club_member": "true",
       "status": "weak",
-      "sucker": "false"
+      "car_owner": "false"
     },
     {
       "id": "1709551934873",
@@ -56,9 +56,9 @@
       "lastname": "MIlestone",
       "birthdate": "1993-03-22T23:00:00.000Z",
       "salary": "455",
-      "fucker": "true",
+      "club_member": "true",
       "status": "medium",
-      "sucker": "false"
+      "car_owner": "false"
     },
     {
       "id": "1709552558899",
@@ -66,29 +66,29 @@
       "lastname": "MIlestone",
       "birthdate": "1993-03-23T00:00:00.000Z",
       "salary": 9666,
-      "fucker": "false",
+      "club_member": "false",
       "status": "medium",
-      "sucker": "true"
+      "car_owner": "true"
     },
     {
       "id": "1709574207854",
       "firstname": "Fred",
       "lastname": "Fherhherh",
-      "birthdate": "1996-03-26T00:00:00.000Z",
-      "salary": 488,
-      "fucker": "true",
+      "birthdate": "1996-03-25T23:00:00.000Z",
+      "salary": "488",
+      "club_member": "true",
       "status": "weak",
-      "sucker": "true"
+      "car_owner": "true"
     },
     {
       "id": "1709734770128",
       "firstname": "Fred",
       "lastname": "MIlestone",
-      "birthdate": "1997-03-13T00:00:00.000Z",
-      "salary": 1188,
-      "fucker": "false",
+      "birthdate": "1997-03-12T23:00:00.000Z",
+      "salary": "1188",
+      "club_member": "false",
       "status": "weak",
-      "sucker": "false"
+      "car_owner": "false"
     }
   ]
 }

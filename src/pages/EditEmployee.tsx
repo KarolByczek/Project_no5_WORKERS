@@ -31,9 +31,9 @@ const selectOptions:SelectOptions[] = [
       lastname: formdata.get('lastname') as string,
       birthdate: new Date(formdata.get('birthdate') as string),
       salary: formdata.get('salary') as unknown as number,
-      club_member: formdata.get('fucker') as unknown as boolean,
+      club_member: formdata.get('club_member') as unknown as boolean,
       status: formdata.get("status") as EmployeeStatus,
-      car_owner: formdata.get('sucker') as unknown as boolean
+      car_owner: formdata.get('car_owner') as unknown as boolean
     }
   }
 
