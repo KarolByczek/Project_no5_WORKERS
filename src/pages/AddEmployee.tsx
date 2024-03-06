@@ -22,9 +22,9 @@ export function AddEmployee() {
       lastname: formdata.get("lastname") as string,
       birthdate: new Date(formdata.get("birthdate") as string),
       salary: +(formdata.get("salary") as string),
-      fucker: formdata.get("fucker") as unknown as boolean,
+      club_member: formdata.get("fucker") as unknown as boolean,
       status: formdata.get("status") as EmployeeStatus,
-      sucker: formdata.get("sucker") as unknown as boolean,
+      car_owner: formdata.get("sucker") as unknown as boolean,
     };
   };
 
@@ -86,13 +86,13 @@ export function AddEmployee() {
           Birthdate:
           <input name="birthdate" type="text" />
         </label>
-        <label htmlFor="fucker">
-          Fucker:
-          <input name="fucker" type="text" />
+        <label htmlFor="club_member">
+          Club Member:
+          <input name="club_member" type="text" />
         </label>
-        <label htmlFor="sucker">
-          Sucker:
-          <input name="sucker" type="text" />
+        <label htmlFor="car_owner">
+          Car Owner:
+          <input name="car_owner" type="text" />
         </label>
         <button type="submit">ADD HER OR HIM</button>
       </form>

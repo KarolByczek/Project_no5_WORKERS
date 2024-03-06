@@ -15,8 +15,8 @@ export function EditEmployee() {
     const [inputValue1, setInputValue1] = useState<string>(data.lastname);
     const [inputValue2, setInputValue2] = useState<string>(data.salary.toString());
     const [inputValue4, setInputValue4] = useState<string>(new Date(data.birthdate).toString());
-    const [inputValue5, setInputValue5] = useState<string>(data.fucker.toString());
-    const [inputValue6, setInputValue6] = useState<string>(data.sucker.toString())
+    const [inputValue5, setInputValue5] = useState<string>(data.club_member.toString());
+    const [inputValue6, setInputValue6] = useState<string>(data.car_owner.toString())
     
 const selectOptions:SelectOptions[] = [
   {value: 'weak', label: 'weak'},
@@ -31,9 +31,9 @@ const selectOptions:SelectOptions[] = [
       lastname: formdata.get('lastname') as string,
       birthdate: new Date(formdata.get('birthdate') as string),
       salary: formdata.get('salary') as unknown as number,
-      fucker: formdata.get('fucker') as unknown as boolean,
+      club_member: formdata.get('fucker') as unknown as boolean,
       status: formdata.get("status") as EmployeeStatus,
-      sucker: formdata.get('sucker') as unknown as boolean
+      car_owner: formdata.get('sucker') as unknown as boolean
     }
   }
 
@@ -90,13 +90,13 @@ const selectOptions:SelectOptions[] = [
           Birthdate:
           <input name="birthdate" type="text" onChange={(event) => setInputValue4(event.target.value)} value={inputValue4.substring(0, 15)} />
         </label>
-        <label htmlFor="fucker">
-          Fucker:
-          <input name="fucker" type="text" onChange={(event) => setInputValue5(event.target.value)} value={inputValue5} />
+        <label htmlFor="club_member">
+          Club Member:
+          <input name="club_member" type="text" onChange={(event) => setInputValue5(event.target.value)} value={inputValue5} />
         </label>
-        <label htmlFor="sucker">
-          Sucker:
-          <input name="sucker" type="text" onChange={(event) => setInputValue6(event.target.value)} value={inputValue6} />
+        <label htmlFor="car_owner">
+          Car Owner:
+          <input name="car_owner" type="text" onChange={(event) => setInputValue6(event.target.value)} value={inputValue6} />
         </label>
         <button type="submit">SAVE AFTER EDITING HER OR HIM</button>
       </form>

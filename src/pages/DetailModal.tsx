@@ -33,13 +33,13 @@ export const DetailModal = () => {
             value={dateFormater(new Date(data.birthdate))}
           />
         </label>
-        <label htmlFor="fucker">
-          Fucker:
-          <input type="text" id="fucker" readOnly value={`${data.fucker}`} />
+        <label htmlFor="club_member">
+          Club Member:
+          <input type="text" id="club_member" readOnly value={`${data.club_member}`} />
         </label>
-        <label htmlFor="sucker">
-          Sucker:
-          <input type="text" id="sucker" readOnly value={`${data.sucker}`} />
+        <label htmlFor="car_owner">
+          Car Owner:
+          <input type="text" id="car_owner" readOnly value={`${data.car_owner}`} />
         </label>
       </div>
       <Link className='detail_modal_return' to={'/'}>RETURN TO HOME PAGE</Link>
