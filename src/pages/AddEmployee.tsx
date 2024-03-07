@@ -23,7 +23,7 @@ export function AddEmployee() {
       birthdate: new Date(formdata.get("birthdate") as string),
       salary: +(formdata.get("salary") as string),
       club_member: formdata.get("club_member") as unknown as boolean,
-      status: 'junior' as EmployeeStatus,
+      status: formdata.get('status') as EmployeeStatus,
       car_owner: formdata.get("car_owner") as unknown as boolean,
     };
   };
@@ -54,7 +54,7 @@ export function AddEmployee() {
 
   return (
     <div className="add_page">
-      <h3>PROVIDE DATA OF AN EMPLOYEE YOU WOULD LIKE TO ADD TO THE LIST:</h3>
+      <h2>PROVIDE DATA OF AN EMPLOYEE YOU WOULD LIKE TO ADD TO THE LIST:</h2>
       <form className="add_employee_form" onSubmit={handleAddEmployee}>
         <label htmlFor="firstname">
           First Name:

@@ -54,7 +54,7 @@ body {
 
     margin-top: -3rem;
 
-    h3 {
+    h2 {
       text-decoration: underline;
       text-underline-offset: 0.3rem;
     }
@@ -156,12 +156,12 @@ body {
         justify-content: end;
         gap: 0.5rem;
         font-size: larger;
-        padding: 0.9rem;
+        padding: 0.4rem;
 
         input,
         select {
           font-size: large;
-          padding: 0.5rem;
+          padding: 0.2rem;
           width: 50%;
         }
       }
