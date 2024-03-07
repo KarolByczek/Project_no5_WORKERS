@@ -53,7 +53,7 @@ export function AddEmployee() {
   };
 
   return (
-    <div>
+    <div className="add_page">
       <h3>PROVIDE DATA OF AN EMPLOYEE YOU WOULD LIKE TO ADD TO THE LIST:</h3>
       <form className="add_employee_form" onSubmit={handleAddEmployee}>
         <label htmlFor="firstname">
