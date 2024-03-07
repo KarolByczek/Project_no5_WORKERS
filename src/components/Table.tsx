@@ -4,7 +4,7 @@ import { QuestionModal } from "./QuestionModal";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-export type EmployeeStatus = "weak" | "strong" | "medium";
+export type EmployeeStatus = "junior" | "mid" | "senior";
 
 export interface Employee {
   id: string;
@@ -44,12 +44,12 @@ export const Table = (props: { data: Employee[] }) => {
 
   const renderStatus = (status: EmployeeStatus): string => {
     switch (status) {
-      case "weak":
-        return ":(";
-      case "strong":
-        return ":)";
-      case "medium":
-        return ":/";
+      case "junior":
+        return "😵";
+      case "mid":
+        return "😸";
+      case "senior":
+        return "😎";
       default:
         return "?";
     }

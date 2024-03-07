@@ -7,7 +7,7 @@
       "birthdate": "1976-04-22T23:00:00.000Z",
       "salary": "3800",
       "club_member": "true",
-      "status": "medium",
+      "status": "mid",
       "car_owner": "false"
     },
     {
@@ -17,7 +17,7 @@
       "birthdate": "1996-04-22T22:00:00.000Z",
       "salary": "4050",
       "club_member": "true",
-      "status": "strong",
+      "status": "senior",
       "car_owner": "false"
     },
     {
@@ -27,7 +27,7 @@
       "birthdate": "1976-04-22T23:00:00.000Z",
       "salary": "2500",
       "club_member": "true",
-      "status": "weak",
+      "status": "junior",
       "car_owner": "true"
     },
     {
@@ -37,7 +37,7 @@
       "birthdate": "2000-01-22T23:00:00.000Z",
       "salary": "3400",
       "club_member": "true",
-      "status": "weak",
+      "status": "junior",
       "car_owner": "true"
     },
     {
@@ -47,7 +47,7 @@
       "birthdate": "1993-03-22T23:00:00.000Z",
       "salary": "4550",
       "club_member": "true",
-      "status": "medium",
+      "status": "mid",
       "car_owner": "false"
     },
     {
@@ -57,7 +57,7 @@
       "birthdate": "1993-03-22T23:00:00.000Z",
       "salary": "3200",
       "club_member": "false",
-      "status": "medium",
+      "status": "senior",
       "car_owner": "true"
     },
     {
@@ -67,7 +67,7 @@
       "birthdate": "1996-03-25T23:00:00.000Z",
       "salary": "4000",
       "club_member": "true",
-      "status": "weak",
+      "status": "senior",
       "car_owner": "true"
     },
     {
@@ -77,8 +77,38 @@
       "birthdate": "1997-03-12T23:00:00.000Z",
       "salary": "3150",
       "club_member": "false",
-      "status": "weak",
+      "status": "junior",
       "car_owner": "false"
+    },
+    {
+      "id": "1709743059277",
+      "firstname": "Paul",
+      "lastname": "The Lama",
+      "birthdate": "1976-04-22T23:00:00.000Z",
+      "salary": "2777",
+      "club_member": "true",
+      "status": "mid",
+      "car_owner": "false"
+    },
+    {
+      "id": "1709743137002",
+      "firstname": "Feliks",
+      "lastname": "Nowak",
+      "birthdate": "1997-03-12T23:00:00.000Z",
+      "salary": "2999",
+      "club_member": "true",
+      "status": "mid",
+      "car_owner": "false"
+    },
+    {
+      "id": "1709806190424",
+      "firstname": "Krzysztof",
+      "lastname": "Nowak",
+      "birthdate": "1998-06-26T22:00:00.000Z",
+      "salary": "2900",
+      "club_member": "true",
+      "status": "junior",
+      "car_owner": "true"
     }
   ]
 }

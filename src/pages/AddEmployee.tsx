@@ -10,9 +10,9 @@ interface StatusOptions {
 export function AddEmployee() {
   const navigate = useNavigate();
   const [statusoptions] = useState<StatusOptions[]>([
-    { label: ":(", value: "weak" },
-    { label: ":/", value: "medium" },
-    { label: ":)", value: "strong" },
+    { label: "😵", value: "junior" },
+    { label: "😸", value: "mid" },
+    { label: "😎", value: "senior" },
   ]);
 
   const makeEmployee = (formdata: FormData): Employee => {
@@ -22,15 +22,15 @@ export function AddEmployee() {
       lastname: formdata.get("lastname") as string,
       birthdate: new Date(formdata.get("birthdate") as string),
       salary: +(formdata.get("salary") as string),
-      club_member: formdata.get("fucker") as unknown as boolean,
+      club_member: formdata.get("club_member") as unknown as boolean,
       status: formdata.get("status") as EmployeeStatus,
-      car_owner: formdata.get("sucker") as unknown as boolean,
+      car_owner: formdata.get("car_owner") as unknown as boolean,
     };
   };
 
   const handleAddEmployee = (event: React.FormEvent) => {
     event.preventDefault();
-    //window.alert('Great Success! You have added your new employee to the list :)');
+    //window.alert('Success! You have added your new employee to the list :)');
     const form = event.target as HTMLFormElement;
     const formdata = new FormData(form);
 
@@ -44,12 +44,12 @@ export function AddEmployee() {
           navigate("/");
         } else {
           console.log("Something went wrong!");
-          throw new Error("Mi scusi, tu es putana!");
+          throw new Error("Error");
         }
       })
       .catch((err) => console.error(err));
 
-    console.log("Formularz został wysłany");
+    console.log("The Employee has been added.");
   };
 
   return (

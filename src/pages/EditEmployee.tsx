@@ -19,9 +19,9 @@ export function EditEmployee() {
     const [inputValue6, setInputValue6] = useState<string>(data.car_owner.toString())
     
 const selectOptions:SelectOptions[] = [
-  {value: 'weak', label: 'weak'},
-  {value: 'medium', label: 'medium'},
-  {value: 'strong', label: 'strong'}
+  {value: 'junior', label: 'junior'},
+  {value: 'mid', label: 'mid'},
+  {value: 'senior', label: 'senior'}
 ]
 
   const makeEmployee = (formdata: FormData):Employee => {
@@ -52,7 +52,7 @@ const selectOptions:SelectOptions[] = [
           navigate("/");
         } else {
           console.log("Something went wrong!");
-          throw new Error("Mi scusi, tu es putana!");
+          throw new Error("Error");
         }
       })
       .catch((err) => console.error(err));
