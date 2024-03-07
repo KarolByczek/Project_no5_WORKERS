@@ -109,6 +109,16 @@
       "club_member": "true",
       "status": "junior",
       "car_owner": "true"
+    },
+    {
+      "id": "1709814921580",
+      "firstname": "Feliks",
+      "lastname": "Nowak",
+      "birthdate": "1997-04-19T00:00:00.000Z",
+      "salary": 3000,
+      "club_member": "true",
+      "status": "mid",
+      "car_owner": "true"
     }
   ]
 }
