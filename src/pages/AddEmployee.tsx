@@ -70,7 +70,6 @@ export function AddEmployee() {
         </label>
         <label htmlFor="status">
           Status:
-          <label htmlFor="status">
             <select name="status">
               {statusoptions.map((opt) => {
                 return (
@@ -81,7 +80,6 @@ export function AddEmployee() {
               })}
             </select>
           </label>
-        </label>
         <label htmlFor="birthdate">
           Birthdate:
           <input name="birthdate" type="text" />
