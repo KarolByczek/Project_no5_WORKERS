@@ -1,11 +1,7 @@
 import React, { useState } from "react";
 import { Employee, EmployeeStatus } from "../components/Table";
 import { useLocation, useNavigate } from "react-router-dom";
-
-export interface SelectOptions {
-  value: string,
-  label: string
-}
+import { statusOptions } from "../AUXILIARY OBJECTS/statusoptions";
 
 export function EditEmployee() {
     const location = useLocation();
@@ -18,11 +14,6 @@ export function EditEmployee() {
     const [inputValue5, setInputValue5] = useState<string>(data.club_member.toString());
     const [inputValue6, setInputValue6] = useState<string>(data.car_owner.toString())
     
-const selectOptions:SelectOptions[] = [
-  {value: 'junior', label: 'junior'},
-  {value: 'mid', label: 'mid'},
-  {value: 'senior', label: 'senior'}
-]
 
   const makeEmployee = (formdata: FormData):Employee => {
     return {
@@ -80,7 +71,7 @@ const selectOptions:SelectOptions[] = [
         <label htmlFor="status">
           Status:
           <select name="status" id="status">
-            {selectOptions.map((option) => {
+            {statusOptions.map((option) => {
               return (
               <option key={option.value} value={option.value} selected={data.status === option.label}>{option.label}</option>
             )})}

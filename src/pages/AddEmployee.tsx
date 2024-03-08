@@ -1,19 +1,9 @@
-import React, { useState } from "react";
 import { Employee, EmployeeStatus } from "../components/Table";
 import { useNavigate } from "react-router-dom";
-
-interface StatusOptions {
-  label: string;
-  value: string;
-}
+import { statusOptions } from "../AUXILIARY OBJECTS/statusoptions";
 
 export function AddEmployee() {
   const navigate = useNavigate();
-  const [statusoptions] = useState<StatusOptions[]>([
-    { label: "😵", value: "junior" },
-    { label: "😸", value: "mid" },
-    { label: "😎", value: "senior" },
-  ]);
 
   const makeEmployee = (formdata: FormData): Employee => {
     return {
@@ -30,7 +20,6 @@ export function AddEmployee() {
 
   const handleAddEmployee = (event: React.FormEvent) => {
     event.preventDefault();
-    window.alert('Success! You have added your new employee to the list :)');
     const form = event.target as HTMLFormElement;
     const formdata = new FormData(form);
 
@@ -42,14 +31,13 @@ export function AddEmployee() {
       .then((response) => {
         if (response.status === 201) {
           navigate("/");
+          console.log("The Employee has been added.");
         } else {
           console.log("Something went wrong!");
-          throw new Error("Error");
+          throw new Error("Fatal error");
         }
       })
       .catch((err) => console.error(err));
-
-    console.log("The Employee has been added.");
   };
 
   return (
@@ -71,7 +59,7 @@ export function AddEmployee() {
         <label htmlFor="status">
           Status:
             <select name="status">
-              {statusoptions.map((opt) => {
+              {statusOptions.map((opt) => {
                 return (
                   <option key={opt.value} value={opt.value}>
                     {opt.label}
