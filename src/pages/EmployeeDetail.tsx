@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Employee } from "../components/Table";
 import "../index.scss";
 
-export const DetailModal = () => {
+export const EmployeeDetail = () => {
   const location = useLocation();
   console.log(location.state);
   const data: Employee = location.state;

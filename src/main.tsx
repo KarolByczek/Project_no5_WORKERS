@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import HomePage from './HomePage.tsx';
 import './index.scss';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import { DetailModal } from './pages/DetailModal.tsx';
+import { EmployeeDetail } from './pages/EmployeeDetail.tsx';
 import { AddEmployee } from './pages/AddEmployee.tsx';
 import { EditEmployee } from './pages/EditEmployee.tsx';
 import "./i18n.js";
@@ -15,7 +15,7 @@ const router = createBrowserRouter([
     },
     {
       path: '/details',
-      element: <DetailModal />
+      element: <EmployeeDetail />
     },
     {
       path: '/add_form',
