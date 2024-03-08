@@ -85,6 +85,12 @@ body {
         border-radius: 3rem;
         padding: 0.6rem;
         background-color: aqua;
+        transition: all 0.4s;
+      }
+
+      button:hover {
+        border: 0.2rem solid rgb(24, 223, 100);
+        cursor: pointer;
       }
 
     }

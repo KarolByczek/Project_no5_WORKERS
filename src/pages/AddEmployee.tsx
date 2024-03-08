@@ -30,7 +30,7 @@ export function AddEmployee() {
 
   const handleAddEmployee = (event: React.FormEvent) => {
     event.preventDefault();
-    //window.alert('Success! You have added your new employee to the list :)');
+    window.alert('Success! You have added your new employee to the list :)');
     const form = event.target as HTMLFormElement;
     const formdata = new FormData(form);
 

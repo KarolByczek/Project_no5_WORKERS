@@ -124,8 +124,28 @@
       "id": "1709885589688",
       "firstname": "Krzysztof",
       "lastname": "The Lama",
-      "birthdate": "1993-03-23T00:00:00.000Z",
-      "salary": 5555,
+      "birthdate": "1993-03-22T23:00:00.000Z",
+      "salary": "5555",
+      "club_member": "true",
+      "status": "senior",
+      "car_owner": "false"
+    },
+    {
+      "id": "1709886793124",
+      "firstname": "Jan",
+      "lastname": "Kaczmarek",
+      "birthdate": "1991-03-23T00:00:00.000Z",
+      "salary": 3200,
+      "club_member": "true",
+      "status": "mid",
+      "car_owner": "true"
+    },
+    {
+      "id": "1709887054092",
+      "firstname": "Filip",
+      "lastname": "Mańczak",
+      "birthdate": "1976-06-23T00:00:00.000Z",
+      "salary": 3040,
       "club_member": "true",
       "status": "junior",
       "car_owner": "false"
