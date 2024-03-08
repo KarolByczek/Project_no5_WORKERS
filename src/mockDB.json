@@ -57,7 +57,7 @@
       "birthdate": "1993-03-22T23:00:00.000Z",
       "salary": "3200",
       "club_member": "false",
-      "status": "senior",
+      "status": "mid",
       "car_owner": "true"
     },
     {
@@ -151,13 +151,23 @@
       "car_owner": "false"
     },
     {
-      "id": "1709890883389",
-      "firstname": "Paul",
-      "lastname": "MIlestone",
-      "birthdate": "1998-03-24T00:00:00.000Z",
-      "salary": 3455,
+      "id": "1709894066731",
+      "firstname": "Rava",
+      "lastname": "Phoenix",
+      "birthdate": "1997-10-13T00:00:00.000Z",
+      "salary": 3200,
       "club_member": "true",
-      "status": "junior",
+      "status": "mid",
+      "car_owner": "false"
+    },
+    {
+      "id": "1709894292045",
+      "firstname": "Paul",
+      "lastname": "Phoenix",
+      "birthdate": "1997-09-12T22:00:00.000Z",
+      "salary": "3400",
+      "club_member": "true",
+      "status": "mid",
       "car_owner": "true"
     }
   ]

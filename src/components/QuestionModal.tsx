@@ -22,7 +22,7 @@ export const QuestionModal = (props: {
           console.log("Response is ok");
         } else {
           console.log("Something went wrong!");
-          throw new Error("Mi scusi, tu es putana!");
+          throw new Error("Fatal error!");
         }
       })
       .then(() => console.log("The employee data has been deleted"))

@@ -9,10 +9,8 @@ export const EmployeeDetail = () => {
   const data: Employee = location.state;
 
   const dateFormater = (date0: Date): string => {
-    const formatedmonth =
-      date0.getMonth() < 10 ? "0" + (date0.getMonth() + 1) : date0.getMonth();
-    const formatedday =
-      date0.getDate() < 10 ? "0" + date0.getDate() : date0.getDate();
+    const formatedmonth = date0.getMonth() < 9 ? "0" + (date0.getMonth() + 1) : date0.getMonth() + 1;
+    const formatedday = date0.getDate() < 10 ? "0" + date0.getDate() : date0.getDate();
     return date0.getFullYear() + "-" + formatedmonth + "-" + formatedday;
   };
 

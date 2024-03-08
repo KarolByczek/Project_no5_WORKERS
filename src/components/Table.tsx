@@ -39,7 +39,7 @@ export const Table = (props: { data: Employee[] }) => {
   const [sortDirection, setSortDirection] = useState<string>("default");
   const [sortBy, setSortBy] = useState<string>("none");
   const [isQuestModOn, setIsQuestModOn] = useState<boolean>(false);
-  const [currentGuy, setCurrentGuy] = useState<Employee>();
+  const [currentEmpl, setCurrentEmpl] = useState<Employee>();
 
 
   const renderStatus = (status: EmployeeStatus): string => {
@@ -112,7 +112,7 @@ export const Table = (props: { data: Employee[] }) => {
   ):void => {
     event.preventDefault();
     setIsQuestModOn(true);
-    setCurrentGuy(item);
+    setCurrentEmpl(item);
   };
 
   const sortAsc = (a: Employee, b: Employee, key: keyof Employee): number => {
@@ -242,7 +242,7 @@ export const Table = (props: { data: Employee[] }) => {
                     {t("remove")}
                   </button>
                 </td>
-                {isQuestModOn === true && employee === currentGuy ? <QuestionModal 
+                {isQuestModOn === true && employee === currentEmpl ? <QuestionModal 
                   dataset={filtereddata}
                   className="question_modal"
                   item={employee}
