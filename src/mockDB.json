@@ -119,6 +119,16 @@
       "club_member": "true",
       "status": "mid",
       "car_owner": "true"
+    },
+    {
+      "id": "1709885589688",
+      "firstname": "Krzysztof",
+      "lastname": "The Lama",
+      "birthdate": "1993-03-23T00:00:00.000Z",
+      "salary": 5555,
+      "club_member": "true",
+      "status": "junior",
+      "car_owner": "false"
     }
   ]
 }

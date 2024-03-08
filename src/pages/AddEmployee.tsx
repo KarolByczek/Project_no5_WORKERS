@@ -92,7 +92,7 @@ export function AddEmployee() {
           Car Owner:
           <input name="car_owner" type="text" />
         </label>
-        <button type="submit">ADD HER OR HIM</button>
+        <button type="submit">ADD THE EMPLOYEE</button>
       </form>
     </div>
   );
