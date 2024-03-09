@@ -6,7 +6,6 @@ import { useTranslation } from "react-i18next";
 
 function HomePage() {
   const [totalemployees, setTotalemployees] = useState<Employee[]>([]);
-  const [styleState, setStyleState] = useState<object>({});
   const { t } = useTranslation();
 
   useEffect(() => {
@@ -14,20 +13,6 @@ function HomePage() {
       .then((response) => response.json())
       .then((responseData) => setTotalemployees(responseData));
 
-    const handleScroll = (): void => {
-      if (window.scrollY > 200) {
-        setStyleState({
-          position: "sticky",
-          top: "0",
-        });
-      } else {
-        setStyleState({
-          position: "relative",
-        });
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
   }, [setTotalemployees]);
 
   return (
@@ -37,7 +22,7 @@ function HomePage() {
         {t("add_a_new")}
       </Link>
       {totalemployees.length > 0 ? (
-        <Table data={totalemployees} provider={styleState} />
+        <Table data={totalemployees} />
       ) : null}
     </div>
   );

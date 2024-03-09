@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { MouseEvent, useState } from "react";
 import { QuestionModal } from "./QuestionModal";
 import { useNavigate } from "react-router-dom";
@@ -18,7 +18,6 @@ export interface Employee {
   car_owner: boolean;
 }
 
-
 /*export interface EmployeesDTO {
   id: string,
   firstname: string,
@@ -30,9 +29,7 @@ export interface Employee {
   car_owner: string
 }*/
 
-
-
-export const Table = (props: { data: Employee[], provider: any }) => {
+export const Table = (props: { data: Employee[]}) => {
   const navigate = useNavigate();
   const { t } = useTranslation();
   const [filtereddata, setFiltereddata] = useState<Employee[]>(props.data);
@@ -41,6 +38,25 @@ export const Table = (props: { data: Employee[], provider: any }) => {
   const [sortBy, setSortBy] = useState<string>("none");
   const [isQuestModOn, setIsQuestModOn] = useState<boolean>(false);
   const [currentEmpl, setCurrentEmpl] = useState<Employee>();
+  const [styleState, setStyleState] = useState<object>({});
+
+  useEffect(() => {
+    const handleScroll = (): void => {
+      if (window.scrollY > 200) {
+        setStyleState({
+          position: "sticky",
+          top: "0",
+        });
+      } else {
+        setStyleState({
+          position: "relative",
+        });
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+  }, [setStyleState])
 
 
   const renderStatus = (status: EmployeeStatus): string => {
@@ -189,7 +205,7 @@ export const Table = (props: { data: Employee[], provider: any }) => {
         {t("employee_result", {count: filtereddata.length})}
       </div>
       <table className="table">
-        <thead className="thead" style={props.provider}>
+        <thead className="thead" style={styleState}>
           <tr>
             <th>ID</th>
             <th
