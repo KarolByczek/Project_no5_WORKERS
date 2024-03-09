@@ -91,26 +91,6 @@
       "car_owner": "false"
     },
     {
-      "id": "1709743137002",
-      "firstname": "Feliks",
-      "lastname": "Nowak",
-      "birthdate": "1997-03-12T23:00:00.000Z",
-      "salary": "2999",
-      "club_member": "true",
-      "status": "mid",
-      "car_owner": "false"
-    },
-    {
-      "id": "1709814921580",
-      "firstname": "Feliks",
-      "lastname": "Nowak",
-      "birthdate": "1997-04-19T00:00:00.000Z",
-      "salary": 3000,
-      "club_member": "true",
-      "status": "mid",
-      "car_owner": "true"
-    },
-    {
       "id": "1709885589688",
       "firstname": "Krzysztof",
       "lastname": "The Lama",
@@ -119,16 +99,6 @@
       "club_member": "true",
       "status": "senior",
       "car_owner": "false"
-    },
-    {
-      "id": "1709886793124",
-      "firstname": "Jan",
-      "lastname": "Kaczmarek",
-      "birthdate": "1991-03-23T00:00:00.000Z",
-      "salary": 3200,
-      "club_member": "true",
-      "status": "mid",
-      "car_owner": "true"
     },
     {
       "id": "1709887054092",
@@ -159,26 +129,6 @@
       "club_member": "true",
       "status": "senior",
       "car_owner": "false"
-    },
-    {
-      "id": "1709988762271",
-      "firstname": "Karol",
-      "lastname": "Byczek",
-      "birthdate": "1986-06-16T00:00:00.000Z",
-      "salary": 3200,
-      "club_member": "true",
-      "status": "junior",
-      "car_owner": "true"
-    },
-    {
-      "id": "1709988782435",
-      "firstname": "Katarzyna",
-      "lastname": "Kozak",
-      "birthdate": "1982-07-13T00:00:00.000Z",
-      "salary": 3200,
-      "club_member": "true",
-      "status": "junior",
-      "car_owner": "true"
     }
   ]
 }

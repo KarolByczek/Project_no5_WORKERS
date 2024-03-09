@@ -2,11 +2,13 @@ import { useTranslation } from "react-i18next";
 import { Employee } from "./Table";
 
 export const QuestionModal = (props: {
-  dataset: Employee[];
-  item: Employee;
-  className: string;
-  hook01: Function;
-  hook02: Function;
+  dataset: Employee[],
+  toDelete: Employee[],
+  item: Employee,
+  className: string,
+  hook01: Function,
+  hook02: Function,
+  hook03: Function
 }) => {
   const { t } = useTranslation();
 
@@ -27,6 +29,7 @@ export const QuestionModal = (props: {
       .catch((err) => console.error(err));
 
     props.hook01(props.dataset.filter((employee) => employee !== props.item));
+    props.hook03([ ...props.toDelete, props.item ]);
     props.hook02(false);
   };
 
