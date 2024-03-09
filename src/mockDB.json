@@ -161,14 +161,14 @@
       "car_owner": "false"
     },
     {
-      "id": "1709894292045",
-      "firstname": "Paul",
+      "id": "1709913942505",
+      "firstname": "Fred",
       "lastname": "Phoenix",
-      "birthdate": "1997-09-12T22:00:00.000Z",
-      "salary": "3400",
+      "birthdate": "1987-03-15T00:00:00.000Z",
+      "salary": 3880,
       "club_member": "true",
-      "status": "mid",
-      "car_owner": "true"
+      "status": "senior",
+      "car_owner": "false"
     }
   ]
 }

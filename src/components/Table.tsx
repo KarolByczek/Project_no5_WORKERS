@@ -2,6 +2,7 @@ import React from "react";
 import { MouseEvent, useState } from "react";
 import { QuestionModal } from "./QuestionModal";
 import { useNavigate } from "react-router-dom";
+//import { StyleState } from "../HomePage";
 import { useTranslation } from "react-i18next";
 
 export type EmployeeStatus = "junior" | "mid" | "senior";
@@ -31,7 +32,7 @@ export interface Employee {
 
 
 
-export const Table = (props: { data: Employee[] }) => {
+export const Table = (props: { data: Employee[], provider: any }) => {
   const navigate = useNavigate();
   const { t } = useTranslation();
   const [filtereddata, setFiltereddata] = useState<Employee[]>(props.data);
@@ -188,7 +189,7 @@ export const Table = (props: { data: Employee[] }) => {
         {t("employee_result", {count: filtereddata.length})}
       </div>
       <table className="table">
-        <thead className="thead">
+        <thead className="thead" style={props.provider}>
           <tr>
             <th>ID</th>
             <th
@@ -214,6 +215,9 @@ export const Table = (props: { data: Employee[] }) => {
             >
               {t("birthdate")}
               {showArrow("birthdate")}
+            </th>
+            <th>
+              Akcje
             </th>
           </tr>
         </thead>

@@ -1,5 +1,3 @@
-//import { ReactNode } from "react";
-
 import { useTranslation } from "react-i18next";
 import { Employee } from "./Table";
 
@@ -28,7 +26,7 @@ export const QuestionModal = (props: {
       .then(() => console.log("The employee data has been deleted"))
       .catch((err) => console.error(err));
 
-    props.hook01(props.dataset.filter((guy) => guy != props.item));
+    props.hook01(props.dataset.filter((employee) => employee !== props.item));
     props.hook02(false);
   };
 
