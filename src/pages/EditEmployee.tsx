@@ -21,7 +21,7 @@ export function EditEmployee() {
       firstname: formdata.get('firstname') as string,
       lastname: formdata.get('lastname') as string,
       birthdate: new Date(formdata.get('birthdate') as string),
-      salary: formdata.get('salary') as unknown as number,
+      salary: +(formdata.get('salary') as string),
       club_member: formdata.get('club_member') as unknown as boolean,
       status: formdata.get("status") as EmployeeStatus,
       car_owner: formdata.get('car_owner') as unknown as boolean

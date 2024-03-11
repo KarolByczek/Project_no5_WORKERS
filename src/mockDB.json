@@ -5,7 +5,7 @@
       "firstname": "Florian",
       "lastname": "Siekieratka",
       "birthdate": "1976-04-22T00:00:00.000Z",
-      "salary": "3800",
+      "salary": 3800,
       "club_member": "true",
       "status": "mid",
       "car_owner": "false"
@@ -15,7 +15,7 @@
       "firstname": "Maria",
       "lastname": "Koterski",
       "birthdate": "1996-04-22T00:00:00.000Z",
-      "salary": "4050",
+      "salary": 4050,
       "club_member": "true",
       "status": "senior",
       "car_owner": "false"
@@ -25,7 +25,7 @@
       "firstname": "Krzysztof",
       "lastname": "Nowak",
       "birthdate": "1976-04-22T00:00:00.000Z",
-      "salary": "2500",
+      "salary": 2500,
       "club_member": "true",
       "status": "mid",
       "car_owner": "true"
@@ -35,7 +35,7 @@
       "firstname": "Masza",
       "lastname": "Musiał",
       "birthdate": "2000-01-22T00:00:00.000Z",
-      "salary": "3400",
+      "salary": 3400,
       "club_member": "true",
       "status": "junior",
       "car_owner": "true"
@@ -45,7 +45,7 @@
       "firstname": "Fred",
       "lastname": "Milestone",
       "birthdate": "1993-03-22T00:00:00.000Z",
-      "salary": "4550",
+      "salary": 4550,
       "club_member": "true",
       "status": "mid",
       "car_owner": "false"
@@ -55,7 +55,7 @@
       "firstname": "Patryk",
       "lastname": "Arlovitz",
       "birthdate": "1993-03-22T00:00:00.000Z",
-      "salary": "3200",
+      "salary": 3200,
       "club_member": "false",
       "status": "mid",
       "car_owner": "true"
@@ -65,7 +65,7 @@
       "firstname": "Paul",
       "lastname": "Wane",
       "birthdate": "1996-03-25T00:00:00.000Z",
-      "salary": "4000",
+      "salary": 4000,
       "club_member": "true",
       "status": "senior",
       "car_owner": "true"
@@ -75,7 +75,7 @@
       "firstname": "Feliks",
       "lastname": "Filipiuk",
       "birthdate": "1997-03-12T00:00:00.000Z",
-      "salary": "3150",
+      "salary": 3150,
       "club_member": "false",
       "status": "junior",
       "car_owner": "false"
@@ -85,7 +85,7 @@
       "firstname": "Paul",
       "lastname": "The Lama",
       "birthdate": "1976-04-22T00:00:00.000Z",
-      "salary": "2777",
+      "salary": 2777,
       "club_member": "true",
       "status": "mid",
       "car_owner": "false"
@@ -95,7 +95,7 @@
       "firstname": "Krzysztof",
       "lastname": "The Lama",
       "birthdate": "1993-03-22T00:00:00.000Z",
-      "salary": "5555",
+      "salary": 5555,
       "club_member": "true",
       "status": "senior",
       "car_owner": "false"
@@ -115,7 +115,7 @@
       "firstname": "Rava",
       "lastname": "Phoenix",
       "birthdate": "1997-10-15T00:00:00.000Z",
-      "salary": "3200",
+      "salary": 3200,
       "club_member": "true",
       "status": "mid",
       "car_owner": "false"
@@ -185,7 +185,7 @@
       "firstname": "Feliks",
       "lastname": "Phoenix",
       "birthdate": "1999-03-17T00:00:00.000Z",
-      "salary": "2344",
+      "salary": 2344,
       "club_member": "false",
       "status": "junior",
       "car_owner": "true"
@@ -195,7 +195,7 @@
       "firstname": "Rava",
       "lastname": "MIlestone",
       "birthdate": "1997-05-16T00:00:00.000Z",
-      "salary": "4333",
+      "salary": 4333,
       "club_member": "true",
       "status": "junior",
       "car_owner": "false"
@@ -205,7 +205,7 @@
       "firstname": "Ferdynand",
       "lastname": "Kiepski",
       "birthdate": "1972-11-14T00:00:00.000Z",
-      "salary": "3200",
+      "salary": 3200,
       "club_member": "false",
       "status": "mid",
       "car_owner": "false"
@@ -215,17 +215,27 @@
       "firstname": "Feliks",
       "lastname": "Fherhherh",
       "birthdate": "1999-01-03T00:00:00.000Z",
-      "salary": "4525",
+      "salary": 4525,
       "club_member": "true",
       "status": "junior",
       "car_owner": "false"
     },
     {
-      "id": "1710147468135",
-      "firstname": "Jastrząb",
-      "lastname": "Ministerski",
-      "birthdate": "2000-02-24T00:00:00.000Z",
-      "salary": "2344",
+      "id": "1710147819105",
+      "firstname": "Krzysztof",
+      "lastname": "Palik",
+      "birthdate": "1978-04-24T00:00:00.000Z",
+      "salary": 3200,
+      "club_member": "true",
+      "status": "junior",
+      "car_owner": "false"
+    },
+    {
+      "id": "1710149346796",
+      "firstname": "Fred",
+      "lastname": "J. Dukes",
+      "birthdate": "1977-04-29T00:00:00.000Z",
+      "salary": 3222,
       "club_member": "true",
       "status": "junior",
       "car_owner": "true"
