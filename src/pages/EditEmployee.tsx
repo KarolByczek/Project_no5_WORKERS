@@ -10,7 +10,7 @@ export function EditEmployee() {
     const [inputValue0, setInputValue0] = useState<string>(data.firstname);
     const [inputValue1, setInputValue1] = useState<string>(data.lastname);
     const [inputValue2, setInputValue2] = useState<string>(data.salary.toString());
-    const [inputValue4, setInputValue4] = useState<string>(new Date(data.birthdate).toString());
+    const [inputValue4, setInputValue4] = useState<string>((data.birthdate).toString().substring(0,10));
     const [inputValue5, setInputValue5] = useState<string>(data.club_member.toString());
     const [inputValue6, setInputValue6] = useState<string>(data.car_owner.toString())
     
@@ -79,7 +79,7 @@ export function EditEmployee() {
         </label>
         <label htmlFor="birthdate">
           Birthdate:
-          <input name="birthdate" type="text" onChange={(event) => setInputValue4(event.target.value)} value={inputValue4.substring(0, 15)} />
+          <input name="birthdate" type="text" onChange={(event) => setInputValue4((event.target.value))} value={inputValue4} />
         </label>
         <label htmlFor="club_member">
           Club Member:

@@ -248,7 +248,7 @@ export const Table = (props: { data: Employee[]}) => {
                 <td><span>Lastname:</span>{employee.lastname}</td>
                 <td><span>Salary:</span>{employee.salary}</td>
                 <td><span>Status:</span>{renderStatus(employee.status)}</td>
-                <td><span>Birthdate:</span>{new Date(employee.birthdate).toLocaleDateString()}</td>
+                <td><span>Birthdate:</span>{(employee.birthdate).toString().substring(0,10)}</td>
                 <td className="buttons">
                   <button onClick={(event) => onClickHandler(event, employee)}>
                     {t("details")}
