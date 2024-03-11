@@ -38,7 +38,7 @@ export const Table = (props: { data: Employee[]}) => {
   const [sortBy, setSortBy] = useState<string>("none");
   const [isQuestModOn, setIsQuestModOn] = useState<boolean>(false);
   const [currentEmpl, setCurrentEmpl] = useState<Employee>();
-  const [deletedEmpl, setDeletedEmpl] = useState<Employee[]>([]);
+  const [deletedEmpls, setDeletedEmpls] = useState<Employee[]>([]);
   const [styleState, setStyleState] = useState<object>({});
 
   useEffect(() => {
@@ -104,7 +104,7 @@ export const Table = (props: { data: Employee[]}) => {
         phrase01
       );
     });
-    const data02 = data01.filter(one => !(deletedEmpl.includes(one)))
+    const data02 = data01.filter(one => !(deletedEmpls.includes(one)))
     setFiltereddata(data02);
     setFiltereddataForSorting(data01)
   };
@@ -266,12 +266,12 @@ export const Table = (props: { data: Employee[]}) => {
                 </td>
                 {isQuestModOn === true && employee === currentEmpl ? <QuestionModal 
                   dataset={filtereddata}
-                  toDelete={deletedEmpl}
+                  toDelete={deletedEmpls}
                   className="question_modal"
                   item={employee}
                   hook01={setFiltereddata}
                   hook02={setIsQuestModOn}
-                  hook03={setDeletedEmpl}
+                  hook03={setDeletedEmpls}
                 /> : null }
               </tr>
             );

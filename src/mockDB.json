@@ -184,8 +184,8 @@
       "id": "1710143004827",
       "firstname": "Feliks",
       "lastname": "Phoenix",
-      "birthdate": "1999-03-18T00:00:00.000Z",
-      "salary": 2344,
+      "birthdate": "1999-03-17T23:00:00.000Z",
+      "salary": "2344",
       "club_member": "false",
       "status": "junior",
       "car_owner": "true"
@@ -194,8 +194,8 @@
       "id": "1710143036203",
       "firstname": "Rava",
       "lastname": "MIlestone",
-      "birthdate": "1997-05-17T00:00:00.000Z",
-      "salary": 4333,
+      "birthdate": "1997-05-16T22:00:00.000Z",
+      "salary": "4333",
       "club_member": "true",
       "status": "junior",
       "car_owner": "false"
@@ -204,8 +204,8 @@
       "id": "1710143144403",
       "firstname": "Ferdynand",
       "lastname": "Kiepski",
-      "birthdate": "1972-11-15T00:00:00.000Z",
-      "salary": 3200,
+      "birthdate": "1972-11-14T23:00:00.000Z",
+      "salary": "3200",
       "club_member": "false",
       "status": "mid",
       "car_owner": "false"
