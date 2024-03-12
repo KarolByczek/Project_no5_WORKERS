@@ -240,15 +240,6 @@
       "status": "junior",
       "car_owner": "false"
     },
-    {
-      "id": "1710151212652",
-      "firstname": "Lidia",
-      "lastname": "Staroń",
-      "birthdate": "1976-05-23T00:00:00.000Z",
-      "salary": 3240,
-      "club_member": "false",
-      "status": "mid",
-      "car_owner": "true"
-    }
+    
   ]
 }
