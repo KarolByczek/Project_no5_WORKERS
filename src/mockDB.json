@@ -24,7 +24,7 @@
       "id": "1708169882327",
       "firstname": "Krzysztof",
       "lastname": "Nowak",
-      "birthdate": "1976-04-22T00:00:00.000Z",
+      "birthdate": "1976-04-27T00:00:00.000Z",
       "salary": 2500,
       "club_member": "true",
       "status": "mid",
@@ -191,16 +191,6 @@
       "car_owner": "true"
     },
     {
-      "id": "1710143036203",
-      "firstname": "Rava",
-      "lastname": "MIlestone",
-      "birthdate": "1997-05-16T00:00:00.000Z",
-      "salary": 4333,
-      "club_member": "true",
-      "status": "junior",
-      "car_owner": "false"
-    },
-    {
       "id": "1710143144403",
       "firstname": "Ferdynand",
       "lastname": "Kiepski",
@@ -226,9 +216,9 @@
       "lastname": "Palik",
       "birthdate": "1978-04-24T00:00:00.000Z",
       "salary": 3200,
-      "club_member": "true",
+      "club_member": "false",
       "status": "junior",
-      "car_owner": "false"
+      "car_owner": "true"
     },
     {
       "id": "1710149346796",
@@ -238,6 +228,26 @@
       "salary": 3222,
       "club_member": "true",
       "status": "junior",
+      "car_owner": "true"
+    },
+    {
+      "id": "1710151035796",
+      "firstname": "Paul",
+      "lastname": "Edgecomb",
+      "birthdate": "1998-03-17T00:00:00.000Z",
+      "salary": 3200,
+      "club_member": "true",
+      "status": "junior",
+      "car_owner": "false"
+    },
+    {
+      "id": "1710151212652",
+      "firstname": "Lidia",
+      "lastname": "Staroń",
+      "birthdate": "1976-05-23T00:00:00.000Z",
+      "salary": 3240,
+      "club_member": "false",
+      "status": "mid",
       "car_owner": "true"
     }
   ]

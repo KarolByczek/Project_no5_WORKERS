@@ -14,8 +14,8 @@ export interface Employee {
   salary: number;
   status: EmployeeStatus;
   birthdate: Date;
-  club_member: boolean;
-  car_owner: boolean;
+  club_member:string;
+  car_owner: string;
 }
 
 /*export interface EmployeesDTO {

@@ -22,9 +22,9 @@ export function EditEmployee() {
       lastname: formdata.get('lastname') as string,
       birthdate: new Date(formdata.get('birthdate') as string),
       salary: +(formdata.get('salary') as string),
-      club_member: formdata.get('club_member') as unknown as boolean,
+      club_member: formdata.get('club_member') as string,
       status: formdata.get("status") as EmployeeStatus,
-      car_owner: formdata.get('car_owner') as unknown as boolean
+      car_owner: formdata.get('car_owner') as string
     }
   }
 
@@ -83,11 +83,17 @@ export function EditEmployee() {
         </label>
         <label htmlFor="club_member">
           Club Member:
-          <input name="club_member" type="text" onChange={(event) => setInputValue5(event.target.value)} value={inputValue5} />
+          <select name="club_member">
+            <option value="true">YES</option>
+            <option value="false">NO</option>
+          </select>
         </label>
         <label htmlFor="car_owner">
           Car Owner:
-          <input name="car_owner" type="text" onChange={(event) => setInputValue6(event.target.value)} value={inputValue6} />
+          <select name="car_owner">
+            <option value="true">YES</option>
+            <option value="false">NO</option>
+          </select>
         </label>
         <button type="submit">SAVE AFTER EDITING HER OR HIM</button>
       </form>

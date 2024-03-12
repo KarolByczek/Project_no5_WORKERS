@@ -14,6 +14,17 @@ export const EmployeeDetail = () => {
     return date0.getFullYear() + "-" + formatedmonth + "-" + formatedday;
   };
 
+  const renderDetails = (fact:string): string => {
+    switch (fact) {
+      case "true":
+        return "✔️";
+      case "false":
+        return "❌";
+      default:
+        return "?";
+    }
+  };
+
   return (
     <div className="detail_container">
       <div className="detail_records">
@@ -33,11 +44,11 @@ export const EmployeeDetail = () => {
         </label>
         <label htmlFor="club_member">
           Club Member:
-          <input type="text" id="club_member" readOnly value={`${data.club_member}`} />
+          <input type="text" id="club_member" readOnly value={renderDetails(data.club_member)} />
         </label>
         <label htmlFor="car_owner">
           Car Owner:
-          <input type="text" id="car_owner" readOnly value={`${data.car_owner}`} />
+          <input type="text" id="car_owner" readOnly value={renderDetails(data.car_owner)} />
         </label>
       </div>
       <Link className='detail_modal_return' to={'/'}>RETURN TO HOME PAGE</Link>

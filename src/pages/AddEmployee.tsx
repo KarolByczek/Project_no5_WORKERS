@@ -12,9 +12,9 @@ export function AddEmployee() {
       lastname: formdata.get("lastname") as string,
       birthdate: new Date(formdata.get("birthdate") as string),
       salary: +(formdata.get("salary") as string),
-      club_member: formdata.get("club_member") as unknown as boolean,
+      club_member: formdata.get("club_member") as string,
       status: formdata.get('status') as EmployeeStatus,
-      car_owner: formdata.get("car_owner") as unknown as boolean,
+      car_owner: formdata.get("car_owner") as string,
     };
   };
 
@@ -74,11 +74,17 @@ export function AddEmployee() {
         </label>
         <label htmlFor="club_member">
           Club Member:
-          <input name="club_member" type="text" />
+          <select name="club_member">
+            <option value="true">YES</option>
+            <option value="false">NO</option>
+          </select>
         </label>
         <label htmlFor="car_owner">
           Car Owner:
-          <input name="car_owner" type="text" />
+          <select name="car_owner">
+            <option value="true">YES</option>
+            <option value="false">NO</option>
+          </select>
         </label>
         <button type="submit">ADD THE EMPLOYEE</button>
       </form>
