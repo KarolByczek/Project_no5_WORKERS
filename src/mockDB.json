@@ -229,17 +229,6 @@
       "club_member": "true",
       "status": "junior",
       "car_owner": "true"
-    },
-    {
-      "id": "1710151035796",
-      "firstname": "Paul",
-      "lastname": "Edgecomb",
-      "birthdate": "1998-03-17T00:00:00.000Z",
-      "salary": 3200,
-      "club_member": "true",
-      "status": "junior",
-      "car_owner": "false"
-    },
-    
+    }
   ]
 }
