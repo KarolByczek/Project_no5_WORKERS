@@ -8,7 +8,7 @@
       "salary": 3800,
       "club_member": "true",
       "status": "mid",
-      "car_owner": "false"
+      "car_owner": "true"
     },
     {
       "id": "1708165331570",
@@ -216,6 +216,26 @@
       "lastname": "Palik",
       "birthdate": "1978-04-24T00:00:00.000Z",
       "salary": 3200,
+      "club_member": "false",
+      "status": "junior",
+      "car_owner": "true"
+    },
+    {
+      "id": "1710323201486",
+      "firstname": "Kinga",
+      "lastname": "Fijołek",
+      "birthdate": "1983-06-27T00:00:00.000Z",
+      "salary": 3222,
+      "club_member": "true",
+      "status": "junior",
+      "car_owner": "true"
+    },
+    {
+      "id": "1710323261239",
+      "firstname": "Laura",
+      "lastname": "Nowak",
+      "birthdate": "1976-04-28T00:00:00.000Z",
+      "salary": 3300,
       "club_member": "false",
       "status": "junior",
       "car_owner": "true"
