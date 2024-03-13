@@ -57,17 +57,22 @@ export const Table = (props: { data: Employee[]}) => {
 
     window.addEventListener("scroll", handleScroll);
 
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    }
+    
+
   }, [setStyleState])
 
 
   const renderStatus = (status: EmployeeStatus): string => {
     switch (status) {
       case "junior":
-        return "😵";
+        return "➤";
       case "mid":
-        return "😸";
+        return "➤➤";
       case "senior":
-        return "😎";
+        return "➤➤➤";
       default:
         return "?";
     }

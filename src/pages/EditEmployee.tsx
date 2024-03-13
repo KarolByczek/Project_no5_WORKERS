@@ -11,8 +11,6 @@ export function EditEmployee() {
     const [inputValue1, setInputValue1] = useState<string>(data.lastname);
     const [inputValue2, setInputValue2] = useState<string>(data.salary.toString());
     const [inputValue4, setInputValue4] = useState<string>((data.birthdate).toString().substring(0,10));
-    const [inputValue5, setInputValue5] = useState<string>(data.club_member.toString());
-    const [inputValue6, setInputValue6] = useState<string>(data.car_owner.toString())
     
 
   const makeEmployee = (formdata: FormData):Employee => {
