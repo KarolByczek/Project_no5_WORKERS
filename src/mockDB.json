@@ -146,7 +146,7 @@
       "lastname": "Nowak",
       "birthdate": "1994-03-29T00:00:00.000Z",
       "salary": 2354,
-      "club_member": "false",
+      "club_member": "true",
       "status": "junior",
       "car_owner": "false"
     },

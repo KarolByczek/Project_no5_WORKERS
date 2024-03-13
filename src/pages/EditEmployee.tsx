@@ -84,15 +84,15 @@ export function EditEmployee() {
         <label htmlFor="club_member">
           Club Member:
           <select name="club_member">
-            <option value="true">YES</option>
-            <option value="false">NO</option>
+            <option value="true" selected={data.club_member === "true"}>YES</option>
+            <option value="false" selected={data.club_member === "false"}>NO</option>
           </select>
         </label>
         <label htmlFor="car_owner">
           Car Owner:
           <select name="car_owner">
-            <option value="true">YES</option>
-            <option value="false">NO</option>
+            <option value="true" selected={data.car_owner === "true"}>YES</option>
+            <option value="false" selected={data.car_owner === "false"}>NO</option>
           </select>
         </label>
         <button type="submit">SAVE AFTER EDITING HER OR HIM</button>
