@@ -13,7 +13,6 @@ body {
   color: black;
   display: flex;
   flex-direction: column;
-  padding-top: 10vh;
   align-items: center;
 
   .searchbar input {
@@ -141,15 +140,15 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: start;
-    margin-top: -7rem;
+    margin-top: 2rem;
 
     .edit_employee_form {
       margin-top: 2rem;
-      height: 56vh;
+      height: 50vh;
       display: flex;
       flex-direction: row;
-      justify-content: end;
-      align-self: end;
+      justify-content: center;
+      align-items: center;
       flex-wrap: wrap;
       gap: 0.5rem;
 
@@ -174,7 +173,6 @@ body {
 
       button {
         position: relative;
-        top: 2rem;
         right: -2rem;
         background-color: rgb(94, 180, 120);
         border: 0.4rem solid green;
