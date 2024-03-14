@@ -80,7 +80,7 @@ const resources = {
 i18n.use(initReactI18next).init({
     resources,
     lng: "pl",
-    fallbackLng: "en"
+    fallbackLng: "de"
 })
 
 export default i18n;
