@@ -208,8 +208,8 @@ export const Table = (props: { data: Employee[]}) => {
           placeholder={t('search_placeholder')}
           type="search"
           onKeyUp={onChangeHandler}
-        /><span> </span>
-        {t("employee_result", {count: filtereddata.length})}
+        />
+        <span>{t("employee_result", {count: filtereddata.length})}</span>
       </div>
       <table className="table">
         <thead className="thead" style={styleState}>
