@@ -199,6 +199,16 @@
       "club_member": "false",
       "status": "junior",
       "car_owner": "true"
+    },
+    {
+      "id": "1710448991577",
+      "firstname": "Paul",
+      "lastname": "Artedis",
+      "birthdate": "1997-02-15T00:00:00.000Z",
+      "salary": 3290,
+      "club_member": "false",
+      "status": "mid",
+      "car_owner": "true"
     }
   ]
 }

@@ -14,9 +14,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 3rem;
 
   .searchbar input {
-    width: 30%;
+    width: 34%;
   }
 
   .detail_records {
