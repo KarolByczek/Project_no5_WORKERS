@@ -240,7 +240,7 @@ export const Table = (props: { data: Employee[]}) => {
               {showArrow("birthdate")}
             </th>
             <th>
-              Akcje
+              {t("actions")}
             </th>
           </tr>
         </thead>
