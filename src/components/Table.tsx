@@ -14,7 +14,7 @@ export interface Employee {
   salary: number;
   status: EmployeeStatus;
   birthdate: Date;
-  club_member:string;
+  club_member: string;
   car_owner: string;
 }
 
@@ -29,11 +29,13 @@ export interface Employee {
   car_owner: string
 }*/
 
-export const Table = (props: { data: Employee[]}) => {
+export const Table = (props: { data: Employee[] }) => {
   const navigate = useNavigate();
   const { t } = useTranslation();
   const [filtereddata, setFiltereddata] = useState<Employee[]>(props.data);
-  const [filtereddataForSorting, setFiltereddataForSorting] = useState<Employee[]>(props.data);
+  const [filtereddataForSorting, setFiltereddataForSorting] = useState<
+    Employee[]
+  >(props.data);
   const [sortDirection, setSortDirection] = useState<string>("default");
   const [sortBy, setSortBy] = useState<string>("none");
   const [isQuestModOn, setIsQuestModOn] = useState<boolean>(false);
@@ -59,11 +61,8 @@ export const Table = (props: { data: Employee[]}) => {
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
-    }
-    
-
-  }, [setStyleState])
-
+    };
+  }, [setStyleState]);
 
   const renderStatus = (status: EmployeeStatus): string => {
     switch (status) {
@@ -109,9 +108,9 @@ export const Table = (props: { data: Employee[]}) => {
         phrase01
       );
     });
-    const data02 = data01.filter(one => !(deletedEmpls.includes(one)))
+    const data02 = data01.filter((one) => !deletedEmpls.includes(one));
     setFiltereddata(data02);
-    setFiltereddataForSorting(data01)
+    setFiltereddataForSorting(data01);
   };
 
   const onClickHandler = (
@@ -133,7 +132,7 @@ export const Table = (props: { data: Employee[]}) => {
   const onClickHandler03 = (
     event: MouseEvent<HTMLButtonElement>,
     item: Employee
-  ):void => {
+  ): void => {
     event.preventDefault();
     setIsQuestModOn(true);
     setCurrentEmpl(item);
@@ -205,11 +204,13 @@ export const Table = (props: { data: Employee[]}) => {
       <div className="searchbar">
         {t("search_for")}
         <input
-          placeholder={t('search_placeholder')}
+          placeholder={t("search_placeholder")}
           type="search"
           onKeyUp={onChangeHandler}
         />
-        <span>{t("employee_result", {count: filtereddata.length})}</span>
+        <span>
+          {t("employee_result", { count: filtereddata.length })}
+        </span>
       </div>
       <table className="table">
         <thead className="thead" style={styleState}>
@@ -239,21 +240,37 @@ export const Table = (props: { data: Employee[]}) => {
               {t("birthdate")}
               {showArrow("birthdate")}
             </th>
-            <th>
-              {t("actions")}
-            </th>
+            <th>{t("actions")}</th>
           </tr>
         </thead>
         <tbody className="tbody">
           {filtereddata.map((employee) => {
             return (
               <tr key={employee.id} className="tablerow">
-                <td><span>ID:</span>{employee.id}</td>
-                <td><span>Firstname:</span>{employee.firstname}</td>
-                <td><span>Lastname:</span>{employee.lastname}</td>
-                <td><span>Salary:</span>{employee.salary}</td>
-                <td><span>Status:</span>{renderStatus(employee.status)}</td>
-                <td><span>Birthdate:</span>{(employee.birthdate).toString().substring(0,10)}</td>
+                <td>
+                  <span>ID:</span>
+                  {employee.id}
+                </td>
+                <td>
+                  <span>Firstname:</span>
+                  {employee.firstname}
+                </td>
+                <td>
+                  <span>Lastname:</span>
+                  {employee.lastname}
+                </td>
+                <td>
+                  <span>Salary:</span>
+                  {employee.salary}
+                </td>
+                <td>
+                  <span>Status:</span>
+                  {renderStatus(employee.status)}
+                </td>
+                <td>
+                  <span>Birthdate:</span>
+                  {employee.birthdate.toString().substring(0, 10)}
+                </td>
                 <td className="buttons">
                   <button onClick={(event) => onClickHandler(event, employee)}>
                     {t("details")}
@@ -269,15 +286,17 @@ export const Table = (props: { data: Employee[]}) => {
                     {t("remove")}
                   </button>
                 </td>
-                {isQuestModOn === true && employee === currentEmpl ? <QuestionModal 
-                  dataset={filtereddata}
-                  toDelete={deletedEmpls}
-                  className="question_modal"
-                  item={employee}
-                  hook01={setFiltereddata}
-                  hook02={setIsQuestModOn}
-                  hook03={setDeletedEmpls}
-                /> : null }
+                {isQuestModOn === true && employee === currentEmpl ? (
+                  <QuestionModal
+                    dataset={filtereddata}
+                    toDelete={deletedEmpls}
+                    className="question_modal"
+                    item={employee}
+                    hook01={setFiltereddata}
+                    hook02={setIsQuestModOn}
+                    hook03={setDeletedEmpls}
+                  />
+                ) : null}
               </tr>
             );
           })}
@@ -285,10 +304,14 @@ export const Table = (props: { data: Employee[]}) => {
       </table>
       <div>
         <p>
-          <strong>{t("sorted_by")} {sortBy}</strong>
+          <strong>
+            {t("sorted_by")} {sortBy}
+          </strong>
         </p>
         <p>
-          <strong>{t("sorting_direction")} {sortDirection}</strong>
+          <strong>
+            {t("sorting_direction")} {sortDirection}
+          </strong>
         </p>
       </div>
     </>
