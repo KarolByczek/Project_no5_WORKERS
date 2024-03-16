@@ -189,6 +189,16 @@
       "club_member": "false",
       "status": "mid",
       "car_owner": "true"
+    },
+    {
+      "id": "1710590465672",
+      "firstname": "Feliks",
+      "lastname": "Phoenix",
+      "birthdate": "1993-04-23T00:00:00.000Z",
+      "salary": 4000,
+      "club_member": "false",
+      "status": "junior",
+      "car_owner": "false"
     }
   ]
 }
