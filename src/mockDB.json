@@ -71,16 +71,6 @@
       "car_owner": "false"
     },
     {
-      "id": "1709743059277",
-      "firstname": "Paul",
-      "lastname": "The Lama",
-      "birthdate": "1976-04-22T00:00:00.000Z",
-      "salary": 2777,
-      "club_member": "true",
-      "status": "mid",
-      "car_owner": "false"
-    },
-    {
       "id": "1709885589688",
       "firstname": "Krzysztof",
       "lastname": "The Lama",
@@ -119,16 +109,6 @@
       "club_member": "true",
       "status": "senior",
       "car_owner": "false"
-    },
-    {
-      "id": "1710142857084",
-      "firstname": "Paul",
-      "lastname": "Fherhherh",
-      "birthdate": "1992-12-31T00:00:00.000Z",
-      "salary": 1455,
-      "club_member": "true",
-      "status": "junior",
-      "car_owner": "true"
     },
     {
       "id": "1710142929196",
