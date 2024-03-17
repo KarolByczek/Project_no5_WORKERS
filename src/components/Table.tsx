@@ -247,22 +247,22 @@ export const Table = (props: { data: Employee[] }) => {
           {filtereddata.map((employee) => {
             return (
               <tr key={employee.id} className="tablerow">
-                <td>
+                <td><span>ID:</span>
                   {employee.id}
                 </td>
-                <td>
+                <td><span>First Name:</span>
                   {employee.firstname}
                 </td>
-                <td>
+                <td><span>Last Name:</span>
                   {employee.lastname}
                 </td>
-                <td>
+                <td><span>Salary:</span>
                   {employee.salary}
                 </td>
-                <td>
+                <td><span>Status:</span>
                   {renderStatus(employee.status)}
                 </td>
-                <td>
+                <td><span>Birthdate:</span>
                   {employee.birthdate.toString().substring(0, 10)}
                 </td>
                 <td className="buttons">
