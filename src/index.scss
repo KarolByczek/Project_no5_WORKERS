@@ -31,6 +31,27 @@ body {
   padding: 0.6rem;
 }
 
+.searchbar {
+  margin-bottom: 1rem;
+  font-size: larger;
+  font-weight: 500;
+  flex-wrap: wrap;
+
+  input {
+    margin-left: 1rem;
+    padding: 0.4rem;
+    width: 75%;
+  }
+
+  span {
+    background-color: rgb(250, 127, 11);
+    padding: 0.3rem;
+    border-radius: 0.5rem;
+    margin-left: 0.5rem;
+  }
+
+}
+
 .detail_records {
   display: flex;
   flex-direction: column;
@@ -72,35 +93,17 @@ body {
       margin-top: 1rem;
     }
   }
-
+  
   .thead {
     display: none;
-  }
-
-  .searchbar {
-    margin-bottom: 1rem;
-    font-size: larger;
-    font-weight: 500;
-    flex-wrap: wrap;
-
-    input {
-      margin-left: 1rem;
-      padding: 0.4rem;
-      width: 75%;
-    }
   }
 
   .tablerow {
     font-weight: bolder;
     background-color: #ded3d3;
 
-    :nth-child(2n + 1) {
-      background-color: rgb(230, 234, 233);
-      border: 0.2rem solid rgb(202, 97, 97);
-    }
-
     td {
-      padding: 1rem;
+      padding: 0.5rem;
       border-radius: 0.5rem;
     }
 
@@ -319,21 +322,6 @@ body {
   .detail_modal_return:hover {
     border: 0.2rem solid bisque;
   }
-
-  .searchbar {
-
-    span {
-    background-color: rgb(250, 127, 11);
-    padding: 0.3rem;
-    border-radius: 0.5rem;
-    margin-left: 0.5rem;
-  }
-    br {
-      display: none;
-  }
-  }
-  
-  
 
   .thead th {
     background-color: #63cddb;
