@@ -207,7 +207,7 @@ export const Table = (props: { data: Employee[] }) => {
           placeholder={t("search_placeholder")}
           type="search"
           onKeyUp={onChangeHandler}
-        />
+        /><br/>
         <span>
           {t("employee_result", { count: filtereddata.length })}
         </span>
