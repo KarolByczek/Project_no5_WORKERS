@@ -207,11 +207,11 @@ export const Table = (props: { data: Employee[] }) => {
           placeholder={t("search_placeholder")}
           type="search"
           onKeyUp={onChangeHandler}
-        /><br/>
-        <span>
-          {t("employee_result", { count: filtereddata.length })}
-        </span>
+        />
       </div>
+      <span className="employees_count">
+        {t("employee_result", { count: filtereddata.length })}
+      </span>
       <table className="table">
         <thead className="thead" style={styleState}>
           <tr>

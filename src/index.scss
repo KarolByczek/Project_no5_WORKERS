@@ -1,7 +1,4 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0.5rem;
   text-align: center;
 }
 
@@ -14,13 +11,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 3rem;
 }
 
 .add_employee_link {
-  position: absolute;
-  top: 3rem;
-  left: 3rem;
   text-decoration: none;
   font-weight: bold;
   font-size: larger;
@@ -31,12 +24,16 @@ body {
   padding: 0.6rem;
 }
 
+h1 {
+  margin-top: 2rem;
+}
+
 .home_page {
-  margin-top: 8rem;
+  margin-top: 5rem;
 }
 
 .searchbar {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   font-size: larger;
   font-weight: 500;
 
@@ -46,14 +43,14 @@ body {
     width: 75%;
   }
 
-  span {
+}
+
+.employees_count {
     background-color: rgb(250, 127, 11);
     padding: 0.3rem;
     border-radius: 0.5rem;
-    margin-left: 0.5rem;
+    margin-bottom: 2rem;
   }
-
-}
 
 .detail_records {
   display: flex;
@@ -128,13 +125,10 @@ body {
       }
     }
   }
-
-  h1 {
-    margin-top: 4rem;
-  }
 }
 
 @media screen and (min-width: 850px) {
+
   .add_page {
     margin-top: -3rem;
 
@@ -299,15 +293,6 @@ body {
     }
   }
 
-  .add_employee_form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
   .detail_modal_return {
     position: absolute;
     right: 3rem;
@@ -324,6 +309,10 @@ body {
 
   .detail_modal_return:hover {
     border: 0.2rem solid bisque;
+  }
+
+  table {
+    margin-top: 2rem;
   }
 
   .thead th {

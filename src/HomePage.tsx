@@ -17,10 +17,11 @@ function HomePage() {
 
   return (
     <div className="home_page">
-      <h1>{t("employees")}</h1>
       <Link className="add_employee_link" to="add_form">
         {t("add_a_new")}
       </Link>
+      <h1>{t("employees")}</h1>
+      
       {totalemployees.length > 0 ? (
         <Table data={totalemployees} />
       ) : null}
