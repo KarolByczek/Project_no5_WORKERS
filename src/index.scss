@@ -221,7 +221,7 @@ p strong {
   }
 }
 
-@media screen and (max-width: 730px) {
+@media screen and (max-width: 740px) {
   .table {
     margin-top: 2rem;
 
@@ -230,14 +230,14 @@ p strong {
     }
 
     .tablerow {
-      display: flex;
-      flex-direction: column;
-      padding: 1rem;
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-template-rows: 16% 16% 16% 16% 16% 16%;
+      padding: 0.4rem;
       margin-top: 1rem;
       font-weight: bolder;
 
       td {
-        width: 80vw;
         font-size: larger;
         display: flex;
         gap: 0.5rem;
@@ -252,15 +252,13 @@ p strong {
       .buttons {
         display: flex;
         justify-content: space-around;
-        margin-top: 1rem;
         padding: 0.2rem;
-        gap: 0.2rem;
 
         button {
           color: rgb(45, 42, 38);
           background-color: aqua;
-          width: 5rem;
-          height: 3rem;
+          width: fit-content;
+          height: fit-content;
         }
       }
     }
@@ -270,40 +268,79 @@ p strong {
     left: 10vh;
     margin-right: 10vh;
   }
+}
 
-  @media screen and (min-width: 731px) {
-    .employees_count {
-      margin-bottom: 2rem;
+@media screen and (min-width: 741px) {
+  .employees_count {
+    margin-bottom: 2rem;
+  }
+
+  .add_employee_link {
+    display: flex;
+    align-self: flex-start;
+    margin-left: 1rem;
+  }
+
+  .table {
+    margin: 2rem 0.4rem;
+
+    .thead {
+      th {
+        background-color: #63cddb;
+        padding: 0.2rem;
+        border: 0.2rem solid rgb(30, 91, 116);
+      }
     }
 
-    .add_employee_link {
-      display: flex;
-      align-self: flex-start;
-    }
+    .tbody {
+      .tablerow {
+        background-color: #ded3d3;
+        td {
+          border: 0.2rem solid transparent;
+          padding: 0.2rem;
+          border-radius: 0.4rem;
+          span {
+            display: none;
+          }
+        }
 
-    .detail_container {
-      margin-top: 2rem;
-      height: 56vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+        .buttons {
+          padding: 0;
+          button {
+            margin: 0;
+          }
+        }
+      }
+
+      .tablerow:hover td {
+        border: 0.2rem solid rgb(91, 190, 61);
+        background-color: aqua;
+      }
+    }
+  }
+
+  .detail_container {
+    margin-top: 2rem;
+    height: 56vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+
+    label {
+      font-weight: bold;
+      font-size: large;
       align-items: center;
-      gap: 3rem;
+    }
 
-      label {
-        font-weight: bold;
-        font-size: large;
-        align-items: center;
-      }
-
-      input {
-        border: 0.2rem solid red;
-        background-color: black;
-        color: aliceblue;
-        font-weight: bold;
-        font-size: large;
-        text-align: center;
-      }
+    input {
+      border: 0.2rem solid red;
+      background-color: black;
+      color: aliceblue;
+      font-weight: bold;
+      font-size: large;
+      text-align: center;
     }
 
     .detail_modal_return {
@@ -322,37 +359,6 @@ p strong {
 
     .detail_modal_return:hover {
       border: 0.2rem solid bisque;
-    }
-
-    .table {
-      margin-top: 2rem;
-
-      .thead {
-        th {
-          background-color: #63cddb;
-          padding: 0.3rem;
-          border: 0.2rem solid rgb(30, 91, 116);
-        }
-      }
-
-      .tbody {
-        .tablerow {
-          background-color: #ded3d3;
-          td {
-            border: 0.2rem solid transparent;
-            padding: 0.3rem;
-            border-radius: 0.4rem;
-            span {
-              display: none;
-            }
-          }
-        }
-      }
-
-      .tablerow:hover td {
-        border: 0.2rem solid rgb(91, 190, 61);
-        background-color: aqua;
-      }
     }
   }
 }
