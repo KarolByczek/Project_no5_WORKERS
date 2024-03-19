@@ -224,41 +224,49 @@ p strong {
 @media screen and (max-width: 740px) {
   .table {
     margin-top: 2rem;
+    width: 85vw;
 
     .thead {
-      display: none;
+      tr {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 33% 33% 33%;
+      }
     }
 
-    .tablerow {
-      display: grid;
-      grid-template-columns: 50% 50%;
-      grid-template-rows: 16% 16% 16% 16% 16% 16%;
-      padding: 0.4rem;
-      margin-top: 1rem;
-      font-weight: bolder;
-
-      td {
-        font-size: larger;
+    .tbody {
+      .tablerow {
         display: flex;
-        gap: 0.5rem;
-        padding: 0.5rem;
+        flex-direction: column;
+        padding: 0.2rem;
+        margin-top: 1rem;
         border-radius: 0.5rem;
 
-        span {
+        td {
+          font-size: larger;
+          font-weight: 200;
           display: flex;
+          gap: 0.5rem;
+          padding: 0.2rem;
+          flex-wrap: nowrap;
+          text-align: start;
+
+          span {
+            display: flex;
+          }
         }
-      }
 
-      .buttons {
-        display: flex;
-        justify-content: space-around;
-        padding: 0.2rem;
+        .buttons {
+          display: flex;
+          justify-content: start;
+          padding: 0.2rem;
 
-        button {
-          color: rgb(45, 42, 38);
-          background-color: aqua;
-          width: fit-content;
-          height: fit-content;
+          button {
+            color: rgb(45, 42, 38);
+            background-color: aqua;
+            width: fit-content;
+            height: fit-content;
+          }
         }
       }
     }
@@ -285,6 +293,9 @@ p strong {
     margin: 2rem 0.4rem;
 
     .thead {
+      span {
+        display: none;
+      }
       th {
         background-color: #63cddb;
         padding: 0.2rem;

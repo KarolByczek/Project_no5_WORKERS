@@ -45,7 +45,7 @@ export const Table = (props: { data: Employee[] }) => {
 
   useEffect(() => {
     const handleScroll = (): void => {
-      if (window.scrollY > 200) {
+      if (window.scrollY > 200 && window.innerWidth > 740) {
         setStyleState({
           position: "sticky",
           top: "0",
@@ -213,7 +213,9 @@ export const Table = (props: { data: Employee[] }) => {
         {t("employee_result", { count: filtereddata.length })}
       </span>
       <table className="table">
+        
         <thead className="thead" style={styleState}>
+          <span>Sort by:</span>
           <tr>
             <th>ID</th>
             <th
@@ -265,7 +267,7 @@ export const Table = (props: { data: Employee[] }) => {
                 <td><span>Birthdate:</span>
                   {employee.birthdate.toString().substring(0, 10)}
                 </td>
-                <td className="buttons">
+                <td className="buttons"><span>Actions:</span>
                   <button onClick={(event) => onClickHandler(event, employee)}>
                     {t("details")}
                   </button>
