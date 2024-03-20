@@ -4,7 +4,7 @@
 
 body {
   background-color: rgb(136, 174, 161);
-  background-image: url("./assets/architecture-01.jpg");
+  background-image: url("./assets/city_background01.png");
   background-attachment: fixed;
   background-size: 100vw auto;
   color: black;
@@ -222,6 +222,11 @@ p strong {
 }
 
 @media screen and (max-width: 740px) {
+
+  body {
+    background-repeat: unset
+  }
+
   .table {
     margin-top: 2rem;
     width: 85vw;
