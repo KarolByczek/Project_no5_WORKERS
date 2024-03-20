@@ -227,13 +227,15 @@ p strong {
     width: 85vw;
 
     .thead {
+      background-color: #63cddb;
+
       tr {
         display: flex;
         flex-direction: column;
-      }
 
-      tr .not_for_sorting {
-        display: none;
+        .not_for_sorting {
+          display: none;
+        }
       }
     }
 
