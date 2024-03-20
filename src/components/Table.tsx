@@ -215,9 +215,9 @@ export const Table = (props: { data: Employee[] }) => {
       <table className="table">
         
         <thead className="thead" style={styleState}>
-          <span>Sort by:</span>
+          <span><i>SORT EMPLOYEES BY:</i></span>
           <tr>
-            <th>ID</th>
+            <th className="not_for_sorting">ID</th>
             <th
               onClick={(event) => handleHeaderColumnClick(event, "firstname")}
             >
@@ -242,7 +242,7 @@ export const Table = (props: { data: Employee[] }) => {
               {t("birthdate")}
               {showArrow("birthdate")}
             </th>
-            <th>{t("actions")}</th>
+            <th className="not_for_sorting">{t("actions")}</th>
           </tr>
         </thead>
         <tbody className="tbody">
