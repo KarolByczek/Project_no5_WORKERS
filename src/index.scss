@@ -15,7 +15,6 @@ body {
 
 .add_employee_link {
   width: fit-content;
-  height: fit-content;
   text-decoration: none;
   font-weight: bold;
   font-size: larger;
@@ -55,6 +54,7 @@ h1 {
 .table {
   .tablerow {
     background-color: #ded3d3;
+    margin: auto 1rem;
   }
   .tablerow:nth-child(2n + 1) {
     background-color: #b1a7a7;
@@ -276,7 +276,7 @@ p strong {
           button {
             color: rgb(45, 42, 38);
             background-color: aqua;
-            width: 30%;
+            width: fit-content;
             height: 3rem;
           }
         }
