@@ -167,7 +167,7 @@ export const Table = (props: { data: Employee[] }) => {
     let tempsortdir = sortDirection;
 
     if (key !== sortBy) {
-      tempsortdir = "descending";
+      tempsortdir = "default";
     }
 
     if (tempsortdir === "default") {
