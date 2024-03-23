@@ -12,19 +12,17 @@ function HomePage() {
     fetch("http://localhost:3000/employees")
       .then((response) => response.json())
       .then((responseData) => setTotalemployees(responseData));
-
   }, [setTotalemployees]);
 
   return (
     <div className="home_page">
-      <Link className="add_employee_link" to="add_form">
-        {t("add_a_new")}
+      <Link to="add_form">
+        <div className="add_employee_link">
+          {t("add_a_new")}
+        </div>
       </Link>
       <h1>{t("employees")}</h1>
-      
-      {totalemployees.length > 0 ? (
-        <Table data={totalemployees} />
-      ) : null}
+      {totalemployees.length > 0 ? <Table data={totalemployees} /> : null}
     </div>
   );
 }
