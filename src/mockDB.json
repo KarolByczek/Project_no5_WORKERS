@@ -209,6 +209,16 @@
       "club_member": "false",
       "status": "junior",
       "car_owner": "true"
+    },
+    {
+      "id": "1711208889726",
+      "firstname": "Konrad",
+      "lastname": "Bartuzzi",
+      "birthdate": "1992-12-13T00:00:00.000Z",
+      "salary": 9,
+      "club_member": "true",
+      "status": "junior",
+      "car_owner": "true"
     }
   ]
 }
