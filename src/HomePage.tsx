@@ -16,7 +16,7 @@ function HomePage() {
 
   return (
     <div className="home_page">
-      <Link to="add_form">
+      <Link className="link" to="add_form">
         <div className="add_employee_link">
           {t("add_a_new")}
         </div>
