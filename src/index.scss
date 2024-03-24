@@ -85,6 +85,8 @@ p strong {
     }
 
     label {
+      display: flex;
+      flex-direction: column;
       font-weight: bold;
       font-size: large;
       align-items: center;
@@ -120,7 +122,6 @@ p strong {
 }
 
 .add_employee_form {
-  margin-top: -5rem;
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -282,9 +283,6 @@ p strong {
           font-weight: 200;
           display: flex;
           gap: 0.5rem;
-          padding: 0.2rem;
-          flex-wrap: nowrap;
-          text-align: start;
 
           span {
             display: flex;
@@ -345,7 +343,6 @@ p strong {
         background-color: #ded3d3;
         td {
           border: 0.2rem solid transparent;
-          padding: 0.2rem;
           border-radius: 0.4rem;
           span {
             display: none;
