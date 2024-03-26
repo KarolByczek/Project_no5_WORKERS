@@ -38,7 +38,7 @@ export function EditEmployee() {
     })
       .then((response) => {
         if (response.ok) {
-          navigate("/#bottom_line");
+          navigate("/");
         } else {
           console.log("Something went wrong!");
           throw new Error("Error");
