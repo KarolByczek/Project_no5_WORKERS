@@ -299,7 +299,7 @@ export const Table = (props: { data: Employee[] }) => {
         </tbody>
       </table>
       <div>
-        <p id="bottom_line">
+        <p>
           <strong>
             {t("sorted_by")} {sortBy}
           </strong>
