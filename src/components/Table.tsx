@@ -267,7 +267,8 @@ export const Table = (props: { data: Employee[] }) => {
                 <td><span>Birthdate:</span>
                   {employee.birthdate.toString().substring(0, 10)}
                 </td>
-                <td className="buttons"><span>Actions:</span>
+                <td className="buttons">
+                  <span>Actions:</span>
                   <button onClick={(event) => onClickHandler(event, employee)}>
                     {t("details")}
                   </button>

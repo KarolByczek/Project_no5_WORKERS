@@ -258,12 +258,14 @@ p strong {
   .table {
     .tbody {
       .tablerow {
-        font-size: medium;
-        font-weight: 200;
         .buttons {
+          span {
+            display: none;
+          }
           button {
             width: fit-content;
             height: fit-content;
+            padding: 0;
           }
         }
       }
