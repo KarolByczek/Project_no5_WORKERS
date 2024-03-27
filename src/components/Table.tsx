@@ -288,9 +288,9 @@ export const Table = (props: { data: Employee[] }) => {
                     toDelete={deletedEmpls}
                     className="question_modal"
                     item={employee}
-                    hook01={setFiltereddata}
-                    hook02={setIsQuestModOn}
-                    hook03={setDeletedEmpls}
+                    setter01={setFiltereddata}
+                    setter02={setIsQuestModOn}
+                    setter03={setDeletedEmpls}
                   />
                 ) : null}
               </tr>

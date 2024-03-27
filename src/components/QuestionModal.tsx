@@ -6,9 +6,9 @@ export const QuestionModal = (props: {
   toDelete: Employee[],
   item: Employee,
   className: string,
-  hook01: Function,
-  hook02: Function,
-  hook03: Function
+  setter01: Function,
+  setter02: Function,
+  setter03: Function
 }) => {
   const { t } = useTranslation();
 
@@ -28,9 +28,9 @@ export const QuestionModal = (props: {
       .then(() => console.log("The employee data has been deleted"))
       .catch((err) => console.error(err));
 
-    props.hook01(props.dataset.filter((employee) => employee !== props.item));
-    props.hook03([ ...props.toDelete, props.item ]);
-    props.hook02(false);
+    props.setter01(props.dataset.filter((employee) => employee !== props.item));
+    props.setter03([ ...props.toDelete, props.item ]);
+    props.setter02(false);
   };
 
   return (
@@ -46,7 +46,7 @@ export const QuestionModal = (props: {
           <button onClick={onClickButton01}>{t("yes")}</button>
           <button
             onClick={() => {
-              props.hook02(false);
+              props.setter02(false);
             }}
           >
             {t("cancellation")}
