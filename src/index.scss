@@ -254,13 +254,21 @@ p strong {
   }
 }
 
-@media screen and (max-width: 350px) {
-
-  #root {
-    font-size: medium;
-    font-weight: 200;
+@media screen and (max-width: 290px) {
+  .table {
+    .tbody {
+      .tablerow {
+        font-size: medium;
+        font-weight: 200;
+        .buttons {
+          button {
+            width: fit-content;
+            height: fit-content;
+          }
+        }
+      }
+    }
   }
-
 }
 
 @media screen and (max-width: 740px) {
