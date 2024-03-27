@@ -254,6 +254,15 @@ p strong {
   }
 }
 
+@media screen and (max-width: 350px) {
+
+  #root {
+    font-size: medium;
+    font-weight: 200;
+  }
+
+}
+
 @media screen and (max-width: 740px) {
   body {
     background-size: cover;
