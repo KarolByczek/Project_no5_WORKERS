@@ -6,7 +6,8 @@ body {
   background-color: rgb(136, 174, 161);
   background-image: url("./assets/city_background01.png");
   background-attachment: fixed;
-  background-size: 100vw auto;
+  background-size: cover;
+  background-repeat: round;
   color: black;
   display: flex;
   flex-direction: column;
@@ -264,8 +265,7 @@ p strong {
           }
           button {
             width: fit-content;
-            height: fit-content;
-            padding: 0;
+            padding: 0.5rem;
           }
         }
       }
@@ -274,10 +274,6 @@ p strong {
 }
 
 @media screen and (max-width: 740px) {
-  body {
-    background-size: cover;
-    background-repeat: round;
-  }
 
   .table {
     margin-top: 2rem;
@@ -320,10 +316,8 @@ p strong {
           justify-content: space-between;
           align-items: center;
           padding: 0.2rem;
-
           button {
-            height: 3rem;
-            padding: 1rem;
+            padding: 0.8rem;
           }
         }
       }
