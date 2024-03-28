@@ -254,7 +254,19 @@ p strong {
   }
 }
 
-
+@media screen and (max-width: 300px) {
+  .table {
+    .tbody {
+      .tablerow {
+        .buttons {
+          button {
+            padding: 2rem;
+          }
+        }
+      }
+    }
+  }
+}
 
 @media screen and (max-width: 740px) {
   .table {
