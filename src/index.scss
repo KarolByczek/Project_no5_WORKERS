@@ -260,12 +260,9 @@ p strong {
     .tbody {
       .tablerow {
         .buttons {
-          span {
-            display: none;
-          }
           button {
             width: fit-content;
-            padding: 0.5rem;
+            padding: 0;
           }
         }
       }
@@ -274,7 +271,6 @@ p strong {
 }
 
 @media screen and (max-width: 740px) {
-
   .table {
     margin-top: 2rem;
     width: 100%;
@@ -316,6 +312,9 @@ p strong {
           justify-content: space-between;
           align-items: center;
           padding: 0.2rem;
+          span {
+            display: none;
+          }
           button {
             padding: 0.8rem;
           }
@@ -348,15 +347,17 @@ p strong {
       span {
         display: none;
       }
-      th {
-        background-color: #63cddb;
-        padding: 0.2rem;
-        border: 0.2rem solid rgb(30, 91, 116);
+      tr {
+        th {
+          background-color: #63cddb;
+          border: 0.2rem solid rgb(30, 91, 116);
+        }
       }
     }
 
     .tbody {
       .tablerow {
+        flex-direction: row;
         background-color: #ded3d3;
         td {
           border: 0.2rem solid transparent;
