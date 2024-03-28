@@ -76,7 +76,7 @@
       "lastname": "The Lama",
       "birthdate": "1993-03-22T00:00:00.000Z",
       "salary": 5555,
-      "club_member": "true",
+      "club_member": "false",
       "status": "senior",
       "car_owner": "false"
     },

@@ -178,15 +178,14 @@ p strong {
 .question_modal {
   position: fixed;
   top: 30vh;
-  left: 30vw;
-  width: fit-content;
+  left: 25vw;
   background-color: rgb(242, 125, 86);
   height: fit-content;
   z-index: 5;
   border: 0.5rem solid red;
   border-radius: 0.3rem;
   font-weight: bold;
-  padding: 2rem 1rem 1rem 1rem;
+  padding: 1rem;
   cursor: pointer;
 
   .modbuttons {
@@ -234,7 +233,7 @@ p strong {
       select {
         font-size: large;
         padding: 0.2rem;
-        width: fit-content;
+        width: 10rem;
       }
     }
 
@@ -255,20 +254,7 @@ p strong {
   }
 }
 
-@media screen and (max-width: 290px) {
-  .table {
-    .tbody {
-      .tablerow {
-        .buttons {
-          button {
-            width: fit-content;
-            padding: 0;
-          }
-        }
-      }
-    }
-  }
-}
+
 
 @media screen and (max-width: 740px) {
   .table {
@@ -324,8 +310,7 @@ p strong {
   }
 
   .question_modal {
-    left: 10vh;
-    margin-right: 10vh;
+    margin-right: 5vw;
   }
 }
 
