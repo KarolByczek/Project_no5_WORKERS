@@ -259,8 +259,10 @@ p strong {
     .tbody {
       .tablerow {
         .buttons {
+          padding: 2rem 0;
           button {
-            padding: 2rem;
+            color: rgb(12, 44, 44);
+            background-color: #ec2424;
           }
         }
       }
