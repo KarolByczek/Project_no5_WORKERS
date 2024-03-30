@@ -366,16 +366,16 @@ p strong {
         }
 
         .buttons {
-          padding: 0;
+          padding: 0.4rem;
           button {
-            margin: 0;
+            margin-left: 0.2rem;
           }
         }
       }
 
       .tablerow:hover td {
-        border: 0.2rem solid rgb(91, 190, 61);
-        background-color: aqua;
+        border: 0.2rem solid rgb(240, 151, 19);
+        background-color: rgb(128, 229, 145);
       }
     }
   }
