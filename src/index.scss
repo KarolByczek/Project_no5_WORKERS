@@ -260,14 +260,21 @@ p strong {
       .tablerow {
         .buttons {
           margin-top: 1rem;
+          flex-wrap: wrap;
           button {
             border-radius: 0.5rem;
             background-color: #8fec24;
+            text-transform: uppercase;
           }
         }
       }
     }
   }
+
+  .question_modal {
+    margin-right: 20vw;
+  }
+
 }
 
 @media screen and (max-width: 740px) {
@@ -324,7 +331,7 @@ p strong {
   }
 
   .question_modal {
-    margin-right: 5vw;
+    margin-right: 15vw;
   }
 }
 
