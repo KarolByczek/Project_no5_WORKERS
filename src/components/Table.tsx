@@ -252,19 +252,19 @@ export const Table = (props: { data: Employee[] }) => {
                 <td><span>ID:</span>
                   {employee.id}
                 </td>
-                <td><span>First Name:</span>
+                <td><span>{t("first_name")}:</span>
                   {employee.firstname}
                 </td>
-                <td><span>Last Name:</span>
+                <td><span>{t("last_name")}:</span>
                   {employee.lastname}
                 </td>
-                <td><span>Salary:</span>
+                <td><span>{t("salary")}:</span>
                   {employee.salary}
                 </td>
-                <td><span>Status:</span>
+                <td><span>{t("status")}:</span>
                   {renderStatus(employee.status)}
                 </td>
-                <td><span>Birthdate:</span>
+                <td><span>{t("birthdate")}:</span>
                   {employee.birthdate.toString().substring(0, 10)}
                 </td>
                 <td className="buttons">
