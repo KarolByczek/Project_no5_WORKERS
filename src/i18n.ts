@@ -23,7 +23,10 @@ const resources = {
             cancellation: "CANCEL",
             employee_result_one: "{{count}} EMPLOYEE",
             employee_result_other: "{{count}} EMPLOYEES",
-            search_placeholder: "Type any employee data..."   
+            search_placeholder: "Type any employee data...",
+            default: "default",
+            ascending: "ascending",
+            descending: "descending"
         }
     },
     pl: {
@@ -47,7 +50,10 @@ const resources = {
             cancellation: "ANULUJ",
             employee_result_one: "{{count}} PRACOWNIK",
             employee_result_other: "{{count}} PRACOWNIKÓW",
-            search_placeholder: "Wpisz dowolne dane pracownika..."
+            search_placeholder: "Wpisz dowolne dane pracownika...",
+            default: "domyślnie",
+            ascending: "rosnąco",
+            descending: "malejąco"
         }
     },
     de: {
@@ -71,7 +77,10 @@ const resources = {
             cancellation: "ANULIEREN",
             employee_result_one: "{{count}} MITARBEITER",
             employee_result_other: "{{count}} MITARBEITERN",
-            search_placeholder: "Schreiben Sie einen info von einer mitarbeiter..."
+            search_placeholder: "Schreiben Sie einen info von einer mitarbeiter...",
+            default: "STANDARD",
+            ascending: "AUFSTEIGEND",
+            descending: "ABSTEIGEND"
 
         }
     }
