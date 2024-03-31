@@ -51,16 +51,6 @@
       "car_owner": "true"
     },
     {
-      "id": "1709574207854",
-      "firstname": "Paul",
-      "lastname": "Wane",
-      "birthdate": "1996-03-25T00:00:00.000Z",
-      "salary": 4000,
-      "club_member": "true",
-      "status": "senior",
-      "car_owner": "true"
-    },
-    {
       "id": "1709734770128",
       "firstname": "Feliks",
       "lastname": "Filipiuk",

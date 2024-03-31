@@ -213,9 +213,10 @@ export const Table = (props: { data: Employee[] }) => {
         {t("employee_result", { count: filtereddata.length })}
       </span>
       <table className="table">
-        
         <thead className="thead" style={styleState}>
-          <span><i>SORT EMPLOYEES BY:</i></span>
+          <span>
+            <i>SORT EMPLOYEES BY:</i>
+          </span>
           <tr>
             <th className="not_for_sorting">ID</th>
             <th
@@ -249,22 +250,28 @@ export const Table = (props: { data: Employee[] }) => {
           {filtereddata.map((employee) => {
             return (
               <tr key={employee.id} className="tablerow">
-                <td><span>ID:</span>
+                <td>
+                  <span>ID:</span>
                   {employee.id}
                 </td>
-                <td><span>{t("first_name")}:</span>
+                <td>
+                  <span>{t("first_name")}:</span>
                   {employee.firstname}
                 </td>
-                <td><span>{t("last_name")}:</span>
+                <td>
+                  <span>{t("last_name")}:</span>
                   {employee.lastname}
                 </td>
-                <td><span>{t("salary")}:</span>
+                <td>
+                  <span>{t("salary")}:</span>
                   {employee.salary}
                 </td>
-                <td><span>{t("status")}:</span>
+                <td>
+                  <span>{t("status")}:</span>
                   {renderStatus(employee.status)}
                 </td>
-                <td><span>{t("birthdate")}:</span>
+                <td>
+                  <span>{t("birthdate")}:</span>
                   {employee.birthdate.toString().substring(0, 10)}
                 </td>
                 <td className="buttons">
@@ -302,12 +309,20 @@ export const Table = (props: { data: Employee[] }) => {
       <div>
         <p>
           <strong>
-            {t("sorted_by")} {sortBy}
+            {t("sorted_by")}<span> </span>
+            {sortBy === "firstname" ? t("first_name") : null}
+            {sortBy === "lastname" ? t("last_name") : null}
+            {sortBy === "salary" ? t("salary") : null}
+            {sortBy === "status" ? t("status") : null}
+            {sortBy === "birthdate" ? t("birthdate") : null}
           </strong>
         </p>
         <p>
           <strong>
-            {t("sorting_direction")} {sortDirection}
+            {t("sorting_direction")}<span> </span>
+            {sortDirection === "default" ? t("default") : null}
+            {sortDirection === "ascending" ? t("ascending") : null}
+            {sortDirection === "descending" ? t("descending") : null}
           </strong>
         </p>
       </div>
