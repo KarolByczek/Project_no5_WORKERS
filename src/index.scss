@@ -256,10 +256,12 @@ p strong {
 
 @media screen and (max-width: 300px) {
   .table {
+    font-size: small;
     .tbody {
       .tablerow {
         .buttons {
           margin-top: 1rem;
+          gap: 0;
           flex-wrap: wrap;
           button {
             border-radius: 0.5rem;
@@ -272,7 +274,8 @@ p strong {
   }
 
   .question_modal {
-    margin-right: 20vw;
+    width: 80vw;
+    left: 2%;
   }
 
 }
