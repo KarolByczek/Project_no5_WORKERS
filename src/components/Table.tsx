@@ -315,6 +315,7 @@ export const Table = (props: { data: Employee[] }) => {
             {sortBy === "salary" ? t("salary") : null}
             {sortBy === "status" ? t("status") : null}
             {sortBy === "birthdate" ? t("birthdate") : null}
+            {sortBy === "none" ? t("none") : null}
           </strong>
         </p>
         <p>

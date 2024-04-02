@@ -26,7 +26,8 @@ const resources = {
             search_placeholder: "Type any employee data...",
             default: "default",
             ascending: "ascending",
-            descending: "descending"
+            descending: "descending",
+            none: "none"
         }
     },
     pl: {
@@ -53,7 +54,8 @@ const resources = {
             search_placeholder: "Wpisz dowolne dane pracownika...",
             default: "domyślnie",
             ascending: "rosnąco",
-            descending: "malejąco"
+            descending: "malejąco",
+            none: "brak"
         }
     },
     de: {
@@ -80,7 +82,8 @@ const resources = {
             search_placeholder: "Schreiben Sie einen info von einer mitarbeiter...",
             default: "STANDARD",
             ascending: "AUFSTEIGEND",
-            descending: "ABSTEIGEND"
+            descending: "ABSTEIGEND",
+            none: "keiner"
 
         }
     }
@@ -88,7 +91,7 @@ const resources = {
 
 i18n.use(initReactI18next).init({
     resources,
-    lng: "de",
+    lng: "pl",
     fallbackLng: "en"
 })
 
