@@ -37,13 +37,13 @@ export const QuestionModal = (props: {
     <div>
     <div className="back_to_black"></div>
       <div className={props.className}>
-        {t("confirmation")}
+        {t("delete_confirmation")}
         <div>
           {props.item.firstname} {props.item.lastname}, {t("birthdate")}: {}
           {props.item.birthdate.toString().substring(0, 10)}
         </div>
         <div className="modbuttons">
-          <button onClick={onClickButton01}>{t("yes")}</button>
+          <button onClick={onClickButton01}>{t("confirmation")}</button>
           <button
             onClick={() => {
               props.setter02(false);

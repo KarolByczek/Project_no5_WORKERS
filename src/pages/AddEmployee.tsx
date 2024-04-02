@@ -47,19 +47,19 @@ export function AddEmployee() {
       <h2>{t("add_employee_text")}</h2>
       <form className="add_employee_form" onSubmit={handleAddEmployee}>
         <label htmlFor="firstname">
-          First Name:
+          {t("first_name")}:
           <input name="firstname" type="text" />
         </label>
         <label htmlFor="lastname">
-          Last Name:
+          {t("last_name")}:
           <input name="lastname" type="text" />
         </label>
         <label htmlFor="salary">
-          Salary:
+          {t("salary")}:
           <input name="salary" type="number" />
         </label>
         <label htmlFor="status">
-          Status:
+          {t("status")}:
             <select name="status">
               {statusOptions.map((opt) => {
                 return (
@@ -71,21 +71,21 @@ export function AddEmployee() {
             </select>
           </label>
         <label htmlFor="birthdate">
-          Birthdate:
+          {t("birthdate")}:
           <input name="birthdate" type="text" />
         </label>
         <label htmlFor="club_member">
-          Club Member:
+          {t("clubmember")}:
           <select name="club_member">
-            <option value="true">YES</option>
-            <option value="false">NO</option>
+            <option value="true">{t("confirmation")}</option>
+            <option value="false">{t("denial")}</option>
           </select>
         </label>
         <label htmlFor="car_owner">
-          Car Owner:
+          {t("carowner")}:
           <select name="car_owner">
-            <option value="true">YES</option>
-            <option value="false">NO</option>
+            <option value="true">{t("confirmation")}</option>
+            <option value="false">{t("denial")}</option>
           </select>
         </label>
         <button type="submit">ADD THE EMPLOYEE</button>

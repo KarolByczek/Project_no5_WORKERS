@@ -209,6 +209,16 @@
       "club_member": "true",
       "status": "junior",
       "car_owner": "false"
+    },
+    {
+      "id": "1712078536957",
+      "firstname": "Friedrich",
+      "lastname": "Hochen-Leibnitz",
+      "birthdate": "1978-04-22T00:00:00.000Z",
+      "salary": 3120,
+      "club_member": "false",
+      "status": "junior",
+      "car_owner": "true"
     }
   ]
 }
