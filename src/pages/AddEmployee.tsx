@@ -1,9 +1,11 @@
 import { Employee, EmployeeStatus } from "../components/Table";
 import { useNavigate } from "react-router-dom";
 import { statusOptions } from "../AUXILIARY OBJECTS/statusoptions";
+import { useTranslation } from "react-i18next";
 
 export function AddEmployee() {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const makeEmployee = (formdata: FormData): Employee => {
     return {
@@ -42,7 +44,7 @@ export function AddEmployee() {
 
   return (
     <div className="add_page">
-      <h2>PROVIDE DATA OF AN EMPLOYEE YOU WOULD LIKE TO ADD TO THE LIST:</h2>
+      <h2>{t("add_employee_text")}</h2>
       <form className="add_employee_form" onSubmit={handleAddEmployee}>
         <label htmlFor="firstname">
           First Name:

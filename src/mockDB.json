@@ -199,6 +199,16 @@
       "club_member": "false",
       "status": "junior",
       "car_owner": "true"
+    },
+    {
+      "id": "1712047943215",
+      "firstname": "Karol",
+      "lastname": "Zabłocki",
+      "birthdate": "1999-11-13T00:00:00.000Z",
+      "salary": 3200,
+      "club_member": "true",
+      "status": "junior",
+      "car_owner": "false"
     }
   ]
 }

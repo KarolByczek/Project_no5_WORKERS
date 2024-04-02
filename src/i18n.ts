@@ -27,7 +27,8 @@ const resources = {
             default: "default",
             ascending: "ascending",
             descending: "descending",
-            none: "none"
+            none: "none",
+            add_employee_text: "PROVIDE DATA OF AN EMPLYEE YOU WOULD LIKE TO ADD TO THE LIST:"
         }
     },
     pl: {
@@ -55,7 +56,8 @@ const resources = {
             default: "domyślnie",
             ascending: "rosnąco",
             descending: "malejąco",
-            none: "brak"
+            none: "brak",
+            add_employee_text: "WPISZ DANE PRACOWNIKA, KTÓREGO CHCIAŁ(A)BYŚ DODAĆ DO LISTY:"
         }
     },
     de: {
@@ -83,7 +85,8 @@ const resources = {
             default: "STANDARD",
             ascending: "AUFSTEIGEND",
             descending: "ABSTEIGEND",
-            none: "keiner"
+            none: "keiner",
+            add_employee_text: "SCHREIBEN SIE DIE MITARBEITERDATEN SIE MOCHTEN HINFÜGEN ZUR DIE LISTE ZU:"
 
         }
     }
@@ -91,7 +94,7 @@ const resources = {
 
 i18n.use(initReactI18next).init({
     resources,
-    lng: "pl",
+    lng: "de",
     fallbackLng: "en"
 })
 
