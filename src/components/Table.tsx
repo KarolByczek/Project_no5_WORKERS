@@ -215,7 +215,7 @@ export const Table = (props: { data: Employee[] }) => {
       <table className="table">
         <thead className="thead" style={styleState}>
           <span>
-            <i>SORT EMPLOYEES BY:</i>
+            <i>{t("sort_employees_by")}:</i>
           </span>
           <tr>
             <th className="not_for_sorting">ID</th>

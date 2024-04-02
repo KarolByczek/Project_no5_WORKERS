@@ -88,7 +88,7 @@ export function AddEmployee() {
             <option value="false">{t("denial")}</option>
           </select>
         </label>
-        <button type="submit">ADD THE EMPLOYEE</button>
+        <button type="submit">{t("add_button")}</button>
       </form>
     </div>
   );
