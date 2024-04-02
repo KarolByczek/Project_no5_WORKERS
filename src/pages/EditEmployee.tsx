@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Employee, EmployeeStatus } from "../components/Table";
 import { useLocation, useNavigate } from "react-router-dom";
 import { statusOptions } from "../AUXILIARY OBJECTS/statusoptions";
+import { t } from "i18next";
 
 export function EditEmployee() {
     const location = useLocation();
@@ -52,22 +53,22 @@ export function EditEmployee() {
 //DRY!!
   return (
     <div id="edit_page">
-      <h1>EDIT EMPLOYEE DATA:</h1>
+      <h1>{t("edit_data")}:</h1>
       <form className="edit_employee_form" onSubmit={handleEdit}>
         <label htmlFor="firstname">
-          First Name:
+          {t("first_name")}:
           <input name="firstname" type="text" onChange={(event) => setInputValue0(event.target.value)} value={inputValue0} />
         </label>
         <label htmlFor="lastname">
-          Last Name:
+        {t("last_name")}:
           <input name="lastname" type="text" onChange={(event) => setInputValue1(event.target.value)} value={inputValue1} />
         </label>
         <label htmlFor="salary">
-          Salary:
+        {t("salary")}:
           <input name="salary" type="number" onChange={(event) => setInputValue2(event.target.value)} value={inputValue2} />
         </label>
         <label htmlFor="status">
-          Status:
+        {t("status")}:
           <select name="status" id="status">
             {statusOptions.map((option) => {
               return (
@@ -76,24 +77,24 @@ export function EditEmployee() {
           </select>
         </label>
         <label htmlFor="birthdate">
-          Birthdate:
+        {t("birthdate")}:
           <input name="birthdate" type="text" onChange={(event) => setInputValue4((event.target.value))} value={inputValue4} />
         </label>
         <label htmlFor="club_member">
-          Club Member:
+        {t("clubmember")}:
           <select name="club_member">
-            <option value="true" selected={data.club_member === "true"}>YES</option>
-            <option value="false" selected={data.club_member === "false"}>NO</option>
+            <option value="true" selected={data.club_member === "true"}>{t("confirmation")}</option>
+            <option value="false" selected={data.club_member === "false"}>{t("denial")}</option>
           </select>
         </label>
         <label htmlFor="car_owner">
-          Car Owner:
+        {t("carowner")}:
           <select name="car_owner">
-            <option value="true" selected={data.car_owner === "true"}>YES</option>
-            <option value="false" selected={data.car_owner === "false"}>NO</option>
+            <option value="true" selected={data.car_owner === "true"}>{t("confirmation")}</option>
+            <option value="false" selected={data.car_owner === "false"}>{t("denial")}</option>
           </select>
         </label>
-        <button type="submit">SAVE AFTER EDITING HER OR HIM</button>
+        <button type="submit">{t("save_edited")}</button>
       </form>
     </div>
   );

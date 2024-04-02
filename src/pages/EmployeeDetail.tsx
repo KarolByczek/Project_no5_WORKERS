@@ -2,6 +2,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { Employee } from "../components/Table";
 import "../index.scss";
+import { t } from "i18next";
 
 export const EmployeeDetail = () => {
   const location = useLocation();
@@ -28,13 +29,13 @@ export const EmployeeDetail = () => {
   return (
     <div className="detail_container">
       <div className="detail_records">
-        <h1>DETAILS:</h1>
+        <h1>{t('details')}:</h1>
         <label htmlFor="lastname">
-          Lastname:
+          {t("last_name")}:
           <input type="text" id="lastname" readOnly value={data.lastname} />
         </label>
         <label htmlFor="birthdate">
-          Birthdate:
+          {t("birthdate")}:
           <input
             type="text"
             id="birthdate"
@@ -43,15 +44,15 @@ export const EmployeeDetail = () => {
           />
         </label>
         <label htmlFor="club_member">
-          Club Member:
+          {t("clubmember")}:
           <input type="text" id="club_member" readOnly value={renderDetails(data.club_member)} />
         </label>
         <label htmlFor="car_owner">
-          Car Owner:
+          {t("carowner")}:
           <input type="text" id="car_owner" readOnly value={renderDetails(data.car_owner)} />
         </label>
       </div>
-      <Link className='detail_modal_return' to={'/'}>RETURN TO HOME PAGE</Link>
+      <Link className='detail_modal_return' to={'/'}>{t("return")}</Link>
     </div>
   );
 };

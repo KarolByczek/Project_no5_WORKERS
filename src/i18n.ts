@@ -16,8 +16,10 @@ const resources = {
             carowner: "CAR OWNER",
             confirmation: "YES",
             denial: "NO",
-            details: "Details",
+            details: "DETAILS",
             edit: "Edit",
+            edit_data: "EDIT EMPLOYEE DATA",
+            save_edited: "SAVE THE EDITED DATA",
             remove: "Remove",
             add_a_new: "ADD A NEW EMPLOYEE",
             add_button: "ADD THE EMPLOYEE",
@@ -33,7 +35,8 @@ const resources = {
             ascending: "ascending",
             descending: "descending",
             none: "none",
-            add_employee_text: "PROVIDE DATA OF AN EMPLYEE YOU WOULD LIKE TO ADD TO THE LIST:"
+            add_employee_text: "PROVIDE DATA OF AN EMPLYEE YOU WOULD LIKE TO ADD TO THE LIST:",
+            return: "RETURN TO HOME PAGE"
         }
     },
     pl: {
@@ -50,8 +53,10 @@ const resources = {
             carowner: "WŁAŚCICIEL SAMOCHODU",
             confirmation: "TAK",
             denial: "NIE",
-            details: "Szczegóły",
+            details: "SZCZEGÓŁY",
             edit: "Edytuj",
+            edit_data: "EDYTUJ DANE PRACOWNIKA",
+            save_edited: "ZAPISZ ZMIANY",
             remove: "Usuń",
             add_a_new: "DODAJ NOWEGO PRACOWNIKA",
             add_button: "DODAJ PRACOWNIKA",
@@ -67,7 +72,8 @@ const resources = {
             ascending: "rosnąco",
             descending: "malejąco",
             none: "brak",
-            add_employee_text: "WPISZ DANE PRACOWNIKA, KTÓREGO CHCIAŁ(A)BYŚ DODAĆ DO LISTY:"
+            add_employee_text: "WPISZ DANE PRACOWNIKA, KTÓREGO CHCIAŁ(A)BYŚ DODAĆ DO LISTY:",
+            return: "POWRÓT DO STRONY GŁÓWNEJ"
         }
     },
     de: {
@@ -84,8 +90,10 @@ const resources = {
             carowner: "AUTOBESITZER",
             confirmation: "JA",
             denial: "NEIN",
-            details: "Datailen",
+            details: "DETAILEN",
             edit: "Editen",
+            edit_data: "EDITEN SIE DIE DATEN VON DER MITARBEITER",
+            save_edited: "HALTEN SIE DIE MODIFIZIERTE DATEN",
             remove: "Entfernen",
             add_a_new: "HINFÜGEN EINE NEUE MITARBEITER ZU",
             add_button: "HINFÜGE DER MITARBEITER ZU",
@@ -97,11 +105,12 @@ const resources = {
             employee_result_one: "{{count}} MITARBEITER",
             employee_result_other: "{{count}} MITARBEITERN",
             search_placeholder: "Schreiben Sie einen info von einer mitarbeiter...",
-            default: "STANDARD",
-            ascending: "AUFSTEIGEND",
-            descending: "ABSTEIGEND",
+            default: "standard",
+            ascending: "aufsteigend",
+            descending: "absteigend",
             none: "keiner",
-            add_employee_text: "SCHREIBEN SIE DIE DATEN VON EINER MITARBEITER SIE MOCHTEN ZUR DIE LISTE HINZUFÜGEN:"
+            add_employee_text: "SCHREIBEN SIE DIE DATEN VON EINER MITARBEITER SIE MOCHTEN ZUR DIE LISTE HINZUFÜGEN:",
+            return: "GEHEN SIE NACH DIE HEIM ZURÜCK"
 
         }
     }
