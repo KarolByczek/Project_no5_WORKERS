@@ -29,18 +29,16 @@ export interface Employee {
   car_owner: string
 }*/
 
-export const Table = (props: { data: Employee[] }) => {
+export const Table = (props: { data: any}) => {
   const navigate = useNavigate();
   const { t } = useTranslation();
-  const [filtereddata, setFiltereddata] = useState<Employee[]>(props.data);
-  const [filtereddataForSorting, setFiltereddataForSorting] = useState<
-    Employee[]
-  >(props.data);
+  const [filtereddata, setFiltereddata] = useState<any>(props.data);
+  const [filtereddataForSorting, setFiltereddataForSorting] = useState<any>(props.data);
   const [sortDirection, setSortDirection] = useState<string>("default");
-  const [sortBy, setSortBy] = useState<string>("none");
+  const [sortBy, setSortBy] = useState<any>("none");
   const [isQuestModOn, setIsQuestModOn] = useState<boolean>(false);
-  const [currentEmpl, setCurrentEmpl] = useState<Employee>();
-  const [deletedEmpls, setDeletedEmpls] = useState<Employee[]>([]);
+  const [currentEmpl, setCurrentEmpl] = useState<any>();
+  const [deletedEmpls, setDeletedEmpls] = useState<any>([]);
   const [styleState, setStyleState] = useState<object>({});
 
   useEffect(() => {
@@ -101,14 +99,14 @@ export const Table = (props: { data: Employee[] }) => {
     const phrase01 = input.value.toLowerCase();
     const cols = ["firstname", "lastname", "birthdate", "salary"];
 
-    const data01 = props.data.filter((empl) => {
+    const data01 = props.data.filter((empl:any) => {
       return findByPhrase(
         cols,
         empl as unknown as { [key: string]: string },
         phrase01
       );
     });
-    const data02 = data01.filter((one) => !deletedEmpls.includes(one));
+    const data02 = data01.filter((one:any) => !deletedEmpls.includes(one));
     setFiltereddata(data02);
     setFiltereddataForSorting(data01);
   };
@@ -123,7 +121,7 @@ export const Table = (props: { data: Employee[] }) => {
 
   const onClickHandler02 = (
     event: MouseEvent<HTMLButtonElement>,
-    item: Employee
+    item: any
   ): void => {
     event.preventDefault();
     navigate("/edit_page", { state: item });
@@ -131,14 +129,14 @@ export const Table = (props: { data: Employee[] }) => {
 
   const onClickHandler03 = (
     event: MouseEvent<HTMLButtonElement>,
-    item: Employee
+    item: any
   ): void => {
     event.preventDefault();
     setIsQuestModOn(true);
     setCurrentEmpl(item);
   };
 
-  const sortAsc = (a: Employee, b: Employee, key: keyof Employee): number => {
+  const sortAsc = (a: any, b: any, key: keyof any): number => {
     if (a[key] > b[key]) {
       return 1;
     }
@@ -148,7 +146,7 @@ export const Table = (props: { data: Employee[] }) => {
     return 0;
   };
 
-  const sortDesc = (a: Employee, b: Employee, key: keyof Employee): number => {
+  const sortDesc = (a: any, b: any, key: keyof any): number => {
     if (a[key] < b[key]) {
       return 1;
     }
@@ -160,7 +158,7 @@ export const Table = (props: { data: Employee[] }) => {
 
   const handleHeaderColumnClick = (
     event: MouseEvent,
-    key: keyof Employee
+    key: keyof any
   ): void => {
     event.preventDefault();
     let sortedData = [...filtereddataForSorting];
@@ -185,7 +183,7 @@ export const Table = (props: { data: Employee[] }) => {
     setSortDirection(tempsortdir);
   };
 
-  function showArrow(key: keyof Employee): string {
+  function showArrow(key: keyof any): string {
     if (key === sortBy) {
       switch (sortDirection) {
         case "ascending":
@@ -248,7 +246,7 @@ export const Table = (props: { data: Employee[] }) => {
           </tr>
         </thead>
         <tbody className="tbody">
-          {filtereddata.map((employee) => {
+          {filtereddata.map((employee:any) => {
             return (
               <tr key={employee.id} className="tablerow">
                 <td>
