@@ -62,7 +62,7 @@ export const Table = (props: { data: any}) => {
     };
   }, [setStyleState]);
 
-  const renderStatus = (status: EmployeeStatus): string => {
+  const renderStatus = (status: string): string => {
     switch (status) {
       case "junior":
         return "➤";
@@ -77,7 +77,7 @@ export const Table = (props: { data: any}) => {
 
   const findByPhrase = (
     columns: string[],
-    item: { [key: string]: string },
+    item: { [key: string]: any },
     phrase: string
   ): boolean => {
     let result = false;
@@ -113,7 +113,7 @@ export const Table = (props: { data: any}) => {
 
   const onClickHandler = (
     event: MouseEvent<HTMLButtonElement>,
-    item: Employee
+    item: any
   ): void => {
     event.preventDefault();
     navigate("/details", { state: item });
@@ -255,23 +255,23 @@ export const Table = (props: { data: any}) => {
                 </td>
                 <td>
                   <span>{t("first_name")}:</span>
-                  {employee.firstname}
+                  {employee.get('firstname')}
                 </td>
                 <td>
                   <span>{t("last_name")}:</span>
-                  {employee.lastname}
+                  {employee.get('lastname')}
                 </td>
                 <td>
                   <span>{t("salary")}:</span>
-                  {employee.salary}
+                  {employee.get('salary')}
                 </td>
                 <td>
                   <span>{t("status")}:</span>
-                  {renderStatus(employee.status)}
+                  {renderStatus(employee.get('status'))}
                 </td>
                 <td>
                   <span>{t("birthdate")}:</span>
-                  {employee.birthdate.toString().substring(0, 10)}
+                  {(employee.get('birthdate')).toString()}
                 </td>
                 <td className="buttons">
                   <span>Actions:</span>

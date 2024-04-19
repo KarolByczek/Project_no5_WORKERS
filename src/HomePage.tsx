@@ -19,11 +19,12 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 const querySnapshot = await getDocs(collection(db, "WORKERS_DATA"));
-const newdata = querySnapshot.docs;
 querySnapshot.forEach((doc) => {
   console.log(doc.data());
-  console.log(doc.get("id"));
+  console.log(doc.get("lastname"));
 });
+
+const newdata = querySnapshot.docs;
 
 function HomePage() {
   const [totalemployees, setTotalemployees] = useState<any>([]);
@@ -35,7 +36,7 @@ function HomePage() {
       .then((responseData) => setTotalemployees(responseData))
   }, [setTotalemployees]);
 
-  console.log(newdata);
+  
 
   return (
     <div className="home_page">
