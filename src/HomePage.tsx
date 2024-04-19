@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
+import { getFirestore, collection, getDocs } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDB9ZO1qAg3JMm6PVK1up8yrNWgBZKNi5Y",
@@ -18,6 +18,13 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+
+const querySnapshot = await getDocs(collection(db, "WORKERS_DATA"));
+querySnapshot.forEach((doc) => {
+  console.log(doc.data());
+  console.log(doc.get('birthdate'));
+});
+
 
 function HomePage() {
   const [totalemployees, setTotalemployees] = useState<Employee[]>([]);
@@ -38,7 +45,6 @@ function HomePage() {
       </Link>
       <h1>{t("employees")}</h1>
       {totalemployees.length > 0 ? <Table data={totalemployees} /> : null}
-      {}
     </div>
   );
 }

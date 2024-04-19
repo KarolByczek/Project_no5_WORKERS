@@ -339,6 +339,11 @@ p strong {
 }
 
 @media screen and (min-width: 741px) {
+
+  .sorting_by {
+    display: none;
+  }
+
   .employees_count {
     margin-bottom: 2rem;
   }
