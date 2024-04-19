@@ -25,6 +25,10 @@ querySnapshot.forEach((doc) => {
 });
 
 const newdata = querySnapshot.docs;
+const onedoc = newdata[0];
+const onetimestamp = onedoc.get('birthdate');
+const onedate = onetimestamp.toDate();
+console.log(onedate.toLocaleDateString('pl-EU'));
 
 function HomePage() {
   const [totalemployees, setTotalemployees] = useState<any>([]);

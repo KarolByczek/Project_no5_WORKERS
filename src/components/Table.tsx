@@ -271,7 +271,7 @@ export const Table = (props: { data: any}) => {
                 </td>
                 <td>
                   <span>{t("birthdate")}:</span>
-                  {(employee.get('birthdate')).toString()}
+                  {((employee.get('birthdate')).toDate()).toLocaleDateString('en-US')}
                 </td>
                 <td className="buttons">
                   <span>Actions:</span>
