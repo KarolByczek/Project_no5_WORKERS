@@ -5,29 +5,6 @@ import { useNavigate } from "react-router-dom";
 //import { StyleState } from "../HomePage";
 import { useTranslation } from "react-i18next";
 
-export type EmployeeStatus = "junior" | "mid" | "senior";
-
-export interface Employee {
-  id: string;
-  firstname: string;
-  lastname: string;
-  salary: number;
-  status: EmployeeStatus;
-  birthdate: Date;
-  club_member: string;
-  car_owner: string;
-}
-
-/*export interface EmployeesDTO {
-  id: string,
-  firstname: string,
-  lastname: string,
-  salary: number,
-  status: EmployeeStatus,
-  birthdate: string,
-  club_member: string,
-  car_owner: string
-}*/
 
 export const Table = (props: { data: any}) => {
   const navigate = useNavigate();

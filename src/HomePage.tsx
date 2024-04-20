@@ -1,6 +1,5 @@
 import { Table } from "./components/Table";
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, getDocs} from "firebase/firestore";
@@ -16,7 +15,7 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
+export const db = getFirestore(app);
 
 const querySnapshot = await getDocs(collection(db, "WORKERS_DATA"));
 querySnapshot.forEach((doc) => {
@@ -25,22 +24,10 @@ querySnapshot.forEach((doc) => {
 });
 
 const newdata = querySnapshot.docs;
-const onedoc = newdata[0];
-const onetimestamp = onedoc.get('birthdate');
-const onedate = onetimestamp.toDate();
-console.log(onedate.toLocaleDateString('pl-EU'));
 
 function HomePage() {
-  const [totalemployees, setTotalemployees] = useState<any>([]);
   const { t } = useTranslation();
 
-  useEffect(() => {
-    fetch("http://localhost:3000/employees")
-      .then((response) => response.json())
-      .then((responseData) => setTotalemployees(responseData))
-  }, [setTotalemployees]);
-
-  
 
   return (
     <div className="home_page">
