@@ -2,11 +2,7 @@ import { Table } from "./components/Table";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { initializeApp } from "firebase/app";
-import {
-  getFirestore,
-  collection,
-  onSnapshot,
-} from "firebase/firestore";
+import { getFirestore, collection, onSnapshot } from "firebase/firestore";
 import { useEffect, useState } from "react";
 
 const firebaseConfig = {
@@ -21,12 +17,13 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+export const collectionRef = collection(db, "WORKERS_DATA");
 
 function HomePage() {
   const [ dbdata, setDbdata ] = useState<[]>([]);
   const { t } = useTranslation();
 
-  const collectionRef = collection(db, "WORKERS_DATA");
+  
 
   useEffect(() => {
     const unsub = onSnapshot(collectionRef, (QuerySnapshot: any) => {
