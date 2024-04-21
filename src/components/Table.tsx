@@ -232,23 +232,23 @@ export const Table = (props: { data: any}) => {
                 </td>
                 <td>
                   <span>{t("first_name")}:</span>
-                  {employee.get('firstname')}
+                  {employee.firstname}
                 </td>
                 <td>
                   <span>{t("last_name")}:</span>
-                  {employee.get('lastname')}
+                  {employee.lastname}
                 </td>
                 <td>
                   <span>{t("salary")}:</span>
-                  {employee.get('salary')}
+                  {employee.salary}
                 </td>
                 <td>
                   <span>{t("status")}:</span>
-                  {renderStatus(employee.get('status'))}
+                  {renderStatus(employee.status)}
                 </td>
                 <td>
                   <span>{t("birthdate")}:</span>
-                  {((employee.get('birthdate')).toDate()).toLocaleDateString('pl-US')}
+                  {((employee.birthdate).toDate()).toLocaleDateString('pl-US')}
                 </td>
                 <td className="buttons">
                   <span>Actions:</span>
