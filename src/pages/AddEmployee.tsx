@@ -5,9 +5,6 @@ import { collectionRef } from "../HomePage";
 import { addDoc, Timestamp } from "firebase/firestore";
 
 
-async function addData(makerFunction: Function, makerdata: any) {
-  await addDoc(collectionRef, makerFunction(makerdata));
-}
 
 export function AddEmployee() {
   const navigate = useNavigate();
@@ -33,7 +30,7 @@ export function AddEmployee() {
     const form = event.target as HTMLFormElement;
     const specformdata = new FormData(form);
 
-    addData(makeEmployee, specformdata);
+    addDoc(collectionRef, makeEmployee(specformdata));
 
     navigate("/");
   };
