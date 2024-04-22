@@ -23,7 +23,6 @@ function HomePage() {
   const [ dbdata, setDbdata ] = useState<[]>([]);
   const { t } = useTranslation();
 
-  
 
   useEffect(() => {
     const unsub = onSnapshot(collectionRef, (QuerySnapshot: any) => {
