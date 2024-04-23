@@ -56,6 +56,10 @@ h1 {
   border-radius: 0.5rem;
 }
 
+.sorting_by {
+  margin-top: 4rem;
+}
+
 .table {
   .tablerow {
     background-color: #ded3d3;
@@ -281,6 +285,8 @@ p strong {
 }
 
 @media screen and (max-width: 740px) {
+  
+  
   .table {
     margin-top: 2rem;
     width: 100%;
