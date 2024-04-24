@@ -1,41 +1,32 @@
 import { useTranslation } from "react-i18next";
-import { Employee } from "./Table";
+import { collectionRef } from "../HomePage";
+import { deleteDoc, doc } from "firebase/firestore";
+
+const { t } = useTranslation();
 
 export const QuestionModal = (props: {
-  dataset: Employee[],
-  toDelete: Employee[],
-  item: Employee,
-  className: string,
-  setter01: Function,
-  setter02: Function,
-  setter03: Function
+  dataset: any;
+  toDelete: any;
+  item: any;
+  className: string;
+  setter01: Function;
+  setter02: Function;
+  setter03: Function;
 }) => {
-  const { t } = useTranslation();
 
-  const onClickButton01 = () => {
-    fetch(`http://localhost:3000/employees/${props.item.id}`, {
-      method: "DELETE",
-      body: JSON.stringify(props.item),
-    })
-      .then((response) => {
-        if (response.ok) {
-          console.log("Response is ok");
-        } else {
-          console.log("Something went wrong!");
-          throw new Error("Fatal error!");
-        }
-      })
-      .then(() => console.log("The employee data has been deleted"))
-      .catch((err) => console.error(err));
+  async function onClickButton01(empl:any) {
+    
+      const employeeRef = doc(collectionRef, empl);
+      await deleteDoc(employeeRef);
 
-    props.setter01(props.dataset.filter((employee) => employee !== props.item));
-    props.setter03([ ...props.toDelete, props.item ]);
+    props.setter01(props.dataset.filter((item: any) => item !== props.item));
+    props.setter03([...props.toDelete, props.item]);
     props.setter02(false);
-  };
+  }
 
   return (
     <div>
-    <div className="back_to_black"></div>
+      <div className="back_to_black"></div>
       <div className={props.className}>
         {t("delete_confirmation")}
         <div>
@@ -43,7 +34,7 @@ export const QuestionModal = (props: {
           {props.item.birthdate.toString().substring(0, 10)}
         </div>
         <div className="modbuttons">
-          <button onClick={onClickButton01}>{t("confirmation")}</button>
+          <button onClick={() => onClickButton01(props.item.id)}>{t("confirmation")}</button>
           <button
             onClick={() => {
               props.setter02(false);
@@ -53,6 +44,6 @@ export const QuestionModal = (props: {
           </button>
         </div>
       </div>
-      </div>
+    </div>
   );
 };

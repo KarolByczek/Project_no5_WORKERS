@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { statusOptions } from "../AUXILIARY OBJECTS/statusoptions";
 import { useTranslation } from "react-i18next";
 import { collectionRef } from "../HomePage";
-import { addDoc, Timestamp } from "firebase/firestore";
+import { doc, setDoc, Timestamp } from "firebase/firestore";
 
 
 
@@ -29,8 +29,11 @@ export function AddEmployee() {
     event.preventDefault();
     const form = event.target as HTMLFormElement;
     const specformdata = new FormData(form);
+    const specemployee = makeEmployee(specformdata);
 
-    addDoc(collectionRef, makeEmployee(specformdata));
+    const employeeRef = doc(collectionRef, specemployee.id)
+
+    setDoc(employeeRef, specemployee);
 
     navigate("/");
   };
