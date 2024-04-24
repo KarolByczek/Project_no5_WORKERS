@@ -25,13 +25,13 @@ function HomePage() {
 
 
   useEffect(() => {
-    const unsub = onSnapshot(collectionRef, (QuerySnapshot: any) => {
+    async function unsub() {onSnapshot(collectionRef, (QuerySnapshot: any) => {
       const items: any = [];
       QuerySnapshot.forEach((doc: any) => {
         items.push(doc.data());
       });
       setDbdata(items);
-    });
+    })};
     return () => {
       unsub();
     };
