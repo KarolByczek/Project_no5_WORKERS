@@ -2,8 +2,8 @@ import React, { useEffect } from "react";
 import { MouseEvent, useState } from "react";
 import { QuestionModal } from "./QuestionModal";
 import { useNavigate } from "react-router-dom";
-//import { StyleState } from "../HomePage";
 import { useTranslation } from "react-i18next";
+import { Timestamp } from "firebase/firestore";
 
 
 export const Table = (props: { data: any}) => {
@@ -248,7 +248,7 @@ export const Table = (props: { data: any}) => {
                 </td>
                 <td>
                   <span>{t("birthdate")}:</span>
-                  {((employee.birthdate).toDate()).toLocaleDateString('pl-US')}
+                  {employee.birthdate.toDate().toLocaleDateString('pl-EU')}
                 </td>
                 <td className="buttons">
                   <span>Actions:</span>
