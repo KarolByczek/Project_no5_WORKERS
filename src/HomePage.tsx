@@ -12,7 +12,7 @@ const firebaseConfig = {
   storageBucket: "projectno5-workers-database.appspot.com",
   messagingSenderId: "476845290981",
   appId: "1:476845290981:web:8017cc10c34b73cad5eb0c",
-  measurementId: "G-FR61PS7RPS",
+  measurementId: "G-FR61PS7RPS"
 };
 
 const app = initializeApp(firebaseConfig);

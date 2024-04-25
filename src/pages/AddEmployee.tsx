@@ -25,7 +25,7 @@ export function AddEmployee() {
     };
   }
 
-  const handleAddEmployee = (event: React.FormEvent) => {
+  const handleAddEmployee = async (event: React.FormEvent) => {
     event.preventDefault();
     const form = event.target as HTMLFormElement;
     const specformdata = new FormData(form);
@@ -33,9 +33,12 @@ export function AddEmployee() {
 
     const employeeRef = doc(collectionRef, specemployee.id)
 
-    setDoc(employeeRef, specemployee);
-
-    navigate("/");
+    try {
+      await setDoc(employeeRef, specemployee);
+      navigate("/");
+    } catch (error) {
+      console.error("Error adding employee: ", error);
+    };
   };
 
   return (
