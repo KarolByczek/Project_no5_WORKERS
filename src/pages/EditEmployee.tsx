@@ -1,60 +1,53 @@
 import React, { useState } from "react";
-import { Employee, EmployeeStatus } from "../components/Table";
 import { useLocation, useNavigate } from "react-router-dom";
 import { statusOptions } from "../AUXILIARY OBJECTS/statusoptions";
 import { t } from "i18next";
+import { collectionRef } from "../HomePage";
+import { doc, updateDoc } from "firebase/firestore";
 
 export function EditEmployee() {
     const location = useLocation();
     const navigate = useNavigate();
-    const data: Employee = location.state;
+    const data: any = location.state;
     const [inputValue0, setInputValue0] = useState<string>(data.firstname);
     const [inputValue1, setInputValue1] = useState<string>(data.lastname);
     const [inputValue2, setInputValue2] = useState<string>(data.salary.toString());
-    const [inputValue4, setInputValue4] = useState<string>((data.birthdate).toString().substring(0,10));
+    const [inputValue4, setInputValue4] = useState<string>((data.birthdate).toString());
     
 
-  const makeEmployee = (formdata: FormData):Employee => {
+  const makeEmployee = (formdata: FormData):any => {
     return {
-      id: Date.now().toString(),
       firstname: formdata.get('firstname') as string,
       lastname: formdata.get('lastname') as string,
       birthdate: new Date(formdata.get('birthdate') as string),
       salary: +(formdata.get('salary') as string),
       club_member: formdata.get('club_member') as string,
-      status: formdata.get("status") as EmployeeStatus,
+      status: formdata.get("status") as string,
       car_owner: formdata.get('car_owner') as string
     }
   }
 
-  const handleEdit = (event: React.FormEvent) => {
+  async function handleEdit (event: React.FormEvent, ref:any) {
     event.preventDefault();
     const form = event.target as HTMLFormElement;
-    const formdata = new FormData(form);
-    const editedData = makeEmployee(formdata);
+    const formData = new FormData(form);
+    const editedData = makeEmployee(formData);
 
-    fetch(`http://localhost:3000/employees/${data.id}`, {
-      method: "PUT",
-      body: JSON.stringify(editedData),
-    })
-      .then((response) => {
-        if (response.ok) {
-          navigate("/");
-        } else {
-          console.log("Something went wrong!");
-          throw new Error("Error");
-        }
-      })
-      .catch((err) => console.error(err));
- 
-    console.log('The employee data has been edited')
+  try{
+    const employeeRef = doc(collectionRef, ref.id);
+    await updateDoc(employeeRef, editedData);
+  } catch (error) {
+    console.error(error);
+  };
+
+  
   };
 
 //DRY!!
   return (
     <div id="edit_page">
       <h1>{t("edit_data")}:</h1>
-      <form className="edit_employee_form" onSubmit={handleEdit}>
+      <form className="edit_employee_form" onSubmit={(event) => handleEdit(event, data)}>
         <label htmlFor="firstname">
           {t("first_name")}:
           <input name="firstname" type="text" onChange={(event) => setInputValue0(event.target.value)} value={inputValue0} />
