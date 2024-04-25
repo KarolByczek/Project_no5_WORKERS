@@ -3,23 +3,24 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { statusOptions } from "../AUXILIARY OBJECTS/statusoptions";
 import { t } from "i18next";
 import { collectionRef } from "../HomePage";
-import { doc, updateDoc } from "firebase/firestore";
+import { Timestamp, doc, updateDoc } from "firebase/firestore";
 
 export function EditEmployee() {
     const location = useLocation();
     const navigate = useNavigate();
     const data: any = location.state;
+    console.log(data);
     const [inputValue0, setInputValue0] = useState<string>(data.firstname);
     const [inputValue1, setInputValue1] = useState<string>(data.lastname);
     const [inputValue2, setInputValue2] = useState<string>(data.salary.toString());
-    const [inputValue4, setInputValue4] = useState<string>((data.birthdate).toString());
+    const [inputValue4, setInputValue4] = useState<string>((data.birthdate).toDate().toLocaleDateString('pl-US'));
     
 
-  const makeEmployee = (formdata: FormData):any => {
+  const makeEmployee = (formdata: FormData):object => {
     return {
       firstname: formdata.get('firstname') as string,
       lastname: formdata.get('lastname') as string,
-      birthdate: new Date(formdata.get('birthdate') as string),
+      birthdate: Timestamp.fromDate(new Date(formdata.get('birthdate') as string)),
       salary: +(formdata.get('salary') as string),
       club_member: formdata.get('club_member') as string,
       status: formdata.get("status") as string,
@@ -27,19 +28,19 @@ export function EditEmployee() {
     }
   }
 
-  async function handleEdit (event: React.FormEvent, ref:any) {
-    event.preventDefault();
+  function handleEdit (event:React.FormEvent) {
     const form = event.target as HTMLFormElement;
     const formData = new FormData(form);
     const editedData = makeEmployee(formData);
 
   try{
-    const employeeRef = doc(collectionRef, ref.id);
-    await updateDoc(employeeRef, editedData);
+    const employeeRef = doc(collectionRef, data.id);
+    updateDoc(employeeRef, editedData);
   } catch (error) {
     console.error(error);
   };
 
+  navigate('/');
   
   };
 
@@ -47,7 +48,7 @@ export function EditEmployee() {
   return (
     <div id="edit_page">
       <h1>{t("edit_data")}:</h1>
-      <form className="edit_employee_form" onSubmit={(event) => handleEdit(event, data)}>
+      <form className="edit_employee_form" onSubmit={(event) => handleEdit(event)}>
         <label htmlFor="firstname">
           {t("first_name")}:
           <input name="firstname" type="text" onChange={(event) => setInputValue0(event.target.value)} value={inputValue0} />
