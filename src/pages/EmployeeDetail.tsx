@@ -40,7 +40,7 @@ export const EmployeeDetail = () => {
             type="text"
             id="birthdate"
             readOnly
-            value={dateFormater(new Date(data.birthdate))}
+            value={dateFormater((data.birthdate).toDate())}
           />
         </label>
         <label htmlFor="club_member">
