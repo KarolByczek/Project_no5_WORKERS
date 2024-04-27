@@ -64,6 +64,9 @@ h1 {
 .table {
   .tablerow {
     background-color: #ded3d3;
+    td {
+      border: 0.2rem solid #696868;
+    }
     .buttons {
       gap: 0.2rem;
       button {
@@ -318,6 +321,7 @@ p strong {
           font-weight: 200;
           display: flex;
           gap: 0.5rem;
+          border-bottom: 0.1rem;
 
           span {
             display: flex;
@@ -380,9 +384,7 @@ p strong {
     .tbody {
       .tablerow {
         flex-direction: row;
-        background-color: #ded3d3;
         td {
-          border: 0.2rem solid transparent;
           border-radius: 0.4rem;
           span {
             display: none;
