@@ -2,7 +2,7 @@ import { Table } from "./components/Table";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, onSnapshot } from "firebase/firestore";
+import { getFirestore, collection, onSnapshot, DocumentData, Timestamp } from "firebase/firestore";
 import { useEffect, useState } from "react";
 
 export type EmployeeStatus = 
@@ -14,7 +14,7 @@ export interface Employee {
   lastname: string,
   salary: number,
   status: EmployeeStatus,
-  birthday: Date,
+  birthdate: Timestamp,
   car_owner: string,
   club_member: string
 };
@@ -39,9 +39,9 @@ function HomePage() {
 
 
   useEffect(() => {
-    async function unsub() {onSnapshot(collectionRef, (QuerySnapshot: any) => {
-      const items: any = [];
-      QuerySnapshot.forEach((doc: any) => {
+    async function unsub() {onSnapshot(collectionRef, (QuerySnapshot) => {
+      const items: Employee[] = [];
+      QuerySnapshot.forEach((doc: DocumentData) => {
         items.push(doc.data());
       });
       setDbdata(items);

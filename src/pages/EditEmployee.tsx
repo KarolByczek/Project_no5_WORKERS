@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { statusOptions } from "../AUXILIARY OBJECTS/statusoptions";
+import { Employee, EmployeeStatus } from "../HomePage";
 import { t } from "i18next";
 import { collectionRef } from "../HomePage";
 import { Timestamp, doc, updateDoc } from "firebase/firestore";
+
+type EditData = Omit<Employee, 'id'>;
 
 export function EditEmployee() {
     const location = useLocation();
@@ -17,22 +20,22 @@ export function EditEmployee() {
     const [inputValue4, setInputValue4] = useState<string>(data.birthdate.toDate().toLocaleDateString());
     
 
-  const makeEmployee = (formdata: FormData):object => {
+  const makeEmployee = (formdata: FormData):EditData  => {
     return {
       firstname: formdata.get('firstname') as string,
       lastname: formdata.get('lastname') as string,
       salary: +(formdata.get('salary') as string),
       birthdate: Timestamp.fromDate(new Date(formdata.get('birthdate') as string)),
       club_member: formdata.get('club_member') as string,
-      status: formdata.get("status") as string,
+      status: formdata.get("status") as EmployeeStatus,
       car_owner: formdata.get('car_owner') as string
     }
   }
 
-  function handleEdit (event:React.FormEvent, ref:any) {
+  function handleEdit (event:React.FormEvent, ref:Employee) {
     const form = event.target as HTMLFormElement;
     const formData = new FormData(form);
-    const editedData = makeEmployee(formData);
+    const editedData:EditData = makeEmployee(formData);
 
   try{
     const employeeRef = doc(collectionRef, ref.id);
