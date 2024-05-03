@@ -5,6 +5,20 @@ import { initializeApp } from "firebase/app";
 import { getFirestore, collection, onSnapshot } from "firebase/firestore";
 import { useEffect, useState } from "react";
 
+export type EmployeeStatus = 
+  "junior" | "mid" |"senior";
+
+export interface Employee {
+  id: string,
+  firstname: string,
+  lastname: string,
+  salary: number,
+  status: EmployeeStatus,
+  birthday: Date,
+  car_owner: string,
+  club_member: string
+};
+
 const firebaseConfig = {
   apiKey: "AIzaSyDB9ZO1qAg3JMm6PVK1up8yrNWgBZKNi5Y",
   authDomain: "projectno5-workers-database.firebaseapp.com",
@@ -20,7 +34,7 @@ const db = getFirestore(app);
 export const collectionRef = collection(db, "WORKERS_DATA");
 
 function HomePage() {
-  const [ dbdata, setDbdata ] = useState<[]>([]);
+  const [ dbdata, setDbdata ] = useState<Employee[]>([]);
   const { t } = useTranslation();
 
 
