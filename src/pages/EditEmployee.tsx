@@ -28,22 +28,22 @@ export function EditEmployee() {
     const [inputValue4, setInputValue4] = useState<string>(data.birthdate.toDate().toLocaleDateString());
     
 
-  const makeEmployee = (formdata: FormData)  => {
+  const editEmployee = (formdata: FormData)  => {
     return {
       firstname: formdata.get('firstname') as string,
       lastname: formdata.get('lastname') as string,
       salary: +(formdata.get('salary') as string),
       birthdate: Timestamp.fromDate(new Date(formdata.get('birthdate') as string)),
-      club_member: formdata.get('club_member') as string,
+      club_member: Boolean(formdata.get('club_member') as string),
       status: formdata.get("status") as EmployeeStatus,
-      car_owner: formdata.get('car_owner') as string
+      car_owner: Boolean(formdata.get('car_owner') as string)
     }
   }
 
   function handleEdit (event:React.FormEvent, refdoc:Employee) {
     const form = event.target as HTMLFormElement;
     const formData = new FormData(form);
-    const editedData = makeEmployee(formData);
+    const editedData = editEmployee(formData);
 
   try{
     const employeeRef = doc(collectionRef, refdoc.id);

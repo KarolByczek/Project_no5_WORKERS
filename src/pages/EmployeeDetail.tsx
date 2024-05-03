@@ -2,11 +2,12 @@
 import { Link, useLocation } from "react-router-dom"
 import "../index.scss";
 import { t } from "i18next";
+import { Employee } from "../HomePage";
 
 export const EmployeeDetail = () => {
   const location = useLocation();
   console.log(location.state);
-  const data: any = location.state;
+  const data: Employee = location.state;
 
   const dateFormater = (date0: Date): string => {
     const formatedmonth = date0.getMonth() < 9 ? "0" + (date0.getMonth() + 1) : date0.getMonth() + 1;
