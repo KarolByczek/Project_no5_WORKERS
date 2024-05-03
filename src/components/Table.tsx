@@ -123,7 +123,7 @@ export const Table = (props: { data: Employee[]}) => {
     return 0;
   };
 
-  const sortDesc = (a: any, b: any, key: keyof any): number => {
+  const sortDesc = (a: Employee, b: Employee, key: keyof Employee): number => {
     if (a[key] < b[key]) {
       return 1;
     }
@@ -135,7 +135,7 @@ export const Table = (props: { data: Employee[]}) => {
 
   const handleHeaderColumnClick = (
     event: MouseEvent,
-    key: keyof any
+    key: keyof Employee
   ): void => {
     event.preventDefault();
     let sortedData = [...filtereddataForSorting];
@@ -160,7 +160,7 @@ export const Table = (props: { data: Employee[]}) => {
     setSortDirection(tempsortdir);
   };
 
-  function showArrow(key: keyof any): string {
+  function showArrow(key: keyof Employee): string {
     if (key === sortBy) {
       switch (sortDirection) {
         case "ascending":
