@@ -14,11 +14,11 @@ export const EmployeeDetail = () => {
     return date0.getFullYear() + "-" + formatedmonth + "-" + formatedday;
   };
 
-  const renderDetails = (fact:string): string => {
+  const renderDetails = (fact:boolean): string => {
     switch (fact) {
-      case "true":
+      case true:
         return "✔️";
-      case "false":
+      case false:
         return "❌";
       default:
         return "?";

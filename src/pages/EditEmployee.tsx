@@ -6,12 +6,20 @@ import { t } from "i18next";
 import { collectionRef } from "../HomePage";
 import { Timestamp, doc, updateDoc } from "firebase/firestore";
 
-type EditData = Omit<Employee, 'id'>;
+interface EditData {
+  firstname: string,
+  lastname: string,
+  salary: number,
+  status: EmployeeStatus,
+  birthdate: Timestamp,
+  car_owner: string,
+  club_member: string
+};;
 
 export function EditEmployee() {
     const location = useLocation();
     const navigate = useNavigate();
-    const data: any = location.state;
+    const data: Employee = location.state;
     console.log(data);
     const [inputValue0, setInputValue0] = useState<string>(data.firstname);
     const [inputValue1, setInputValue1] = useState<string>(data.lastname);
@@ -20,7 +28,7 @@ export function EditEmployee() {
     const [inputValue4, setInputValue4] = useState<string>(data.birthdate.toDate().toLocaleDateString());
     
 
-  const makeEmployee = (formdata: FormData):EditData  => {
+  const makeEmployee = (formdata: FormData)  => {
     return {
       firstname: formdata.get('firstname') as string,
       lastname: formdata.get('lastname') as string,
@@ -32,13 +40,13 @@ export function EditEmployee() {
     }
   }
 
-  function handleEdit (event:React.FormEvent, ref:Employee) {
+  function handleEdit (event:React.FormEvent, refdoc:Employee) {
     const form = event.target as HTMLFormElement;
     const formData = new FormData(form);
-    const editedData:EditData = makeEmployee(formData);
+    const editedData = makeEmployee(formData);
 
   try{
-    const employeeRef = doc(collectionRef, ref.id);
+    const employeeRef = doc(collectionRef, refdoc.id);
     updateDoc(employeeRef, editedData);
   } catch (error) {
     console.error(error);
@@ -48,7 +56,6 @@ export function EditEmployee() {
   
   };
 
-//DRY!!
   return (
     <div id="edit_page">
       <h1>{t("edit_data")}:</h1>
@@ -81,15 +88,15 @@ export function EditEmployee() {
         <label htmlFor="club_member">
         {t("clubmember")}:
           <select name="club_member">
-            <option value="true" selected={data.club_member === "true"}>{t("confirmation")}</option>
-            <option value="false" selected={data.club_member === "false"}>{t("denial")}</option>
+            <option value="true" selected={data.club_member === true}>{t("confirmation")}</option>
+            <option value="false" selected={data.club_member === false}>{t("denial")}</option>
           </select>
         </label>
         <label htmlFor="car_owner">
         {t("carowner")}:
           <select name="car_owner">
-            <option value="true" selected={data.car_owner === "true"}>{t("confirmation")}</option>
-            <option value="false" selected={data.car_owner === "false"}>{t("denial")}</option>
+            <option value="true" selected={data.car_owner === true}>{t("confirmation")}</option>
+            <option value="false" selected={data.car_owner === false}>{t("denial")}</option>
           </select>
         </label>
         <button type="submit">{t("save_edited")}</button>

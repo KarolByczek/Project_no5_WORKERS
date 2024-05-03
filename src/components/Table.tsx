@@ -3,18 +3,19 @@ import { MouseEvent, useState } from "react";
 import { QuestionModal } from "./QuestionModal";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { Employee, EmployeeStatus } from "../HomePage";
 
 
-export const Table = (props: { data: any}) => {
+export const Table = (props: { data: Employee[]}) => {
   const navigate = useNavigate();
   const { t } = useTranslation();
-  const [filtereddata, setFiltereddata] = useState<any>(props.data);
-  const [filtereddataForSorting, setFiltereddataForSorting] = useState<any>(props.data);
+  const [filtereddata, setFiltereddata] = useState<Employee[]>(props.data);
+  const [filtereddataForSorting, setFiltereddataForSorting] = useState<Employee[]>(props.data);
   const [sortDirection, setSortDirection] = useState<string>("default");
-  const [sortBy, setSortBy] = useState<any>("none");
+  const [sortBy, setSortBy] = useState<string | number | symbol>("none");
   const [isQuestModOn, setIsQuestModOn] = useState<boolean>(false);
-  const [currentEmpl, setCurrentEmpl] = useState<any>();
-  const [deletedEmpls, setDeletedEmpls] = useState<any>([]);
+  const [currentEmpl, setCurrentEmpl] = useState<Employee>();
+  const [deletedEmpls, setDeletedEmpls] = useState<Employee[]>([]);
   const [styleState, setStyleState] = useState<object>({});
 
   useEffect(() => {
@@ -38,7 +39,7 @@ export const Table = (props: { data: any}) => {
     };
   }, [setStyleState]);
 
-  const renderStatus = (status: string): string => {
+  const renderStatus = (status: EmployeeStatus): string => {
     switch (status) {
       case "junior":
         return "➤";
@@ -53,7 +54,7 @@ export const Table = (props: { data: any}) => {
 
   const findByPhrase = (
     columns: string[],
-    item: { [key: string]: any },
+    item: { [key: string]: string },
     phrase: string
   ): boolean => {
     let result = false;
@@ -75,21 +76,21 @@ export const Table = (props: { data: any}) => {
     const phrase01 = input.value.toLowerCase();
     const cols = ["firstname", "lastname", "birthdate", "salary"];
 
-    const data01 = props.data.filter((empl:any) => {
+    const data01 = props.data.filter((empl:Employee) => {
       return findByPhrase(
         cols,
         empl as unknown as { [key: string]: string },
         phrase01
       );
     });
-    const data02 = data01.filter((one:any) => !deletedEmpls.includes(one));
+    const data02 = data01.filter((one:Employee) => !deletedEmpls.includes(one));
     setFiltereddata(data02);
     setFiltereddataForSorting(data01);
   };
 
   const onClickHandler = (
     event: MouseEvent<HTMLButtonElement>,
-    item: any
+    item: Employee
   ): void => {
     event.preventDefault();
     navigate("/details", { state: item });
@@ -97,7 +98,7 @@ export const Table = (props: { data: any}) => {
 
   const onClickHandler02 = (
     event: MouseEvent<HTMLButtonElement>,
-    item: any
+    item: Employee
   ): void => {
     event.preventDefault();
     navigate("/edit_page", { state: item });
@@ -105,7 +106,7 @@ export const Table = (props: { data: any}) => {
 
   const onClickHandler03 = (
     event: MouseEvent<HTMLButtonElement>,
-    item: any
+    item: Employee
   ): void => {
     event.preventDefault();
     setIsQuestModOn(true);

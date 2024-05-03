@@ -15,8 +15,8 @@ export interface Employee {
   salary: number,
   status: EmployeeStatus,
   birthdate: Timestamp,
-  car_owner: string,
-  club_member: string
+  car_owner: boolean,
+  club_member: boolean
 };
 
 const firebaseConfig = {
