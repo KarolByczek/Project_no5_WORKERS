@@ -6,15 +6,6 @@ import { t } from "i18next";
 import { collectionRef } from "../HomePage";
 import { Timestamp, doc, updateDoc } from "firebase/firestore";
 
-interface EditData {
-  firstname: string,
-  lastname: string,
-  salary: number,
-  status: EmployeeStatus,
-  birthdate: Timestamp,
-  car_owner: string,
-  club_member: string
-};;
 
 export function EditEmployee() {
     const location = useLocation();
@@ -89,14 +80,14 @@ export function EditEmployee() {
         {t("clubmember")}:
           <select name="club_member">
             <option value="true" selected={data.club_member === true}>{t("confirmation")}</option>
-            <option value="false" selected={data.club_member === false}>{t("denial")}</option>
+            <option value="" selected={data.club_member === false}>{t("denial")}</option>
           </select>
         </label>
         <label htmlFor="car_owner">
         {t("carowner")}:
           <select name="car_owner">
             <option value="true" selected={data.car_owner === true}>{t("confirmation")}</option>
-            <option value="false" selected={data.car_owner === false}>{t("denial")}</option>
+            <option value="" selected={data.car_owner === false}>{t("denial")}</option>
           </select>
         </label>
         <button type="submit">{t("save_edited")}</button>

@@ -75,14 +75,14 @@ export function AddEmployee() {
           {t("clubmember")}:
           <select name="club_member">
             <option value="true">{t("confirmation")}</option>
-            <option value="false">{t("denial")}</option>
+            <option value="">{t("denial")}</option>
           </select>
         </label>
         <label htmlFor="car_owner">
           {t("carowner")}:
           <select name="car_owner">
             <option value="true">{t("confirmation")}</option>
-            <option value="false">{t("denial")}</option>
+            <option value="">{t("denial")}</option>
           </select>
         </label>
         <button type="submit">{t("add_button")}</button>
