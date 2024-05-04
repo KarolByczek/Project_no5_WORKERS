@@ -184,12 +184,12 @@ export const Table = (props: { data: Employee[]}) => {
           onKeyUp={onChangeHandler}
         />
       </div>
-      <span className="employees_count">
+      <div className="employees_count">
         {t("employee_result", { count: filtereddata.length })}
-      </span><br />
-      <span className="sorting_by">
+      </div>
+      <div className="sorting_by">
         {t("sort_employees_by")}:
-      </span>
+      </div>
       <table className="table">
         <thead className="thead" style={styleState}>
          

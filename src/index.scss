@@ -53,13 +53,17 @@ h1 {
 
 .employees_count {
   background-color: rgb(250, 127, 11);
-  padding: 0.3rem;
+  padding: 0.8rem;
   border-radius: 0.5rem;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .sorting_by {
-  margin-top: 4rem;
+  margin-top: 2rem;
 }
+
 
 .table {
   .tablerow {
@@ -352,13 +356,15 @@ p strong {
 
 @media screen and (min-width: 741px) {
 
+  .employees_count {
+    margin-bottom: 2rem;
+  }
+
   .sorting_by {
     display: none;
   }
 
-  .employees_count {
-    margin-bottom: 2rem;
-  }
+ 
 
   .add_employee_link {
     display: flex;
