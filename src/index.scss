@@ -62,7 +62,7 @@ h1 {
 
 .sorting_by {
   margin-top: 2rem;
-  margin-bottom: -1.5rem;
+  margin-bottom: -2rem;
   background-color: aqua;
 }
 
@@ -81,7 +81,8 @@ h1 {
     }
   }
 
-  .tablerow {
+  tbody {
+     .tablerow {
     background-color: #ddd6d6;
     td {
       border: 0.2rem solid #696868;
@@ -99,6 +100,8 @@ h1 {
       }
     }
   }
+  }
+ 
   .tablerow:nth-child(2n + 1) {
     background-color: #b6acac;
   }
