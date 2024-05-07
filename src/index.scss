@@ -63,10 +63,24 @@ h1 {
 .sorting_by {
   margin-top: 2rem;
   margin-bottom: -1.5rem;
+  background-color: aqua;
 }
 
 
 .table {
+
+  .thead {
+    span {
+      display: none;
+    }
+    tr {
+      th {
+        background-color: #63cddb;
+        padding: 0.3rem;
+      }
+    }
+  }
+
   .tablerow {
     background-color: #ddd6d6;
     td {
@@ -386,9 +400,7 @@ p strong {
       }
       tr {
         th {
-          background-color: #63cddb;
           border: 0.2rem solid rgb(30, 91, 116);
-          padding: 0.3rem;
         }
       }
     }
