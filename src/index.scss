@@ -316,6 +316,11 @@ p strong {
 
 @media screen and (max-width: 740px) {
   
+  .add_employee_link {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+  }
   
   .table {
     margin-top: 2rem;
