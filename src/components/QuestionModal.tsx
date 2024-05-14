@@ -31,7 +31,7 @@ export const QuestionModal = (props: {
 
   return (
     <div>
-      <div className="back_to_black"></div>
+      <div className="black_background"></div>
       <div className={props.className}>
         {t("delete_confirmation")}
         <div>

@@ -192,7 +192,6 @@ export const Table = (props: { data: Employee[]}) => {
       </div>
       <table className="table">
         <thead className="thead" style={styleState}>
-         
           <tr>
             <th className="not_for_sorting">ID</th>
             <th

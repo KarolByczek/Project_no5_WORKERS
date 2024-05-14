@@ -67,8 +67,7 @@ h1 {
 }
 
 
-.table {
-
+.table { 
   .thead {
     span {
       display: none;
@@ -120,7 +119,7 @@ p strong {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: end;
+    align-items: center;
     gap: 3rem;
 
     h1 {
@@ -200,7 +199,7 @@ p strong {
   }
 }
 
-.back_to_black {
+.black_background {
   position: fixed;
   left: 0;
   right: 0;
@@ -213,8 +212,8 @@ p strong {
 
 .question_modal {
   position: fixed;
-  top: 30vh;
-  left: 25vw;
+  top: 35vh;
+  left: 30vw;
   background-color: rgb(242, 125, 86);
   height: fit-content;
   z-index: 5;
@@ -222,18 +221,19 @@ p strong {
   border-radius: 0.3rem;
   font-weight: bold;
   padding: 1rem;
-  cursor: pointer;
 
   .modbuttons {
     display: flex;
     justify-content: space-around;
     margin-top: 1rem;
+    
 
     button {
       padding: 0.7rem;
       background-color: rgb(169, 56, 56);
       border-radius: 0.5rem;
       font-weight: bold;
+      cursor: pointer;
     }
   }
 }
