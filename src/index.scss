@@ -146,9 +146,10 @@ p strong {
   }
 
   .detail_modal_return {
-    position: absolute;
-    right: 3rem;
-    bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
     text-decoration: none;
     color: bisque;
     font-family: "Courier New", Courier, monospace;
