@@ -29,7 +29,7 @@ const resources = {
             delete_confirmation: "Are you sure you would like to delete this employee:",
             cancellation: "CANCEL",
             employee_result_one: "{{count}} EMPLOYEE",
-            employee_result_other: "{{count}} EMPLOYEES",
+            employee_result: "{{count}} EMPLOYEES",
             search_placeholder: "Type any employee data...",
             default: "default",
             ascending: "ascending",
@@ -66,7 +66,7 @@ const resources = {
             delete_confirmation: "Czy na pewno chciałabyś/chciałbyś usunąć tego pracownika:",
             cancellation: "ANULUJ",
             employee_result_one: "{{count}} PRACOWNIK",
-            employee_result_other: "{{count}} PRACOWNIKÓW",
+            employee_result: "{{count}} PRACOWNIKÓW",
             search_placeholder: "Wpisz dowolne dane pracownika...",
             default: "domyślnie",
             ascending: "rosnąco",
@@ -103,7 +103,7 @@ const resources = {
             delete_confirmation: "Sind Sie sicher Sie mochten dieser Mitarbeiter entfernen:",
             cancellation: "ANULIEREN",
             employee_result_one: "{{count}} MITARBEITER",
-            employee_result_other: "{{count}} MITARBEITERN",
+            employee_result: "{{count}} MITARBEITERN",
             search_placeholder: "Schreiben Sie einen info von einer mitarbeiter...",
             default: "standard",
             ascending: "aufsteigend",
@@ -118,7 +118,7 @@ const resources = {
 
 i18n.use(initReactI18next).init({
     resources,
-    lng: "pl",
+    lng: "de",
     fallbackLng: "en"
 })
 
