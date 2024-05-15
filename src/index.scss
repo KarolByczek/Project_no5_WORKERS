@@ -63,7 +63,7 @@ h1 {
 .sorting_by {
   margin-top: 2rem;
   margin-bottom: -2rem;
-  background-color: rgb(42, 226, 226);
+  background-color: #63cddb;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: small;
 }
@@ -77,6 +77,8 @@ h1 {
   padding: 0.4rem;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: small;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
 }
 
 .table {
@@ -223,7 +225,8 @@ p strong {
 .question_modal {
   position: fixed;
   top: 35vh;
-  left: 30vw;
+  left: 20vw;
+  right: 20vw;
   background-color: rgb(242, 125, 86);
   height: fit-content;
   z-index: 5;
@@ -388,7 +391,8 @@ p strong {
   }
 
   .question_modal {
-    margin-right: 15vw;
+    left: 10vw;
+    right: 10vw;
   }
 }
 
