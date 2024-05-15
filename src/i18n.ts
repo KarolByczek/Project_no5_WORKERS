@@ -24,7 +24,8 @@ const resources = {
             add_a_new: "ADD A NEW EMPLOYEE",
             add_button: "ADD THE EMPLOYEE",
             sorted_by: "SORTED BY:",
-            sort_employees_by: "SORT EMPLOYEES BY",
+            sort_employees_by: "SORT EMPLOYEES BY (CLICK)",
+            sort_employees_by_other: "CLICK ON ANY HEADLINE IN ORDER TO SORT THE LIST (IN ASCENDING OR DESCENDING DIRECTION)",
             sorting_direction: "SORTING DIRECTION:",
             delete_confirmation: "Are you sure you would like to delete this employee:",
             cancellation: "CANCEL",
@@ -61,7 +62,8 @@ const resources = {
             add_a_new: "DODAJ NOWEGO PRACOWNIKA",
             add_button: "DODAJ PRACOWNIKA",
             sorted_by: "SORTOWANIE WEDŁUG:",
-            sort_employees_by: "SORTUJ PRACOWNIKÓW PO",
+            sort_employees_by_other: "KLIKNIJ W DOWOLNY NAGŁÓWEK, ABY POSORTOWAĆ LISTĘ (ROSNĄCO LUB MALEJĄCO)",
+            sort_employees_by: "SORTUJ PRACOWNIKÓW WEDŁUG (KLIKNIJ)",
             sorting_direction: "KIERUNEK SORTOWANIA:",
             delete_confirmation: "Czy na pewno chciałabyś/chciałbyś usunąć tego pracownika:",
             cancellation: "ANULUJ",
@@ -98,7 +100,8 @@ const resources = {
             add_a_new: "HINFÜGEN EINE NEUE MITARBEITER ZU",
             add_button: "HINFÜGE DER MITARBEITER ZU",
             sorted_by: "SORTIEREN NACH:",
-            sort_employees_by: "SORTIEREN DIE MITARBEITERN NACH",
+            sort_employees_by: "SORTIEREN DIE MITARBEITERN NACH (KLICKEN)",
+            sort_employees_by_other: "CLICKEN NACH EINE GEWÄHLTE ÜBERSCHRIFT FÜR SORTIERUNG (INS AUFSTEIGENDE ODER ABSTEIGEND RICHTUNG)",
             sorting_direction: "SORTIERUNG RICHTUNG:",
             delete_confirmation: "Sind Sie sicher Sie mochten dieser Mitarbeiter entfernen:",
             cancellation: "ANULIEREN",
@@ -118,7 +121,7 @@ const resources = {
 
 i18n.use(initReactI18next).init({
     resources,
-    lng: "de",
+    lng: "pl",
     fallbackLng: "en"
 })
 

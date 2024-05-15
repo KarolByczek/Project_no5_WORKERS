@@ -190,6 +190,9 @@ export const Table = (props: { data: Employee[]}) => {
       <div className="sorting_by">
         {t("sort_employees_by")}:
       </div>
+      <div className="sorting_by_other">
+        {t("sort_employees_by_other")}:
+      </div>
       <table className="table">
         <thead className="thead" style={styleState}>
           <tr>
