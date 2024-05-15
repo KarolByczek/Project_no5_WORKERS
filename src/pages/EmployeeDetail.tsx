@@ -52,7 +52,7 @@ export const EmployeeDetail = () => {
           <input type="text" id="car_owner" readOnly value={renderDetails(data.car_owner)} />
         </label>
       </div>
-      <Link className='detail_modal_return' to={'/'}>{t("return")}</Link>
+      <Link className='detail_return_button' to={'/'}>{t("return")}</Link>
     </div>
   );
 };
