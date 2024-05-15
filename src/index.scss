@@ -60,13 +60,15 @@ h1 {
   margin-right: auto;
 }
 
-.table {
-  .thead {
-    .sorting_by {
+.sorting_by {
       margin-top: 2rem;
       margin-bottom: -2rem;
       background-color: rgb(42, 226, 226);
     }
+
+.table {
+  .thead {
+    
     tr {
       th {
         background-color: #63cddb;
@@ -317,7 +319,7 @@ p strong {
 
   .table {
     margin-top: 2rem;
-    width: 80vw;
+    width: 98vw;
 
     .thead {
       background-color: #63cddb;

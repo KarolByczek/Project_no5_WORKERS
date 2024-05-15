@@ -187,12 +187,11 @@ export const Table = (props: { data: Employee[]}) => {
       <div className="employees_count">
         {t("employee_result", { count: filtereddata.length })}
       </div>
-      
+      <div className="sorting_by">
+        {t("sort_employees_by")}:
+      </div>
       <table className="table">
         <thead className="thead" style={styleState}>
-          <div className="sorting_by">
-          {t("sort_employees_by")}:
-          </div>
           <tr>
             <th className="not_for_sorting">ID</th>
             <th
