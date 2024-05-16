@@ -5,12 +5,13 @@ import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Employee, EmployeeStatus } from "../HomePage";
 
-
-export const Table = (props: { data: Employee[]}) => {
+export const Table = (props: { data: Employee[] }) => {
   const navigate = useNavigate();
   const { t } = useTranslation();
   const [filtereddata, setFiltereddata] = useState<Employee[]>(props.data);
-  const [filtereddataForSorting, setFiltereddataForSorting] = useState<Employee[]>(props.data);
+  const [filtereddataForSorting, setFiltereddataForSorting] = useState<
+    Employee[]
+  >(props.data);
   const [sortDirection, setSortDirection] = useState<string>("default");
   const [sortBy, setSortBy] = useState<string | number | symbol>("none");
   const [isQuestModOn, setIsQuestModOn] = useState<boolean>(false);
@@ -76,14 +77,16 @@ export const Table = (props: { data: Employee[]}) => {
     const phrase01 = input.value.toLowerCase();
     const cols = ["firstname", "lastname", "birthdate", "salary"];
 
-    const data01 = props.data.filter((empl:Employee) => {
+    const data01 = props.data.filter((empl: Employee) => {
       return findByPhrase(
         cols,
         empl as unknown as { [key: string]: string },
         phrase01
       );
     });
-    const data02 = data01.filter((one:Employee) => !deletedEmpls.includes(one));
+    const data02 = data01.filter(
+      (one: Employee) => !deletedEmpls.includes(one)
+    );
     setFiltereddata(data02);
     setFiltereddataForSorting(data01);
   };
@@ -187,12 +190,8 @@ export const Table = (props: { data: Employee[]}) => {
       <div className="employees_count">
         {t("employee_result", { count: filtereddata.length })}
       </div>
-      <div className="sorting_by">
-        {t("sort_employees_by")}:
-      </div>
-      <div className="sorting_by_other">
-        {t("sort_employees_by_other")}:
-      </div>
+      <div className="sorting_by">{t("sort_employees_by")}:</div>
+      <div className="sorting_by_other">{t("sort_employees_by_other")}:</div>
       <table className="table">
         <thead className="thead" style={styleState}>
           <tr>
@@ -225,7 +224,7 @@ export const Table = (props: { data: Employee[]}) => {
           </tr>
         </thead>
         <tbody className="tbody">
-          {filtereddata.map((employee:any) => {
+          {filtereddata.map((employee: any) => {
             return (
               <tr key={employee.id} className="tablerow">
                 <td>
@@ -250,7 +249,7 @@ export const Table = (props: { data: Employee[]}) => {
                 </td>
                 <td>
                   <span>{t("birthdate")}:</span>
-                  {employee.birthdate.toDate().toLocaleDateString('pl-EU')}
+                  {employee.birthdate.toDate().toLocaleDateString("pl-EU")}
                 </td>
                 <td className="buttons">
                   <span>Actions:</span>
@@ -287,7 +286,8 @@ export const Table = (props: { data: Employee[]}) => {
       <div>
         <p>
           <strong>
-            {t("sorted_by")}<span> </span>
+            {t("sorted_by")}
+            <span> </span>
             {sortBy === "firstname" ? t("first_name") : null}
             {sortBy === "lastname" ? t("last_name") : null}
             {sortBy === "salary" ? t("salary") : null}
@@ -298,7 +298,8 @@ export const Table = (props: { data: Employee[]}) => {
         </p>
         <p>
           <strong>
-            {t("sorting_direction")}<span> </span>
+            {t("sorting_direction")}
+            <span> </span>
             {sortDirection === "default" ? t("default") : null}
             {sortDirection === "ascending" ? t("ascending") : null}
             {sortDirection === "descending" ? t("descending") : null}

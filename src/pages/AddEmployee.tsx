@@ -1,10 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import { statusOptions } from "../AUXILIARY OBJECTS/statusoptions";
 import { useTranslation } from "react-i18next";
-import { collectionRef} from "../HomePage";
+import { collectionRef } from "../HomePage";
 import { doc, setDoc, Timestamp } from "firebase/firestore";
-
-
 
 export function AddEmployee() {
   const navigate = useNavigate();
@@ -15,7 +13,9 @@ export function AddEmployee() {
       id: Date.now().toString(),
       firstname: formdata.get("firstname") as string,
       lastname: formdata.get("lastname") as string,
-      birthdate: Timestamp.fromDate(new Date(formdata.get("birthdate") as string)),
+      birthdate: Timestamp.fromDate(
+        new Date(formdata.get("birthdate") as string)
+      ),
       salary: +(formdata.get("salary") as string),
       club_member: Boolean(formdata.get("club_member") as string),
       status: formdata.get("status") as string,
@@ -29,14 +29,14 @@ export function AddEmployee() {
     const specformdata = new FormData(form);
     const specemployee = makeEmployee(specformdata);
 
-    const employeeRef = doc(collectionRef, specemployee.id)
+    const employeeRef = doc(collectionRef, specemployee.id);
 
     try {
       await setDoc(employeeRef, specemployee);
       navigate("/");
     } catch (error) {
       console.error("Error adding employee: ", error);
-    };
+    }
   };
 
   return (
